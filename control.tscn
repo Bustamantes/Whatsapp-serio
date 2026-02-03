@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cv0kiovxy5cnr"]
+
+[ext_resource type="Texture2D" uid="uid://dwsecixhv43mw" path="res://icon.svg" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=1248340580]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -17.0
+offset_right = -5.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1610541412]
+position = Vector2(90, 95)
+texture = ExtResource("1_0fbet")
