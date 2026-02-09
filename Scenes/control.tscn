@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://cv0kiovxy5cnr"]
+
+[ext_resource type="Texture2D" uid="uid://dwsecixhv43mw" path="res://icon.svg" id="1_sjmnu"]
+[ext_resource type="StyleBox" uid="uid://dkkjmkvqtd2o6" path="res://Scenes/button_color.tres" id="2_cgmvo"]
+[ext_resource type="StyleBox" uid="uid://bwvbgnrfvlkr8" path="res://Scenes/button_hovered_color.tres" id="3_vh8u0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjmnu"]
+bg_color = Color(0.73491657, 0.91447157, 0.915859, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh8u0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3137255, 0.2901961, 1, 1)
+border_blend = true
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 15
+corner_detail = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgmvo"]
+bg_color = Color(0.14509805, 0.3882353, 0.92156863, 0.49019608)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpaqk"]
+bg_color = Color(0.4862745, 0.23137255, 0.92941177, 0.49019608)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+expand_margin_left = 50.0
+
+[node name="Control" type="Control" unique_id=1248340580]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=2088665866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sjmnu")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1610541412]
+visible = false
+position = Vector2(594, 262)
+texture = ExtResource("1_sjmnu")
+
+[node name="Borde boton" type="Panel" parent="." unique_id=1893460519]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 66.0
+offset_right = 725.0
+offset_bottom = 171.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba" type="Button" parent="Borde boton" unique_id=2057417497]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/hover = ExtResource("3_vh8u0")
+text = "Opening Whatsapp
+"
+
+[node name="Circulo boton" type="PanelContainer" parent="Borde boton/Boton prueba" unique_id=142819837]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton" type="Label" parent="Borde boton/Boton prueba/Circulo boton" unique_id=986461118]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="Borde boton2" type="Panel" parent="." unique_id=329750561]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 187.0
+offset_right = 725.0
+offset_bottom = 292.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba2" type="Button" parent="Borde boton2" unique_id=70153032]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/hover = ExtResource("3_vh8u0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
+disabled = true
+text = "Reading Messages
+"
+
+[node name="Circulo boton2" type="PanelContainer" parent="Borde boton2/Boton prueba2" unique_id=723410214]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton2" type="Label" parent="Borde boton2/Boton prueba2/Circulo boton2" unique_id=1666783439]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "2"

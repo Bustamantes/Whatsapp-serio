@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Whatsapp Serio"
+run/main_scene="uid://cv0kiovxy5cnr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
 
 [physics]
 
