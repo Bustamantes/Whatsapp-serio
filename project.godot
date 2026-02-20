@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="Whatsapp Serio"
-run/main_scene="res://scenes/main_scene.tscn"
+run/main_scene="res://scenes/LoadingScreen.tscn"
+config/auto_accept_quit=false
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+DataManager="*res://scripts/autoload/DataManager.gd"
+ProgressManager="*res://scripts/autoload/ProgressManager.gd"
 
 [display]
 

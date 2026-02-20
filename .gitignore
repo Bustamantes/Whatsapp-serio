@@ -1,3 +1,15 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# System specific ignores
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Exported files (Optional, keep if you want to ignore build outputs)
+/exports/
+*.exe
+*.apk
+*.ipa

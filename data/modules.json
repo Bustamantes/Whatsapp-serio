@@ -1,0 +1,460 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "title": "Introducción a WhatsApp",
+      "description": "Conoce la aplicación y cómo moverte en ella.",
+      "icon": "📱",
+      "lessons": [
+        {
+          "id": "1-1",
+          "title": "¿Qué es WhatsApp?",
+          "content": "WhatsApp es una aplicación para enviar mensajes y hacer llamadas usando internet.\n\nNo necesitas pagar por cada mensaje — solo necesitas tener WiFi o datos.\n\nEs muy usada por familias para mantenerse en contacto.\n\nEsta app te permite escribir, llamar, enviar fotos, audios y mucho más."
+        },
+        {
+          "id": "1-2",
+          "title": "Abrir WhatsApp",
+          "content": "Busca el ícono verde con un teléfono blanco en tu pantalla principal.\n\nToca ese ícono una sola vez para abrir la aplicación.\n\nLa primera vez te pedirá tu número de teléfono — escríbelo con calma.\n\nLuego recibirás un código por mensaje de texto para confirmar que eres tú."
+        },
+        {
+          "id": "1-3",
+          "title": "Las pestañas de WhatsApp",
+          "content": "Al abrir WhatsApp verás pestañas en la parte de arriba o abajo:\n\n💬 CHATS: Aquí están tus conversaciones con personas.\n📞 LLAMADAS: Aquí puedes ver y hacer llamadas.\n🔔 NOVEDADES (ESTADOS): Aquí las personas comparten fotos del día.\n\nToca cada pestaña para explorarla. No puedes romper nada tocando."
+        },
+        {
+          "id": "1-4",
+          "title": "El botón de los tres puntos",
+          "content": "En la esquina superior derecha verás tres puntos ⋮ o tres rayas.\n\nEse botón abre un menú con opciones adicionales como:\n- Nuevo grupo\n- Ajustes\n- Dispositivos vinculados\n\nEs normal si no lo usas seguido, pero es bueno saber dónde está."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"1-q1","text":"¿Para qué sirve WhatsApp?","choices":["Para jugar videojuegos","Para enviar mensajes y hacer llamadas","Para ver televisión","Para pagar facturas"],"answer":1,"source_lesson":"1-1"},
+          {"id":"1-q2","text":"¿Qué ícono tiene WhatsApp?","choices":["Un corazón rojo","Una cámara azul","Un teléfono blanco sobre fondo verde","Un sobre amarillo"],"answer":2,"source_lesson":"1-2"},
+          {"id":"1-q3","text":"¿Cuántas veces debes tocar el ícono para abrir WhatsApp?","choices":["Cinco veces","Dos veces rápido","Una sola vez","Mantenerlo presionado 10 segundos"],"answer":2,"source_lesson":"1-2"},
+          {"id":"1-q4","text":"¿Dónde están tus conversaciones en WhatsApp?","choices":["En la pestaña LLAMADAS","En la pestaña CHATS","En la pestaña ESTADOS","En los tres puntos"],"answer":1,"source_lesson":"1-3"},
+          {"id":"1-q5","text":"¿Qué encuentras en los tres puntos ⋮?","choices":["Las fotos de tus contactos","Opciones y ajustes adicionales","Los mensajes nuevos","Las llamadas perdidas"],"answer":1,"source_lesson":"1-4"},
+          {"id":"1-q6","text":"¿Qué necesitas para usar WhatsApp gratis?","choices":["Un televisor","Pagar mensualmente","WiFi o datos de internet","Una tarjeta de regalo"],"answer":2,"source_lesson":"1-1"}
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Enviar Mensajes de Texto",
+      "description": "Aprende a escribir y enviar mensajes a tus seres queridos.",
+      "icon": "💬",
+      "lessons": [
+        {
+          "id": "2-1",
+          "title": "Abrir una conversación",
+          "content": "En la pestaña CHATS verás la lista de tus conversaciones.\n\nSi ya tienes una conversación con alguien, toca su nombre para abrirla.\n\nSi es la primera vez, busca el ícono de lápiz ✏️ o el de mensaje nuevo 💬 para iniciar uno nuevo.\n\nLuego busca el nombre de la persona en tu lista de contactos."
+        },
+        {
+          "id": "2-2",
+          "title": "Escribir tu mensaje",
+          "content": "En la parte de abajo verás una barra que dice 'Escribe un mensaje'.\n\nToca esa barra — aparecerá el teclado en tu teléfono.\n\nEscribe tu mensaje con calma. Si te equivocas, usa la tecla de borrar ⌫.\n\nPuedes escribir lo que quieras: saludos, preguntas, lo que sientas."
+        },
+        {
+          "id": "2-3",
+          "title": "Enviar el mensaje",
+          "content": "Cuando termines de escribir, busca el botón verde con una flecha ➤ a la derecha.\n\nToca ese botón una vez y tu mensaje se enviará.\n\nVerás una o dos palomitas ✓ que indican:\n✓ Un palomita: el mensaje salió de tu teléfono.\n✓✓ Dos palomitas grises: la otra persona lo recibió.\n✓✓ Dos palomitas azules: la otra persona lo leyó."
+        },
+        {
+          "id": "2-4",
+          "title": "Emojis y reacciones",
+          "content": "Puedes añadir emojis a tus mensajes tocando el ícono de carita 😊 en el teclado.\n\nLos emojis son pequeñas imágenes que expresan emociones:\n😄 Feliz  😢 Triste  ❤️ Amor  👍 De acuerdo\n\nTambién puedes reaccionar a un mensaje manteniéndolo presionado y eligiendo un emoji.\n\nEs una forma bonita de responder sin escribir mucho."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"2-q1","text":"¿Dónde escribes tu mensaje?","choices":["En el nombre del contacto","En la barra que dice 'Escribe un mensaje'","En la barra de búsqueda","En los tres puntos"],"answer":1,"source_lesson":"2-2"},
+          {"id":"2-q2","text":"¿Qué botón usas para enviar un mensaje?","choices":["El botón de cámara","El botón verde con flecha ➤","El botón de llamada","El botón de micrófono"],"answer":1,"source_lesson":"2-3"},
+          {"id":"2-q3","text":"¿Qué significan dos palomitas azules ✓✓?","choices":["El mensaje se perdió","El teléfono tiene poca batería","La otra persona leyó tu mensaje","El mensaje está en camino"],"answer":2,"source_lesson":"2-3"},
+          {"id":"2-q4","text":"¿Cómo reaccionas a un mensaje?","choices":["Escribiendo REACCIÓN en el chat","Manteniendo presionado el mensaje y eligiendo un emoji","Llamando a la persona","Borrando el mensaje"],"answer":1,"source_lesson":"2-4"},
+          {"id":"2-q5","text":"¿Qué ícono tocas para iniciar una conversación nueva?","choices":["Los tres puntos ⋮","El lápiz ✏️ o ícono de mensaje nuevo","La lupa de búsqueda","El ícono de llamadas"],"answer":1,"source_lesson":"2-1"},
+          {"id":"2-q6","text":"Si te equivocas al escribir, ¿qué usas?","choices":["Cierras la app","La tecla de borrar ⌫","Envías el mensaje de todas formas","Llamas en cambio"],"answer":1,"source_lesson":"2-2"}
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Llamadas de Voz",
+      "description": "Habla con tus familiares por WhatsApp sin gastar minutos.",
+      "icon": "📞",
+      "lessons": [
+        {
+          "id": "3-1",
+          "title": "¿Qué es una llamada de WhatsApp?",
+          "content": "Una llamada de WhatsApp es como una llamada normal, pero usa internet en vez de minutos.\n\nNo te cobran por minuto — solo usas tu WiFi o datos.\n\nPuedes llamar a cualquier persona que también tenga WhatsApp, en cualquier parte del mundo.\n\nLa calidad es muy buena si tienes buena señal de internet."
+        },
+        {
+          "id": "3-2",
+          "title": "Hacer una llamada",
+          "content": "Hay dos formas de llamar:\n\n1. Abre el chat con la persona → toca el ícono de teléfono 📞 arriba a la derecha.\n\n2. Ve a la pestaña LLAMADAS → toca el ícono de lápiz o teléfono nuevo → busca el contacto.\n\nToca el nombre de la persona y la llamada comenzará automáticamente."
+        },
+        {
+          "id": "3-3",
+          "title": "Durante la llamada",
+          "content": "Cuando estés en llamada verás varios botones:\n\n🔇 Silenciar: Para que no te escuchen a ti.\n🔊 Altavoz: Para escuchar con el parlante del teléfono (manos libres).\n⏸️ En espera: Para pausar la llamada.\n🔴 Colgar: El botón rojo — tócalo para terminar la llamada.\n\nNo te preocupes si te confundes, el botón rojo siempre termina la llamada."
+        },
+        {
+          "id": "3-4",
+          "title": "Recibir una llamada",
+          "content": "Cuando alguien te llama, tu teléfono sonará y vibrará.\n\nVerás el nombre de quien te llama en la pantalla.\n\nPara contestar: toca el botón verde 📞 o desliza hacia la derecha.\n\nPara rechazar: toca el botón rojo 🔴 o desliza hacia la izquierda.\n\nSi no puedes contestar, puedes enviar un mensaje rápido como 'Te llamo luego'."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"3-q1","text":"¿Qué usa una llamada de WhatsApp en lugar de minutos?","choices":["La batería del teléfono","El saldo de la SIM","Internet (WiFi o datos)","Una tarjeta prepago"],"answer":2,"source_lesson":"3-1"},
+          {"id":"3-q2","text":"¿Qué ícono tocas para llamar desde un chat?","choices":["La cámara","El teléfono 📞 arriba a la derecha","Los tres puntos","La lupa"],"answer":1,"source_lesson":"3-2"},
+          {"id":"3-q3","text":"¿Qué botón presionas para colgar una llamada?","choices":["El botón verde","El botón amarillo","El botón rojo 🔴","El botón de silencio"],"answer":2,"source_lesson":"3-3"},
+          {"id":"3-q4","text":"¿Qué hace el botón de altavoz 🔊?","choices":["Aumenta el brillo","Silencia la llamada","Permite escuchar sin acercar el teléfono al oído","Termina la llamada"],"answer":2,"source_lesson":"3-3"},
+          {"id":"3-q5","text":"¿Cómo contestas una llamada entrante?","choices":["Escribes HOLA en el chat","Tocas el botón verde o deslizas a la derecha","Reinicias el teléfono","Cierras WhatsApp"],"answer":1,"source_lesson":"3-4"},
+          {"id":"3-q6","text":"¿Puedes llamar a alguien en otro país por WhatsApp?","choices":["No, solo sirve en tu ciudad","Si tienes la misma operadora","Sí, a cualquier persona con WhatsApp","Solo si pagas extra"],"answer":2,"source_lesson":"3-1"}
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Videollamadas",
+      "description": "Habla cara a cara con tus seres queridos aunque estén lejos.",
+      "icon": "📹",
+      "lessons": [
+        {
+          "id": "4-1",
+          "title": "¿Qué es una videollamada?",
+          "content": "Una videollamada es una llamada donde también puedes ver a la otra persona en tu pantalla.\n\nEs como estar cara a cara aunque estén en diferentes ciudades o países.\n\nTu cámara trasera o frontal transmite tu imagen en tiempo real.\n\nNecesitas buena conexión a internet para una imagen clara."
+        },
+        {
+          "id": "4-2",
+          "title": "Hacer una videollamada",
+          "content": "Abre el chat con la persona que quieres ver.\n\nBusca el ícono de cámara 📹 en la parte superior derecha (al lado del teléfono).\n\nToca ese ícono y la videollamada comenzará.\n\nSi la persona acepta, podrás verla en tu pantalla principal y tú aparecerás en una ventanita pequeña."
+        },
+        {
+          "id": "4-3",
+          "title": "Controlar la cámara y el micrófono",
+          "content": "Durante la videollamada puedes:\n\n📷 Apagar tu cámara: Si no quieres que te vean (por ejemplo si aún no estás lista).\n🎤 Silenciar: Si hay ruido de fondo o quieres pausa.\n🔄 Cambiar cámara: Alterna entre la cámara frontal (selfie) y la trasera.\n🔴 Colgar: Siempre el botón rojo para terminar.\n\nTestimate tranquilo/a — la otra persona solo te ve si tu cámara está encendida."
+        },
+        {
+          "id": "4-4",
+          "title": "Videollamadas grupales",
+          "content": "¡También puedes hacer videollamadas con varias personas al mismo tiempo!\n\nDesde un chat grupal, toca el ícono de cámara 📹 para iniciar con todos.\n\nO desde LLAMADAS, crea una llamada nueva y selecciona varios contactos.\n\nEn pantalla verás a varias personas a la vez — como una reunión familiar virtual.\n\nEs ideal para celebraciones, cumpleaños o simplemente para ver a todos juntos."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"4-q1","text":"¿Qué es una videollamada?","choices":["Un video de YouTube","Una llamada donde también puedes ver a la otra persona","Un mensaje con foto","Una llamada sin internet"],"answer":1,"source_lesson":"4-1"},
+          {"id":"4-q2","text":"¿Qué ícono tocas para hacer una videollamada?","choices":["El micrófono","El teléfono 📞","La cámara 📹","Los tres puntos ⋮"],"answer":2,"source_lesson":"4-2"},
+          {"id":"4-q3","text":"¿Cómo apagas tu cámara durante la videollamada?","choices":["Cierras los ojos","Cubres la cámara con el dedo","Tocas el ícono de cámara para desactivarla","Reinicias el teléfono"],"answer":2,"source_lesson":"4-3"},
+          {"id":"4-q4","text":"¿Para qué sirve el botón de cambiar cámara 🔄?","choices":["Para grabar el video","Para alternar entre cámara frontal y trasera","Para hacer zoom","Para silenciar"],"answer":1,"source_lesson":"4-3"},
+          {"id":"4-q5","text":"¿Cuántas personas pueden estar en una videollamada grupal?","choices":["Solo 2","Solo 3","Varias personas a la vez","Depende del modelo del teléfono, máximo 1"],"answer":2,"source_lesson":"4-4"},
+          {"id":"4-q6","text":"¿Dónde apareces tú durante una videollamada?","choices":["No apareces","En la pantalla completa","En una ventanita pequeña","En el chat de texto"],"answer":2,"source_lesson":"4-2"}
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Enviar Fotos y Videos",
+      "description": "Comparte momentos especiales con fotos y videos.",
+      "icon": "📷",
+      "lessons": [
+        {
+          "id": "5-1",
+          "title": "Enviar una foto desde tu galería",
+          "content": "Abre el chat con la persona a quien quieres enviar la foto.\n\nBusca el ícono de clip 📎 o el de imagen 🖼️ cerca de la barra de texto.\n\nTócalo y elige 'Galería' o 'Fotografías'.\n\nBusca la foto que quieres compartir y tócala para seleccionarla.\n\nLuego toca el botón de enviar. ¡Listo!"
+        },
+        {
+          "id": "5-2",
+          "title": "Tomar una foto desde WhatsApp",
+          "content": "También puedes tomar una foto nueva directamente desde WhatsApp.\n\nToca el ícono de cámara 📷 en la barra de mensajes.\n\nSe abrirá tu cámara — enfoca lo que quieres fotografiar.\n\nToca el botón grande redondo o el de la cámara para tomar la foto.\n\nRevisa la foto y si te gusta, toca el botón de enviar."
+        },
+        {
+          "id": "5-3",
+          "title": "Ver y guardar fotos recibidas",
+          "content": "Cuando alguien te manda una foto, aparecerá directamente en el chat.\n\nToca la foto para verla más grande.\n\nPara guardarla en tu teléfono: toca el ícono de descarga ⬇️ o mantén presionada la foto y elige 'Descargar' o 'Guardar'.\n\nLa foto quedará guardada en tu galería para verla cuando quieras."
+        },
+        {
+          "id": "5-4",
+          "title": "Enviar un video",
+          "content": "Para enviar un video haces lo mismo que con una foto.\n\nToca el clip 📎 → Galería → busca el video que quieres compartir.\n\nRecuerda: los videos pesan mucho, así que tardan más en enviarse.\n\nSi el video es muy largo (más de 1 minuto), WhatsApp puede pedirte que lo recortes.\n\nEspera a que la barra de carga termine antes de salir del chat."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"5-q1","text":"¿Qué ícono tocas para enviar una foto?","choices":["El de teléfono","El de clip 📎 o imagen 🖼️","El de tres puntos","El de micrófono"],"answer":1,"source_lesson":"5-1"},
+          {"id":"5-q2","text":"¿Desde dónde puedes elegir la foto para enviar?","choices":["Solo de WhatsApp","De internet","De tu galería o tomando una nueva","Del correo electrónico"],"answer":2,"source_lesson":"5-1"},
+          {"id":"5-q3","text":"¿Cómo guardas una foto que te enviaron?","choices":["No se puede guardar","La imprimes","Tocas el ícono de descarga ⬇️ o eliges 'Guardar'","Capturas pantalla obligatoriamente"],"answer":2,"source_lesson":"5-3"},
+          {"id":"5-q4","text":"¿Por qué tardan más en enviarse los videos?","choices":["Porque WhatsApp está lento","Porque pesan mucho más que las fotos","Porque necesitan código especial","No tardan más"],"answer":1,"source_lesson":"5-4"},
+          {"id":"5-q5","text":"¿Qué sucede al tocar una foto en el chat?","choices":["Se borra","Se envía a otra persona","Se ve más grande","Se descarga sola"],"answer":2,"source_lesson":"5-3"},
+          {"id":"5-q6","text":"¿Cómo tomas una foto nueva desde WhatsApp?","choices":["Abres la galería","Tocas el ícono de cámara 📷 en la barra de mensajes","Vas a ajustes","Usas la pestaña LLAMADAS"],"answer":1,"source_lesson":"5-2"}
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "title": "Audios y Stickers",
+      "description": "Envía mensajes de voz y stickers divertidos.",
+      "icon": "🎤",
+      "lessons": [
+        {
+          "id": "6-1",
+          "title": "Grabar un mensaje de voz",
+          "content": "A veces es más fácil hablar que escribir. ¡Los mensajes de voz son perfectos para eso!\n\nBusca el ícono de micrófono 🎤 en la barra de mensajes (a la derecha).\n\nMantén presionado ese ícono mientras hablas.\n\nCuando termines de hablar, suelta el dedo — el mensaje se enviará automáticamente.\n\nSi quieres cancelarlo, desliza el dedo a la izquierda mientras grabas."
+        },
+        {
+          "id": "6-2",
+          "title": "Grabar sin sostener el teléfono",
+          "content": "¿Te cansas de mantener el dedo en el micrófono? ¡Hay un truco!\n\nCuando mantengas presionado el micrófono 🎤, desliza el dedo hacia arriba.\n\nAparecerá un candado 🔒 — suelta el dedo cuando veas el candado.\n\nAhora puedes hablar sin mantener el botón. ¡El audio se graba solo!\n\nCuando termines, toca el botón de enviar ➤ o el de detener ⏹️."
+        },
+        {
+          "id": "6-3",
+          "title": "Escuchar audios recibidos",
+          "content": "Cuando alguien te manda un audio, verás un ícono de onda de sonido con un botón ▶️.\n\nToca el botón de PLAY ▶️ para escucharlo.\n\nPuedes escucharlo incluso sin abrir el chat — solo desde las notificaciones.\n\nSi quieres escucharlo más rápido, busca el ícono de velocidad (1x → 1.5x → 2x).\n\nLos audios que ya escuchaste tienen palomitas azules."
+        },
+        {
+          "id": "6-4",
+          "title": "Enviar stickers y GIFs",
+          "content": "Los stickers son imágenes animadas o graciosas para expresarte.\n\nToca el ícono de carita 😊 en el teclado, luego busca el ícono de sticker.\n\nElige el que más te guste y tócalo para enviarlo. ¡Es muy fácil!\n\nLos GIFs son imágenes que se mueven. Los encuentras en la misma sección.\n\nHay packs de stickers gratuitos que puedes descargar para tener más variedad."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"6-q1","text":"¿Cómo grabas un mensaje de voz?","choices":["Tocas el micrófono una vez","Mantienes presionado el micrófono 🎤 mientras hablas","Escribes 'audio' en el chat","Vas a ajustes"],"answer":1,"source_lesson":"6-1"},
+          {"id":"6-q2","text":"¿Cómo cancelas un audio mientras lo grabas?","choices":["Apagas el teléfono","Deslizas el dedo a la izquierda","Tocas enviar","Cierras el chat"],"answer":1,"source_lesson":"6-1"},
+          {"id":"6-q3","text":"¿Qué hace el candado 🔒 al grabar?","choices":["Protege tu chat","Permite grabar sin sostener el botón","Silencia el audio","Cancela la grabación"],"answer":1,"source_lesson":"6-2"},
+          {"id":"6-q4","text":"¿Qué botón tocas para escuchar un audio recibido?","choices":["La onda de audio","El botón de PLAY ▶️","Los tres puntos","El de micrófono"],"answer":1,"source_lesson":"6-3"},
+          {"id":"6-q5","text":"¿Qué son los stickers?","choices":["Mensajes de texto especiales","Imágenes o animaciones para expresarte","Fotos de tus contactos","Videos largos"],"answer":1,"source_lesson":"6-4"},
+          {"id":"6-q6","text":"¿Cómo aumentas la velocidad de un audio?","choices":["No se puede cambiar la velocidad","Grabas el audio más rápido","Tocas el ícono de velocidad (1x → 1.5x → 2x)","Llamas en vez de escuchar"],"answer":2,"source_lesson":"6-3"}
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "title": "Grupos de WhatsApp",
+      "description": "Crea y participa en grupos para comunicarte con varios a la vez.",
+      "icon": "👥",
+      "lessons": [
+        {
+          "id": "7-1",
+          "title": "¿Qué es un grupo?",
+          "content": "Un grupo de WhatsApp es un chat donde varias personas pueden hablar a la vez.\n\nTodos los mensajes que envías al grupo los ven todos los miembros.\n\nEs muy útil para familias, amigos o compañeros.\n\nPuedes tener varios grupos diferentes. Por ejemplo: 'Familia', 'Amigos del barrio', 'Club de tejido'."
+        },
+        {
+          "id": "7-2",
+          "title": "Crear un grupo",
+          "content": "Para crear un grupo:\n\n1. Toca los tres puntos ⋮ → 'Nuevo grupo'.\n2. Selecciona las personas que quieres incluir (busca sus nombres).\n3. Toca la flecha para continuar.\n4. Escribe el nombre del grupo (ej. 'Familia García').\n5. Opcionalmente, añade una foto.\n6. Toca el ícono de confirmar ✓ — ¡el grupo está creado!"
+        },
+        {
+          "id": "7-3",
+          "title": "Participar en un grupo",
+          "content": "Cuando entras a un grupo, verás los mensajes de todos sus miembros.\n\nPuedes escribir, enviar fotos, audios y más — igual que en un chat normal.\n\nSi no quieres responder a todos, puedes 'responder' a un mensaje específico manteniéndolo presionado → Responder.\n\nSi hay muchos mensajes, puedes silenciar el grupo para no recibir tantas notificaciones."
+        },
+        {
+          "id": "7-4",
+          "title": "Salir de un grupo",
+          "content": "Si ya no quieres estar en un grupo, puedes salir fácilmente.\n\nAbre el grupo → toca el nombre del grupo arriba → baja hasta encontrar 'Salir del grupo'.\n\nTe pedirá confirmación — toca 'SALIR' para confirmar.\n\nNo te preocupes, salir de un grupo es normal y nadie se ofende por eso.\n\nSi eres el administrador, primero debes nombrar a otra persona como administrador."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"7-q1","text":"¿Qué es un grupo de WhatsApp?","choices":["Un chat donde solo hablan 2 personas","Un chat donde varias personas se comunican a la vez","Una llamada grupal permanente","Una lista de contactos"],"answer":1,"source_lesson":"7-1"},
+          {"id":"7-q2","text":"¿Cómo creas un grupo nuevo?","choices":["Tocas el micrófono","Vas a ajustes → privacidad","Tocas los tres puntos ⋮ → 'Nuevo grupo'","Llamas a todos tus contactos"],"answer":2,"source_lesson":"7-2"},
+          {"id":"7-q3","text":"¿Cuándo creas el grupo, qué debes ponerle?","choices":["Un código secreto","Un nombre al grupo","Tu nombre completo","La fecha de nacimiento"],"answer":1,"source_lesson":"7-2"},
+          {"id":"7-q4","text":"¿Cómo respondes a UN mensaje específico en un grupo?","choices":["Escribes el nombre de la persona","Mantienes presionado el mensaje → Responder","Creas un nuevo chat","Llamas a esa persona"],"answer":1,"source_lesson":"7-3"},
+          {"id":"7-q5","text":"¿Cómo sales de un grupo?","choices":["Bloqueas a todos los miembros","Borras el chat","Nombre del grupo → bajar → 'Salir del grupo'","Desinstalando WhatsApp"],"answer":2,"source_lesson":"7-4"},
+          {"id":"7-q6","text":"¿Pueden los mensajes de un grupo verlos todos sus miembros?","choices":["No, son mensajes privados","Solo el administrador los ve","Sí, todos los miembros los ven","Solo los que tienen el teléfono encendido"],"answer":2,"source_lesson":"7-1"}
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "title": "Estados de WhatsApp",
+      "description": "Comparte momentos de tu día que desaparecen en 24 horas.",
+      "icon": "⭐",
+      "lessons": [
+        {
+          "id": "8-1",
+          "title": "¿Qué son los estados?",
+          "content": "Los estados (también llamados 'Novedades') son fotos, videos o textos que compartes por 24 horas.\n\nDespués de 24 horas desaparecen solos — no tienes que borrarlos.\n\nSolo tus contactos pueden ver tus estados.\n\nEs una forma bonita de decir 'buenos días', compartir una foto del jardín o avisar algo importante."
+        },
+        {
+          "id": "8-2",
+          "title": "Ver estados de tus contactos",
+          "content": "Ve a la pestaña NOVEDADES o ESTADOS en WhatsApp.\n\nVerás una lista de personas que han publicado estados hoy.\n\nToca el nombre o la foto de alguien para ver su estado.\n\nEl estado se pasa solo, pero puedes pasar al siguiente tocando la pantalla.\n\nCuando ves el estado, la persona sabe que lo viste (aparece tu nombre en sus 'vistos')."
+        },
+        {
+          "id": "8-3",
+          "title": "Publicar tu propio estado",
+          "content": "Para publicar un estado:\n\n1. Ve a NOVEDADES o ESTADOS.\n2. Toca 'Mi estado' y luego el ícono de cámara 📷 o lápiz ✏️.\n3. Toma una foto, elige una de tu galería, o escribe un texto.\n4. Opcionalmente añade un emoji o texto sobre la foto.\n5. Toca el botón de enviar ➤ — ¡tu estado está publicado!\n\nTardarás menos de 1 minuto en hacerlo."
+        },
+        {
+          "id": "8-4",
+          "title": "Controlar quién ve tus estados",
+          "content": "Puedes elegir quién puede ver tus estados.\n\nVe a los tres puntos ⋮ → Ajustes → Privacidad → Estado.\n\nTienes opciones:\n👥 Mis contactos: Todos tus contactos lo ven.\n🚫 Mis contactos excepto...: Puedes excluir a ciertas personas.\n✅ Solo compartir con...: Solo personas que tú elijas.\n\nEsto es útil si no quieres que todos vean lo que publicas."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"8-q1","text":"¿Cuánto tiempo duran los estados en WhatsApp?","choices":["1 hora","7 días","24 horas","Para siempre"],"answer":2,"source_lesson":"8-1"},
+          {"id":"8-q2","text":"¿Quién puede ver tus estados?","choices":["Cualquier persona del mundo","Solo tú","Solo tus contactos (o los que elijas)","Solo tus grupos"],"answer":2,"source_lesson":"8-1"},
+          {"id":"8-q3","text":"¿Dónde encuentras los estados de tus contactos?","choices":["En ajustes","En la pestaña NOVEDADES o ESTADOS","En la lista de chats","En la pestaña llamadas"],"answer":1,"source_lesson":"8-2"},
+          {"id":"8-q4","text":"¿Sabe la persona si viste su estado?","choices":["No, es anónimo","Sí, tu nombre aparece en sus 'vistos'","Solo si envías una reacción","Depende de los ajustes de ella"],"answer":1,"source_lesson":"8-2"},
+          {"id":"8-q5","text":"¿Cómo publicas tu propio estado?","choices":["Desde el chat de un contacto","Enviando una foto a todos tus grupos","En NOVEDADES → Mi estado → cámara o lápiz","Desde llamadas recientes"],"answer":2,"source_lesson":"8-3"},
+          {"id":"8-q6","text":"¿Cómo controlas quién ve tus estados?","choices":["No puedes controlarlo","Ajustes → Privacidad → Estado","Borrando contactos","Solo si pagas WhatsApp Plus"],"answer":1,"source_lesson":"8-4"}
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "title": "Privacidad y Seguridad",
+      "description": "Protégete en WhatsApp y cuida tu información personal.",
+      "icon": "🔒",
+      "lessons": [
+        {
+          "id": "9-1",
+          "title": "Bloquear a un contacto",
+          "content": "Si alguien te molesta o te envía mensajes inapropiados, puedes bloquearlo.\n\nAbre el chat con esa persona → toca su nombre arriba → baja hasta 'Bloquear'.\n\nCuando bloqueas a alguien:\n- Ya no puede enviarte mensajes.\n- No ve cuándo estás en línea.\n- No ve tus estados.\n\nPuedes desbloquear a alguien en cualquier momento si cambias de opinión."
+        },
+        {
+          "id": "9-2",
+          "title": "Cuidado con mensajes sospechosos",
+          "content": "Algunos mensajes pueden ser intentos de engaño (llamados 'estafas').\n\nDesconfía si un mensaje:\n- Pide dinero urgente, incluso si parece de un familiar.\n- Promete premios o herencias que no esperabas.\n- Pide tus contraseñas o datos bancarios.\n- Tiene muchos errores de ortografía.\n\nRegla de oro: Si tienes dudas, NO hagas clic en links y llama a la persona directamente."
+        },
+        {
+          "id": "9-3",
+          "title": "Tu foto de perfil y privacidad",
+          "content": "Puedes controlar quién ve tu foto de perfil y tu información.\n\nVe a los tres puntos ⋮ → Ajustes → Cuenta → Privacidad.\n\nAquí puedes configurar quién ve:\n📸 Tu foto de perfil\n🕐 Cuándo estuviste en línea\n✅ Confirmación de lectura (palomitas azules)\n☎️ Tu número de teléfono\n\nRecomendamos que solo 'Mis contactos' puedan ver tu foto."
+        },
+        {
+          "id": "9-4",
+          "title": "Verificación en dos pasos",
+          "content": "La verificación en dos pasos es una protección extra para tu cuenta.\n\nVe a Ajustes → Cuenta → Verificación en dos pasos.\n\nCrea un PIN de 6 dígitos que solo tú conozcas (no uses fechas de nacimiento).\n\nSi alguien intenta acceder a tu cuenta desde otro teléfono, necesitará ese PIN.\n\nEs muy recomendable activarlo para proteger tu cuenta de robos."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"9-q1","text":"¿Qué pasa cuando bloqueas a alguien?","choices":["Le avisas que lo bloqueaste","Borra todos tus mensajes","Ya no puede enviarte mensajes ni ver tu información","Desaparece de WhatsApp"],"answer":2,"source_lesson":"9-1"},
+          {"id":"9-q2","text":"¿Cómo reconoces un mensaje sospechoso?","choices":["Viene de un número desconocido en inglés solo","Pide dinero urgente, contraseñas o premios inesperados","Tiene emojis y fotos","Es de un grupo de WhatsApp"],"answer":1,"source_lesson":"9-2"},
+          {"id":"9-q3","text":"¿Qué debes hacer si recibes un link sospechoso?","choices":["Tocarlo para ver qué es","Reenviarlo a tus amigos","No tocarlo y llamar a la persona directamente","Pagar lo que piden"],"answer":2,"source_lesson":"9-2"},
+          {"id":"9-q4","text":"¿Dónde configuras la privacidad de tu foto de perfil?","choices":["En la pestaña CHATS","En Ajustes → Cuenta → Privacidad","En los tres puntos del chat","En la pestaña ESTADOS"],"answer":1,"source_lesson":"9-3"},
+          {"id":"9-q5","text":"¿Qué es la verificación en dos pasos?","choices":["Un código que WhatsApp te manda siempre","Un PIN extra para proteger tu cuenta","Una contraseña de tu correo","Tu huella dactilar"],"answer":1,"source_lesson":"9-4"},
+          {"id":"9-q6","text":"¿Recomendamos usar tu fecha de nacimiento como PIN?","choices":["Sí, es fácil de recordar","Solo si es reciente","No, usa un PIN que solo tú conozcas","Sí, siempre es seguro"],"answer":2,"source_lesson":"9-4"}
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "title": "Ajustes del Perfil",
+      "description": "Personaliza tu perfil y las notificaciones de WhatsApp.",
+      "icon": "⚙️",
+      "lessons": [
+        {
+          "id": "10-1",
+          "title": "Cambiar tu foto de perfil",
+          "content": "Ve a los tres puntos ⋮ → Ajustes → toca tu foto o nombre arriba.\n\nLuego toca el ícono de cámara sobre tu foto.\n\nPuedes:\n📷 Tomar una nueva foto con tu cámara\n🖼️ Elegir una foto de tu galería\n🗑️ Borrar la foto actual\n\nElige la que más te guste y toca 'Listo'. Tu foto se actualiza para todos tus contactos."
+        },
+        {
+          "id": "10-2",
+          "title": "Cambiar tu nombre e información",
+          "content": "En Ajustes → toca tu nombre o foto → verás tu nombre y tu 'Info'.\n\nToca el lápiz ✏️ junto a tu nombre para cambiarlo.\n\nEn 'Info' puedes escribir algo sobre ti (ej. '¡Siempre disponible para familia!').\n\nEste nombre e info lo ven las personas que te tienen guardada como contacto.\n\nToca el ícono de guardar ✓ cuando termines."
+        },
+        {
+          "id": "10-3",
+          "title": "Notificaciones",
+          "content": "Las notificaciones son los avisos que recibes cuando tienes mensajes nuevos.\n\nVe a Ajustes → Notificaciones para configurarlas.\n\nPuedes ajustar:\n🔔 Tono del mensaje (el sonido que hace cuando llega)\n📳 Vibración\n🔕 Silenciar todo (útil para dormir)\n\nSi un grupo te manda muchas notificaciones, puedes silenciarlo: Abre el grupo → toca su nombre → 'Silenciar notificaciones'."
+        },
+        {
+          "id": "10-4",
+          "title": "Tamaño del texto y accesibilidad",
+          "content": "Si el texto te parece muy pequeño, puedes hacerlo más grande.\n\nVe a Ajustes → Chats → Tamaño de la fuente.\n\nElige entre Pequeño, Mediano o Grande. ¡Prueba hasta encontrar el que te resulte más cómodo!\n\nTambién puedes aumentar el tamaño de todo el texto desde los ajustes de tu teléfono (no solo WhatsApp).\n\nEn Android: Ajustes del teléfono → Pantalla → Tamaño de fuente."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"10-q1","text":"¿Dónde cambias tu foto de perfil?","choices":["En la pestaña CHATS","Ajustes → tu foto → ícono de cámara","En la pestaña ESTADOS","En la pestaña LLAMADAS"],"answer":1,"source_lesson":"10-1"},
+          {"id":"10-q2","text":"¿Qué pueden ver tus contactos de tu perfil?","choices":["Solo tu teléfono","Tu nombre, foto e info que hayas puesto","Tu historial de chats","Tus contraseñas"],"answer":1,"source_lesson":"10-2"},
+          {"id":"10-q3","text":"¿Cómo silencias las notificaciones de UN grupo?","choices":["Sal del grupo","Abre el grupo → nombre del grupo → 'Silenciar notificaciones'","Apaga el teléfono","Desinstala WhatsApp"],"answer":1,"source_lesson":"10-3"},
+          {"id":"10-q4","text":"¿Dónde aumentas el tamaño del texto en WhatsApp?","choices":["Ajustes → Chats → Tamaño de la fuente","En la pestaña CHATS","Ajustes → Cuenta → Privacidad","No se puede cambiar"],"answer":0,"source_lesson":"10-4"},
+          {"id":"10-q5","text":"¿Qué es la 'Info' de tu perfil?","choices":["Tu contraseña","Una frase o mensaje que pones sobre ti mismo","Tu número de teléfono","Tu lista de contactos"],"answer":1,"source_lesson":"10-2"},
+          {"id":"10-q6","text":"¿Puedes cambiar el tono (sonido) de los mensajes?","choices":["No, el sonido es fijo","Sí, desde Ajustes → Notificaciones","Solo si pagas WhatsApp Premium","Solo en grupos"],"answer":1,"source_lesson":"10-3"}
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "title": "Archivos y Documentos",
+      "description": "Envía y recibe documentos, ubicaciones y contactos.",
+      "icon": "📄",
+      "lessons": [
+        {
+          "id": "11-1",
+          "title": "Enviar un documento o archivo",
+          "content": "Puedes enviar archivos como PDFs, hojas de cálculo o documentos de Word.\n\nToca el ícono de clip 📎 en la barra de mensajes.\n\nElige 'Documento' y busca el archivo en tu teléfono.\n\nToca el archivo y luego el botón de enviar.\n\nEs muy útil para enviar formularios, recetas médicas digitales o cartillas."
+        },
+        {
+          "id": "11-2",
+          "title": "Recibir y abrir archivos",
+          "content": "Cuando alguien te envía un documento, verás un ícono con el nombre del archivo.\n\nToca el archivo para descargarlo (aparecerá una barra de carga).\n\nUna vez descargado, tócalo de nuevo para abrirlo.\n\nSi no puedes abrirlo, puede que necesites una app especial (como un lector de PDF).\n\nLos archivos descargados quedan guardados en tu teléfono en la carpeta de Descargas."
+        },
+        {
+          "id": "11-3",
+          "title": "Compartir tu ubicación",
+          "content": "Si necesitas que alguien te encuentre, puedes enviar tu ubicación.\n\nToca el clip 📎 → 'Ubicación'.\n\nElige 'Enviar ubicación actual' para mandar el sitio donde estás en este momento.\n\nO elige 'Compartir ubicación en tiempo real' para que te sigan durante un tiempo.\n\nEs muy útil si estás perdido/a o esperas a alguien que no sabe llegar."
+        },
+        {
+          "id": "11-4",
+          "title": "Enviar un contacto",
+          "content": "¿Quieres darle el número de alguien a otra persona? ¡No necesitas dictarlo!\n\nToca el clip 📎 → 'Contacto'.\n\nBusca el nombre de la persona cuyo número quieres compartir.\n\nToca su nombre para seleccionarlo y luego envíalo.\n\nLa otra persona recibirá el nombre y número de ese contacto directamente."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"11-q1","text":"¿Qué ícono tocas para enviar un documento?","choices":["El de cámara","El de micrófono","El clip 📎","El de llamadas"],"answer":2,"source_lesson":"11-1"},
+          {"id":"11-q2","text":"¿Qué tipos de archivos puedes enviar?","choices":["Solo fotos","Solo videos","PDFs, documentos, hojas de cálculo y más","Solo archivos de música"],"answer":2,"source_lesson":"11-1"},
+          {"id":"11-q3","text":"¿Dónde quedan guardados los archivos que descargas?","choices":["En WhatsApp solo","En la carpeta de Descargas de tu teléfono","En la galería siempre","Se borran al cerrar WhatsApp"],"answer":1,"source_lesson":"11-2"},
+          {"id":"11-q4","text":"¿Cómo envías tu ubicación actual?","choices":["Escribes la dirección en el chat","Clip 📎 → Ubicación → Enviar ubicación actual","Tomas una foto del lugar","Llamas y explicas cómo llegar"],"answer":1,"source_lesson":"11-3"},
+          {"id":"11-q5","text":"¿Cómo compartes el número de teléfono de alguien?","choices":["Lo escribes a mano en el chat","Clip 📎 → Contacto → buscas y seleccionas el contacto","Tomas captura de pantalla de tu lista de contactos","No se puede hacer en WhatsApp"],"answer":1,"source_lesson":"11-4"},
+          {"id":"11-q6","text":"¿Para qué sirve 'Compartir ubicación en tiempo real'?","choices":["Para que te sigan durante un tiempo mientras te mueves","Para enviar la dirección de tu casa permanentemente","Para ver dónde están tus contactos siempre","Para bloquear a una persona de tu ubicación"],"answer":0,"source_lesson":"11-3"}
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "title": "Consejos y Trucos Útiles",
+      "description": "Aprende a usar WhatsApp de forma más inteligente y eficiente.",
+      "icon": "💡",
+      "lessons": [
+        {
+          "id": "12-1",
+          "title": "Buscar mensajes antiguos",
+          "content": "¿Necesitas encontrar un mensaje importante que alguien te envió hace tiempo?\n\nDentro de un chat, toca los tres puntos ⋮ → 'Buscar'.\n\nEscribe una palabra del mensaje que buscas (ej. 'dirección', 'cita', 'número').\n\nWhatsApp mostrará todos los mensajes que contengan esa palabra.\n\nTambién puedes buscar entre TODOS tus chats desde la barra de búsqueda principal."
+        },
+        {
+          "id": "12-2",
+          "title": "Marcar mensajes con estrella",
+          "content": "Puedes marcar mensajes importantes para encontrarlos fácilmente después.\n\nMantén presionado el mensaje → toca el ícono de estrella ⭐.\n\nPara ver todos tus mensajes marcados:\nToca los tres puntos ⋮ → 'Mensajes destacados'.\n\nEs muy útil para guardar direcciones, números, recetas o información importante sin perderla."
+        },
+        {
+          "id": "12-3",
+          "title": "WhatsApp en la computadora",
+          "content": "¡Puedes usar WhatsApp en tu computadora o tablet también!\n\nEn la computadora: Abre el navegador y ve a web.whatsapp.com.\n\nEn WhatsApp de tu teléfono: Tres puntos ⋮ → 'Dispositivos vinculados' → 'Vincular un dispositivo'.\n\nEscanea el código QR que aparece en la computadora con tu teléfono.\n\nAhora puedes escribir mensajes más cómodo con el teclado de la computadora."
+        },
+        {
+          "id": "12-4",
+          "title": "Liberar espacio en tu teléfono",
+          "content": "WhatsApp puede ocupar mucho espacio con fotos y videos recibidos.\n\nVe a Ajustes → Almacenamiento y datos → Gestionar almacenamiento.\n\nVerás qué conversaciones ocupan más espacio.\n\nPuedes borrar archivos que ya no necesitas (fotos repetidas, videos pesados).\n\nTambién puedes ir a Ajustes → Almacenamiento → desactivar la descarga automática de fotos si no quieres que se guarden todas."
+        }
+      ],
+      "exam": {
+        "questions": [
+          {"id":"12-q1","text":"¿Cómo buscas un mensaje específico dentro de un chat?","choices":["Lees todos los mensajes desde el principio","Tres puntos ⋮ → Buscar → escribes una palabra","Llamas a la persona","En Ajustes → Mensajes"],"answer":1,"source_lesson":"12-1"},
+          {"id":"12-q2","text":"¿Cómo marcas un mensaje con estrella para guardarlo?","choices":["Le pones un emoji de estrella en respuesta","Mantienes presionado el mensaje → ícono de estrella ⭐","Lo reenvías a ti mismo","Lo capturas en pantalla"],"answer":1,"source_lesson":"12-2"},
+          {"id":"12-q3","text":"¿Dónde encuentras tus mensajes destacados (con estrella)?","choices":["En la pestaña ESTADOS","Tres puntos ⋮ → Mensajes destacados","En Ajustes → Cuenta","No se pueden ver después"],"answer":1,"source_lesson":"12-2"},
+          {"id":"12-q4","text":"¿Cómo usas WhatsApp en tu computadora?","choices":["Instalas WhatsApp en la computadora normalmente","Entras a web.whatsapp.com y escaneas el código QR con tu teléfono","No es posible usar WhatsApp en computadora","Creas una cuenta nueva solo para la computadora"],"answer":1,"source_lesson":"12-3"},
+          {"id":"12-q5","text":"¿Cómo liberas espacio ocupado por WhatsApp?","choices":["Desinstalas y reinstala","Ajustes → Almacenamiento y datos → Gestionar almacenamiento","Borras toda la aplicación","No se puede liberar espacio"],"answer":1,"source_lesson":"12-4"},
+          {"id":"12-q6","text":"¿Por qué WhatsApp puede ocupar mucho espacio en el teléfono?","choices":["Por los emojis que envías","Por las fotos y videos recibidos y descargados","Por los mensajes de texto largos","Por el número de contactos que tienes"],"answer":1,"source_lesson":"12-4"}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://module_list"]
+
+[ext_resource type="Script" path="res://scripts/ui/module_list.gd" id="1_module_list"]
+
+[node name="ModuleList" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_module_list")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.075, 0.082, 0.11, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+add_theme_constant_override/separation = 0
+
+[node name="StatsBar" type="PanelContainer" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+
+[node name="HBox" type="HBoxContainer" parent="VBox/StatsBar"]
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_right = -24.0
+alignment = 1
+
+[node name="Title" type="Label" parent="VBox/StatsBar/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "📱 WhatsApp Serio"
+horizontal_alignment = 1
+add_theme_font_size_override/font_size = 26
+add_theme_color_override/font_color = Color(0.55, 0.6, 0.75, 1)
+
+[node name="ProgressLbl" type="Label" parent="VBox/StatsBar/HBox"]
+layout_mode = 2
+text = "🔥 0"
+add_theme_font_size_override/font_size = 22
+add_theme_color_override/font_color = Color(1, 0.6, 0.2, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="PathContainer" type="Control" parent="VBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BottomPanel" type="PanelContainer" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 90)
+
+[node name="NavBox" type="HBoxContainer" parent="VBox/BottomPanel"]
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
