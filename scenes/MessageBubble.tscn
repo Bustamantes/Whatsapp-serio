@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://message_bubble"]
+
+[ext_resource type="Script" path="res://scripts/ui/message_bubble.gd" id="1_message_bubble"]
+
+[node name="MessageBubble" type="MarginContainer"]
+offset_right = 300.0
+offset_bottom = 80.0
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+script = ExtResource("1_message_bubble")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="Panel/MarginContainer/VBox"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Texto del mensaje"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+custom_minimum_size = Vector2(100, 0)
+size_flags_horizontal = 1
+
+[node name="TimeLabel" type="Label" parent="Panel/MarginContainer/VBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.4, 0.4, 0.4, 1)
+theme_override_font_sizes/font_size = 12
+text = "12:00 PM"

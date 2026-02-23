@@ -9,14 +9,14 @@ const SNAKE_AMP := 130.0
 const SECT_H := 80
 const ICONS := ["⭐", "📹", "📖", "🎧"]
 
-const C_ACTIVE := Color(0.18, 0.72, 0.96)
-const C_ACTIVE_SH := Color(0.12, 0.52, 0.72)
-const C_DONE := Color(0.42, 0.45, 0.52)
-const C_DONE_SH := Color(0.28, 0.30, 0.35)
-const C_LOCK := Color(0.20, 0.22, 0.28)
-const C_LOCK_SH := Color(0.13, 0.14, 0.18)
+const C_ACTIVE := Color(0.15, 0.83, 0.41) # Premium Green
+const C_ACTIVE_SH := Color(0.07, 0.55, 0.24)
+const C_DONE := Color(0.29, 0.56, 1.0) # Premium Blue
+const C_DONE_SH := Color(0.18, 0.37, 0.75)
+const C_LOCK := Color(0.25, 0.28, 0.35)
+const C_LOCK_SH := Color(0.16, 0.18, 0.25)
 const C_GOLD := Color(1.0, 0.78, 0.1)
-const C_GOLD_SH := Color(0.7, 0.55, 0.05)
+const C_GOLD_SH := Color(0.8, 0.55, 0.0)
 const C_DIM := Color(0.5, 0.55, 0.7)
 
 @onready var scroll: ScrollContainer = $VBox/ScrollContainer
@@ -108,9 +108,9 @@ func _build_path() -> void:
 			
 			# Personaje decorativo cada cierto tiempo
 			if gi % 5 == 2:
-				_character(vw - 120 if x < _cx else 40, y + 20)
+				_character(vw - 120.0 if x < _cx else 40.0, y + 20.0)
 				
-			_lesson_node(x, y, i, comp, act, unlocked, mid, lid, ls.get("title",""), ls.get("content",""))
+			_lesson_node(x, y, i, comp, act, mid, lid, ls.get("title",""), ls.get("content",""))
 			y += V_GAP
 			gi += 1
 		# Exam
@@ -139,18 +139,18 @@ func _section(m: Dictionary, y: float, unlocked: bool, vw: float) -> void:
 	p.position = Vector2(40, y)
 	p.size = Vector2(vw - 80, SECT_H + 20)
 	var s := StyleBoxFlat.new()
-	# Color de sección azul duolingo o gris si bloqueado
-	s.bg_color = Color(0.18, 0.72, 0.96) if unlocked else Color(0.2, 0.22, 0.28)
+	# Color de sección más rico
+	s.bg_color = C_ACTIVE if unlocked else C_LOCK
 	s.corner_radius_top_left = 20
 	s.corner_radius_top_right = 20
 	s.corner_radius_bottom_left = 20
 	s.corner_radius_bottom_right = 20
 	s.content_margin_left = 24
 	s.content_margin_right = 24
-	s.content_margin_top = 12
-	s.content_margin_bottom = 12
+	s.content_margin_top = 16
+	s.content_margin_bottom = 16
 	# Sombra profunda estilo duolingo
-	s.shadow_color = Color(0.12, 0.52, 0.72) if unlocked else Color(0.13, 0.14, 0.18)
+	s.shadow_color = C_ACTIVE_SH if unlocked else C_LOCK_SH
 	s.shadow_size = 0
 	s.shadow_offset = Vector2(0, 10)
 	p.add_theme_stylebox_override("panel", s)
@@ -267,7 +267,7 @@ func _ring(x: float, y: float, sz: int, color: Color) -> void:
 	tw.tween_property(r, "scale", Vector2(1.05, 1.05), 1.0).set_trans(Tween.TRANS_SINE)
 	tw.tween_property(r, "scale", Vector2(0.95, 0.95), 1.0).set_trans(Tween.TRANS_SINE)
 
-func _lesson_node(x: float, y: float, idx: int, comp: bool, act: bool, unlocked: bool,
+func _lesson_node(x: float, y: float, idx: int, comp: bool, act: bool,
 		mid: int, lid: String, title: String, content: String) -> void:
 	if act: _ring(x, y, NODE_SZ, C_ACTIVE)
 	
@@ -287,12 +287,12 @@ func _lesson_node(x: float, y: float, idx: int, comp: bool, act: bool, unlocked:
 		bg = C_LOCK; sh = C_LOCK_SH
 		btn.disabled = true
 	
-	btn.add_theme_stylebox_override("normal", _circle_style(bg, sh, NODE_SZ / 2))
+	btn.add_theme_stylebox_override("normal", _circle_style(bg, sh, NODE_SZ / 2.0))
 	
 	if not btn.disabled:
-		var h := _circle_style(bg.lightened(0.1), sh, NODE_SZ / 2)
+		var h := _circle_style(bg.lightened(0.1), sh, NODE_SZ / 2.0)
 		btn.add_theme_stylebox_override("hover", h)
-		var p := _circle_style(bg.darkened(0.1), sh, NODE_SZ / 2, 2.0)
+		var p := _circle_style(bg.darkened(0.1), sh, NODE_SZ / 2.0, 2.0)
 		btn.add_theme_stylebox_override("pressed", p)
 		btn.pressed.connect(_on_lesson.bind(mid, lid, title, content))
 		

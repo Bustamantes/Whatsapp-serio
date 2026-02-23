@@ -2,17 +2,17 @@ extends Control
 
 # Vista del examen — preguntas aleatorizadas, corrección inmediata
 
-# 🎨 Palette
-const ACCENT := Color(0.29, 0.56, 1.0)
-const GREEN := Color(0.24, 0.82, 0.52)
-const GREEN_SOFT := Color(0.24, 0.82, 0.52, 0.12)
+# 🎨 Palette Premium
+const ACCENT := Color(0.15, 0.83, 0.41) # Premium Green
+const GREEN := Color(0.15, 0.73, 0.36)
+const GREEN_SOFT := Color(0.15, 0.73, 0.36, 0.12)
 const RED := Color(0.92, 0.33, 0.33)
 const RED_SOFT := Color(0.92, 0.33, 0.33, 0.12)
-const GOLD := Color(1.0, 0.82, 0.28)
-const CARD_BG := Color(0.10, 0.11, 0.18, 0.95)
-const TEXT_PRIMARY := Color(0.92, 0.93, 0.98)
-const TEXT_SECONDARY := Color(0.5, 0.55, 0.7)
-const BORDER_DEFAULT := Color(0.18, 0.2, 0.32, 0.5)
+const GOLD := Color(1.0, 0.78, 0.1)
+const CARD_BG := Color(0.12, 0.14, 0.20, 0.95)
+const TEXT_PRIMARY := Color(0.96, 0.97, 0.99)
+const TEXT_SECONDARY := Color(0.55, 0.6, 0.75)
+const BORDER_DEFAULT := Color(0.25, 0.28, 0.35, 0.5)
 
 @onready var question_label: Label = $VBox/QuestionLabel
 @onready var options_container: VBoxContainer = $VBox/OptionsContainer
@@ -87,7 +87,7 @@ func _style_next_button() -> void:
 	ns.border_color = ACCENT.lightened(0.2)
 	ns.content_margin_top = 18
 	ns.content_margin_bottom = 18
-	ns.shadow_color = Color(0.29, 0.56, 1.0, 0.3)
+	ns.shadow_color = ACCENT * Color(1,1,1,0.3)
 	ns.shadow_size = 6
 	ns.shadow_offset = Vector2(0, 3)
 	next_button.add_theme_stylebox_override("normal", ns)
@@ -298,7 +298,5 @@ func _shuffled_choices(question: Dictionary) -> Dictionary:
 	return {"choices": shuffled, "correct_index": correct_index}
 
 func _on_back_pressed() -> void:
-	var scene: Node = load("res://scenes/ModuleDetail.tscn").instantiate()
-	get_tree().root.add_child(scene)
-	scene.setup(_module_id)
+	get_tree().change_scene_to_file("res://scenes/ModuleList.tscn")
 	queue_free()

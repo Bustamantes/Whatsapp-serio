@@ -2,14 +2,15 @@ extends Control
 
 # Vista de lectura de lección
 
-# 🎨 Palette
-const ACCENT := Color(0.29, 0.56, 1.0)
-const GREEN := Color(0.24, 0.82, 0.52)
-const TEXT_PRIMARY := Color(0.92, 0.93, 0.98)
-const BORDER_DEFAULT := Color(0.18, 0.2, 0.32, 0.5)
+# 🎨 Palette Premium
+const ACCENT := Color(0.15, 0.83, 0.41) # WhatsApp Green
+const GREEN := Color(0.15, 0.73, 0.36)
+const TEXT_PRIMARY := Color(0.96, 0.97, 0.99)
+const BORDER_DEFAULT := Color(0.25, 0.28, 0.35, 0.5)
 
 @onready var title_label: Label = $VBox/Header/TitleLabel
-@onready var content_label: Label = $VBox/ScrollContainer/ContentLabel
+@onready var scroll_content: VBoxContainer = $VBox/ScrollContainer/ScrollContent
+@onready var content_label: RichTextLabel = $VBox/ScrollContainer/ScrollContent/ContentLabel
 @onready var complete_button: Button = $VBox/CompleteButton
 @onready var back_button: Button = $VBox/Header/BackButton
 @onready var completed_banner: Label = $VBox/CompletedBanner
@@ -48,6 +49,16 @@ func setup(module_id: int, lesson_id: String, lesson_title: String, content: Str
 	_already_completed = ProgressManager.is_lesson_completed(module_id, lesson_id)
 	title_label.text = lesson_title
 	content_label.text = content
+	
+	# Fetch chat simulation data if exists
+	var lesson_data = DataManager.get_lesson(module_id, lesson_id)
+	if lesson_data.has("chat_simulation"):
+		var chat_data = lesson_data["chat_simulation"]
+		var MockupScene = load("res://scenes/WhatsAppMockup.tscn")
+		var mockup = MockupScene.instantiate()
+		scroll_content.add_child(mockup)
+		mockup.start_simulation(chat_data.get("title", ""), chat_data.get("messages", []))
+	
 	_update_ui()
 	_style_complete_button()
 
@@ -122,7 +133,5 @@ func _on_back_pressed() -> void:
 	_go_back()
 
 func _go_back() -> void:
-	var scene: Node = load("res://scenes/ModuleDetail.tscn").instantiate()
-	get_tree().root.add_child(scene)
-	scene.setup(_module_id)
+	get_tree().change_scene_to_file("res://scenes/ModuleList.tscn")
 	queue_free()
