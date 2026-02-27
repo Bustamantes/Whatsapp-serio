@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://dua6o5ou78n6v"]
+
+[ext_resource type="Script" uid="uid://bplj825x31v2u" path="res://Codes/game_screen.gd" id="1_a68iv"]
+[ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="2_kuxdk"]
+[ext_resource type="StyleBox" uid="uid://cdsqqe5c4b17e" path="res://Scenes/Question_option.tres" id="3_kuxdk"]
+[ext_resource type="StyleBox" uid="uid://yp3ljc4ooytm" path="res://Scenes/Question_touched.tres" id="4_76bm4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5224c"]
+bg_color = Color(0.47291023, 0.6369689, 0.786659, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kuxdk"]
+bg_color = Color(0.4862745, 0.23137255, 0.92941177, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76bm4"]
+bg_color = Color(0.5944133, 0.4469366, 0.9818948, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qg26s"]
+bg_color = Color(0.4862745, 0.23137255, 0.92941177, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 12
+
+[node name="Control" type="Control" unique_id=1490381308]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a68iv")
+
+[node name="Fondo juego" type="Panel" parent="." unique_id=1031714799]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5224c")
+
+[node name="Espacio preguntas" type="Panel" parent="." unique_id=26089291]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -389.25
+offset_top = -265.0
+offset_right = 389.25
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_kuxdk")
+
+[node name="Pregunta" type="Label" parent="Espacio preguntas" unique_id=1175386806]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.087000005
+anchor_right = 0.5
+anchor_bottom = 0.089
+offset_left = -50.0
+offset_top = -15.110004
+offset_right = 51.0
+offset_bottom = 15.829998
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Question"
+horizontal_alignment = 1
+
+[node name="Seleccion 1" type="Button" parent="Espacio preguntas" unique_id=1732418043]
+layout_mode = 0
+offset_left = 214.25
+offset_top = 153.0
+offset_right = 288.25
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+text = "Resp 1"
+
+[node name="Seleccion 2" type="Button" parent="Espacio preguntas" unique_id=857843029]
+layout_mode = 0
+offset_left = 476.25
+offset_top = 151.0
+offset_right = 550.25
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+text = "Resp 2"
+
+[node name="Seleccion 3" type="Button" parent="Espacio preguntas" unique_id=731839212]
+layout_mode = 0
+offset_left = 213.25
+offset_top = 263.0
+offset_right = 287.25
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+text = "Resp 3"
+
+[node name="Seleccion 4" type="Button" parent="Espacio preguntas" unique_id=676646002]
+layout_mode = 0
+offset_left = 475.25
+offset_top = 266.0
+offset_right = 549.25
+offset_bottom = 304.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+text = "Resp 4"
+
+[node name="Confirmacion" type="Button" parent="Espacio preguntas" unique_id=1494638752]
+layout_mode = 0
+offset_left = 330.25
+offset_top = 335.0
+offset_right = 454.25
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kuxdk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_76bm4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qg26s")
+text = "Examinar"
