@@ -1,0 +1,21 @@
+[
+	{"Question": "¿Cuarta pregunta?",
+	 "Choices": ["Mandarina","Banana","Pera","4"],
+	 "Answer": 3
+	},
+
+	{"Question": "¿Quinta pregunta?",
+	 "Choices": ["Uva","5","Liche","Mandarina"],
+	 "Answer": 1
+	},
+	
+	{"Question": "¿Sexta pregunta?",
+	 "Choices": ["Uva","Banana","6","Piña"],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿Septima pregunta?",
+	 "Choices": ["Uva","Banana","Tomate","7"],
+	 "Answer": 3
+	}
+]

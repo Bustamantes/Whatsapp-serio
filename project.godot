@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="Whatsapp Serio"
-config/version="0.1"
+config/version="0.2"
 run/main_scene="uid://cv0kiovxy5cnr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LevelManager="*uid://cb4ja8886r8xf"
 
 [display]
 

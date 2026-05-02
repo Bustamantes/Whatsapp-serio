@@ -1,0 +1,16 @@
+[
+	{"Question": "¿Primera pregunta?",
+	 "Choices": ["Primera respuesta","Banana","Pera","Mandarina"],
+	 "Answer": 0
+	},
+
+	{"Question": "¿Segunda pregunta?",
+	 "Choices": ["Uva","Banana","segunda respuesta","Mandarina"],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿Tercera pregunta?",
+	 "Choices": ["Uva","Banana","Pera","tercera respuesta"],
+	 "Answer": 3
+	}
+]

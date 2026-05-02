@@ -4,7 +4,6 @@
 [ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="2_kuxdk"]
 [ext_resource type="StyleBox" uid="uid://cdsqqe5c4b17e" path="res://Scenes/Question_option.tres" id="3_kuxdk"]
 [ext_resource type="StyleBox" uid="uid://yp3ljc4ooytm" path="res://Scenes/Question_touched.tres" id="4_76bm4"]
-[ext_resource type="ButtonGroup" uid="uid://b4plucumysih7" path="res://Scenes/group_Questions_Button.tres" id="5_qg26s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5224c"]
 bg_color = Color(0.47291023, 0.6369689, 0.786659, 1)
@@ -48,7 +47,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a68iv")
-grupo_Boton = ExtResource("5_qg26s")
 
 [node name="Fondo juego" type="Panel" parent="." unique_id=1031714799]
 layout_mode = 1
@@ -103,7 +101,6 @@ theme_override_styles/normal = ExtResource("3_kuxdk")
 theme_override_styles/pressed = ExtResource("4_76bm4")
 theme_override_styles/hover = ExtResource("3_kuxdk")
 toggle_mode = true
-button_group = ExtResource("5_qg26s")
 text = "Resp 1"
 
 [node name="Seleccion 2" type="Button" parent="Espacio preguntas" unique_id=857843029]
@@ -119,7 +116,6 @@ theme_override_styles/normal = ExtResource("3_kuxdk")
 theme_override_styles/pressed = ExtResource("4_76bm4")
 theme_override_styles/hover = ExtResource("3_kuxdk")
 toggle_mode = true
-button_group = ExtResource("5_qg26s")
 text = "Resp 2"
 
 [node name="Seleccion 3" type="Button" parent="Espacio preguntas" unique_id=731839212]
@@ -135,7 +131,6 @@ theme_override_styles/normal = ExtResource("3_kuxdk")
 theme_override_styles/pressed = ExtResource("4_76bm4")
 theme_override_styles/hover = ExtResource("3_kuxdk")
 toggle_mode = true
-button_group = ExtResource("5_qg26s")
 text = "Resp 3"
 
 [node name="Seleccion 4" type="Button" parent="Espacio preguntas" unique_id=676646002]
@@ -151,7 +146,6 @@ theme_override_styles/normal = ExtResource("3_kuxdk")
 theme_override_styles/pressed = ExtResource("4_76bm4")
 theme_override_styles/hover = ExtResource("3_kuxdk")
 toggle_mode = true
-button_group = ExtResource("5_qg26s")
 text = "Resp 4"
 
 [node name="Confirmacion" type="Button" parent="Espacio preguntas" unique_id=1494638752]
@@ -168,8 +162,8 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_m7atg")
 disabled = true
 text = "Examinar"
 
-[connection signal="pressed" from="Espacio preguntas/Seleccion 1" to="." method="_on_seleccion_1_pressed"]
-[connection signal="pressed" from="Espacio preguntas/Seleccion 2" to="." method="_on_seleccion_2_pressed"]
-[connection signal="pressed" from="Espacio preguntas/Seleccion 3" to="." method="_on_seleccion_3_pressed"]
-[connection signal="pressed" from="Espacio preguntas/Seleccion 4" to="." method="_on_seleccion_4_pressed"]
+[connection signal="toggled" from="Espacio preguntas/Seleccion 1" to="." method="_on_seleccion_1_toggled"]
+[connection signal="toggled" from="Espacio preguntas/Seleccion 2" to="." method="_on_seleccion_2_toggled"]
+[connection signal="toggled" from="Espacio preguntas/Seleccion 3" to="." method="_on_seleccion_3_toggled"]
+[connection signal="toggled" from="Espacio preguntas/Seleccion 4" to="." method="_on_seleccion_4_toggled"]
 [connection signal="pressed" from="Espacio preguntas/Confirmacion" to="." method="_on_confirmacion_pressed"]
