@@ -1,0 +1,32 @@
+[
+	{"Question": "¿Como se crea un grupo de Whatsapp?",
+	 "Choices": ["Más ajustes > Ajustes > Privacidad > Duración predeterminada","Más opciones > ajustes >nueva difusión","Más opciones > ajustes > chats","Icono Nuevo chat >  Nuevo grupo >  seleccionar a los contactos >  icono de la flecha verde"],
+	 "Answer": 3
+	},
+	
+	{ "Question": "¿Como se añade miembros en un grupo de Whatsapp?",
+	  "Choices": ["Tocar el nombre del grupo > botón añadir miembros", "Tocar el nombre del grupo > llamar", "Tocar el nombre del grupo > botón añadir", "Tocar el nombre del grupo > botón llamar"],
+	  "Answer": 0
+	},
+	
+	{"Question": "¿Cómo sé quiénes han leído mi mensaje en un grupo?",
+	 "Choices": ["Tocar tu mensaje > toca los tres puntos y elige Info","Manténer presionado tu mensaje > toca los tres puntos y elige Info","Deslizar tu mensaje > toca los tres puntos y elige Info","Manténer presionado tu mensaje > toca los tres puntos y elige borrar"],
+	 "Answer": 1
+	},
+
+	{"Question": "¿Cómo puedo responderle a una sola persona dentro de un grupo lleno de mensajes?",
+	 "Choices": ["Mantén presionado el mensaje de la persona > tocar la flecha que apunta a la izquierda","Mantén presionado el mensaje de la persona > tocar la flecha que apunta a la derecha","Mantén presionado el mensaje de la persona > tocar el icono de basura","Tocar el mensaje de la persona > tocar la flecha que apunta a la izquierda"],
+	 "Answer": 0
+	},
+	
+	{"Question": "¿Como silenciar los mensajes en un grupo?",
+	 "Choices": ["En el grupo, toca los tres puntos > más","En el grupo, toca los tres puntos > info del grupo","En el grupo, Toca los tres puntos > Silenciar notificaciones","En el grupo, toca los tres puntos > Buscar"],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿Como se realiza una llamada en un grupo de Whatsapp?",
+	 "Choices": ["Tocar el nombre del grupo > salir del grupo", "Tocar el nombre del grupo > llamar", "Tocar el nombre del grupo > botón añadir", "Tocar el nombre del grupo > botón video"],
+	 "Answer": 1
+	},
+	
+]

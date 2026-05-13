@@ -48,7 +48,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a68iv")
-grupo_Boton = ExtResource("5_qg26s")
 
 [node name="Fondo juego" type="Panel" parent="." unique_id=1031714799]
 layout_mode = 1
@@ -59,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5224c")
 
-[node name="Espacio preguntas" type="Panel" parent="." unique_id=26089291]
+[node name="Espacio juego" type="Panel" parent="." unique_id=26089291]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -74,28 +73,40 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("2_kuxdk")
 
-[node name="Pregunta" type="Label" parent="Espacio preguntas" unique_id=1175386806]
+[node name="Espacio preguntas" type="VBoxContainer" parent="Espacio juego" unique_id=1865769083]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.087000005
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.089
-offset_left = -50.0
-offset_top = -15.110004
-offset_right = 51.0
-offset_bottom = 15.829998
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -222.0
+offset_right = 342.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Pregunta" type="Label" parent="Espacio juego/Espacio preguntas" unique_id=1175386806]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 20
 text = "Question"
 horizontal_alignment = 1
 
-[node name="Seleccion 1" type="Button" parent="Espacio preguntas" unique_id=1732418043]
-layout_mode = 0
-offset_left = 214.25
-offset_top = 153.0
-offset_right = 288.25
-offset_bottom = 191.0
+[node name="separador preguntas" type="HBoxContainer" parent="Espacio juego/Espacio preguntas" unique_id=651921083]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="pri caja" type="VBoxContainer" parent="Espacio juego/Espacio preguntas/separador preguntas" unique_id=24282637]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Seleccion 1" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/pri caja" unique_id=1732418043]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
 theme_override_font_sizes/font_size = 20
@@ -105,29 +116,11 @@ theme_override_styles/hover = ExtResource("3_kuxdk")
 toggle_mode = true
 button_group = ExtResource("5_qg26s")
 text = "Resp 1"
+autowrap_mode = 2
 
-[node name="Seleccion 2" type="Button" parent="Espacio preguntas" unique_id=857843029]
-layout_mode = 0
-offset_left = 476.25
-offset_top = 151.0
-offset_right = 550.25
-offset_bottom = 189.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = ExtResource("3_kuxdk")
-theme_override_styles/pressed = ExtResource("4_76bm4")
-theme_override_styles/hover = ExtResource("3_kuxdk")
-toggle_mode = true
-button_group = ExtResource("5_qg26s")
-text = "Resp 2"
-
-[node name="Seleccion 3" type="Button" parent="Espacio preguntas" unique_id=731839212]
-layout_mode = 0
-offset_left = 213.25
-offset_top = 263.0
-offset_right = 287.25
-offset_bottom = 301.0
+[node name="Seleccion 3" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/pri caja" unique_id=731839212]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
 theme_override_font_sizes/font_size = 20
@@ -137,13 +130,29 @@ theme_override_styles/hover = ExtResource("3_kuxdk")
 toggle_mode = true
 button_group = ExtResource("5_qg26s")
 text = "Resp 3"
+autowrap_mode = 2
 
-[node name="Seleccion 4" type="Button" parent="Espacio preguntas" unique_id=676646002]
-layout_mode = 0
-offset_left = 475.25
-offset_top = 266.0
-offset_right = 549.25
-offset_bottom = 304.0
+[node name="seg caja" type="VBoxContainer" parent="Espacio juego/Espacio preguntas/separador preguntas" unique_id=1780414215]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Seleccion 2" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/seg caja" unique_id=857843029]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+toggle_mode = true
+button_group = ExtResource("5_qg26s")
+text = "Resp 2"
+autowrap_mode = 2
+
+[node name="Seleccion 4" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/seg caja" unique_id=676646002]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
 theme_override_font_sizes/font_size = 20
@@ -153,13 +162,15 @@ theme_override_styles/hover = ExtResource("3_kuxdk")
 toggle_mode = true
 button_group = ExtResource("5_qg26s")
 text = "Resp 4"
+autowrap_mode = 2
 
-[node name="Confirmacion" type="Button" parent="Espacio preguntas" unique_id=1494638752]
-layout_mode = 0
-offset_left = 330.25
-offset_top = 335.0
-offset_right = 454.25
-offset_bottom = 382.0
+[node name="Intentos" type="Label" parent="Espacio juego/Espacio preguntas" unique_id=756614612]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Confirmacion" type="Button" parent="Espacio juego/Espacio preguntas" unique_id=1494638752]
+layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_kuxdk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_76bm4")
@@ -168,8 +179,8 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_m7atg")
 disabled = true
 text = "Examinar"
 
-[connection signal="pressed" from="Espacio preguntas/Seleccion 1" to="." method="_on_seleccion_1_pressed"]
-[connection signal="pressed" from="Espacio preguntas/Seleccion 2" to="." method="_on_seleccion_2_pressed"]
-[connection signal="pressed" from="Espacio preguntas/Seleccion 3" to="." method="_on_seleccion_3_pressed"]
-[connection signal="pressed" from="Espacio preguntas/Seleccion 4" to="." method="_on_seleccion_4_pressed"]
-[connection signal="pressed" from="Espacio preguntas/Confirmacion" to="." method="_on_confirmacion_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 1" to="." method="_on_seleccion_1_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 3" to="." method="_on_seleccion_3_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 2" to="." method="_on_seleccion_2_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 4" to="." method="_on_seleccion_4_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/Confirmacion" to="." method="_on_confirmacion_pressed"]

@@ -1,0 +1,36 @@
+[
+	{"Question": "¿Cómo guardo un mensaje importante en un chat?",
+	 "Choices": ["Mantén presionado el mensaje y toca el icono de la flechas hacia la izquierda","Mantén presionado el mensaje y toca el icono de la basura","Mantén presionado el mensaje y toca el icono de las flechas hacia la derecha","Mantén presionado el mensaje y toca el icono de la Estrella"],
+	 "Answer": 3
+	},
+	
+	{"Question": "¿Como encuentro un mensaje destacado?",
+	 "Choices": ["En el chat tocando el nombre del contacto > Notificacioes","En el chat tocando el nombre del contacto > Mensajes destacados","En el chat tocando el nombre del contacto > Llamar","En el chat tocando el nombre del contacto > Vaciar chats"],
+	 "Answer": 1
+	},
+
+	{"Question": "¿Si cambio de telefono, puedo conservar mis conversaciones?",
+	 "Choices": ["Mientras haya una copia de seguridad, si","Mientras haya una copia de seguridad, no","Mientras haya una conversación, si","Mientras haya una confirmación de identidad, si"],
+	 "Answer": 0
+	},
+	
+	{"Question": "¿Cómo puedo fijar el chat de una persona importante para no buscarlo siempre?",
+	 "Choices": ["Manténer presionado el contacto en la lista principal > tocar el icono de la campana tachada","Manténer presionado el contacto en la lista principal > tocar el icono de la chincheta","Manténer presionado el contacto en la lista principal > tocar el icono de la basura","Manténer presionado el contacto en la lista principal > tocar el icono del archivo"],
+	 "Answer": 1
+	},
+	
+	{"Question": "¿Cómo borro cosas cuando mi telefono dice que tengo poco espacio de almacenamiento?",
+	 "Choices": ["Ajustes > Idioma > elegir un idioma","Ajustes > Privacidad > comprobación rápida de privacidad","Ajustes > Almacenamiento y datos > Administrar almacenamiento","Ajustes > Listas > crear listas personalizadas"],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿Puedo usar WhatsApp en otro lugar además del telefono?",
+	 "Choices": ["Si, se puede usar en computadoras y tablets y se llama Instagram","Si, se puede usar en computadoras y tablets y se llama Facebook","No, solo se puede usar en telefonos","Si, se puede usar en computadoras y tablets y se llama WhatsApp Web"],
+	 "Answer": 3
+	},
+	
+	{"Question": "¿Cómo puedo ver WhatsApp Web?",
+	 "Choices": ["Más opciones > Dispositivos vinculados > vincular un dispositivo y escanea el código QR que salga en la otro dispositivo","Más opciones > listas de difusión > icono más y selecciona los contactos","Más opciones > nuevo grupo > elige los contactos y presiona boton de la flecha","Más opciones > Destacados > elige los mensajes"],
+	 "Answer": 0
+	},
+]

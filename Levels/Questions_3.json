@@ -1,0 +1,31 @@
+[
+	{"Question": "¿Como hacer una llamada en WhatsApp?",
+	 "Choices": ["Tocando el icono del microfono","Tocando el icono del teléfono","Tocando el icono del clip","Tocando el icono del megafono"],
+	 "Answer": 1
+	},
+	
+	{"Question": "¿Cómo puedo subir un estado por WhatsApp?",
+	 "Choices": ["Ir a la pestaña Novedades > Añadir Mi estado","Ir a la pestaña Chats > Añadir Mi estado","Ir a la pestaña Comunidades > Añadir Mi estado","Ir a la pestaña Llamadas > Añadir Mi estado"],
+	 "Answer": 0
+	},
+
+	{"Question": "¿Las llamadas por WhatsApp cuestan dinero?",
+	 "Choices": ["Si, pero no usa WiFi/Datos móviles","No, pero usa bateria","Si, pero usa WiFi/Datos móviles","No, pero usa WiFi/Datos móviles"],
+	 "Answer": 3
+	},
+	
+	{"Question": "¿Cuanto dura un estado en WhatsApp?",
+	 "Choices": ["60 segundos","24 días","24 horas","30 minutos"],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿puedo saber si alguien ha visto mi estado?",
+	 "Choices": ["Sí, aparece una lista de quiénes han mirado el estado","No, no se sabe quien han mirado el estado","Si, pero es anónimo","Talvez, aparece una lista de quiénes han mirado el estado"],
+	 "Answer": 0
+	},
+	
+	{"Question": "¿Como puedo hacer una videollamada?",
+	 "Choices": ["Tocar la imagen del contacto > tocar el icono triangular","Tocar la imagen del contacto > tocar el icono de mensaje","Tocar la imagen del contacto > tocar el icono de información","Tocar la imagen del contacto > tocar el icono de video"],
+	 "Answer": 3
+	},
+]

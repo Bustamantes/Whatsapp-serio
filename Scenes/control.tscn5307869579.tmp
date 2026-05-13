@@ -1,0 +1,455 @@
+[gd_scene format=3 uid="uid://cv0kiovxy5cnr"]
+
+[ext_resource type="Script" uid="uid://dddjhx3k42sxe" path="res://Codes/control_menu.gd" id="1_wpaqk"]
+[ext_resource type="StyleBox" uid="uid://dkkjmkvqtd2o6" path="res://Scenes/button_color.tres" id="2_cgmvo"]
+[ext_resource type="StyleBox" uid="uid://bwvbgnrfvlkr8" path="res://Scenes/button_clicked_color.tres" id="3_vh8u0"]
+[ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="4_wpaqk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjmnu"]
+bg_color = Color(0.73333335, 0.9137255, 0.91764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh8u0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.3137255, 0.2901961, 1, 1)
+border_blend = true
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 15
+corner_detail = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgmvo"]
+bg_color = Color(0.14509805, 0.3882353, 0.92156863, 0.49019608)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.09803922, 0.09803922, 0.09803922, 0.3764706)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpaqk"]
+bg_color = Color(0.4862745, 0.23137255, 0.92941177, 0.49019608)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+expand_margin_left = 50.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqysy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_top = 8
+border_width_bottom = 8
+border_color = Color(0.3137255, 0.2901961, 1, 1)
+border_blend = true
+
+[node name="Control" type="Control" unique_id=1248340580]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wpaqk")
+
+[node name="Fondo" type="Panel" parent="." unique_id=2088665866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sjmnu")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1010901980]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -533.0
+offset_top = -185.5
+offset_right = 533.0
+offset_bottom = 185.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="Borde boton" type="Panel" parent="GridContainer" unique_id=1893460519]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba" type="Button" parent="GridContainer/Borde boton" unique_id=2057417497]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.49500003
+anchor_right = 0.582
+anchor_bottom = 0.49500003
+offset_left = -119.584
+offset_top = -40.975002
+offset_right = 119.416
+offset_bottom = 41.024998
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Abriendo Whatsapp
+"
+
+[node name="Circulo boton" type="PanelContainer" parent="GridContainer/Borde boton/Boton prueba" unique_id=142819837]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton" type="Label" parent="GridContainer/Borde boton/Boton prueba/Circulo boton" unique_id=986461118]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="Borde boton2" type="Panel" parent="GridContainer" unique_id=329750561]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba2" type="Button" parent="GridContainer/Borde boton2" unique_id=70153032]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
+disabled = true
+text = "Mensajes y
+Multimedia"
+autowrap_mode = 2
+
+[node name="Circulo boton2" type="PanelContainer" parent="GridContainer/Borde boton2/Boton prueba2" unique_id=723410214]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton2" type="Label" parent="GridContainer/Borde boton2/Boton prueba2/Circulo boton2" unique_id=1666783439]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "2"
+
+[node name="Borde boton3" type="Panel" parent="GridContainer" unique_id=827392488]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba3" type="Button" parent="GridContainer/Borde boton3" unique_id=2036994388]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
+disabled = true
+text = "Llamadas y Estados
+"
+
+[node name="Circulo boton3" type="PanelContainer" parent="GridContainer/Borde boton3/Boton prueba3" unique_id=2145166100]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton3" type="Label" parent="GridContainer/Borde boton3/Boton prueba3/Circulo boton3" unique_id=1370014309]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "3"
+
+[node name="Borde boton4" type="Panel" parent="GridContainer" unique_id=1871108987]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba4" type="Button" parent="GridContainer/Borde boton4" unique_id=1004073295]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
+disabled = true
+text = "???"
+
+[node name="Circulo boton4" type="PanelContainer" parent="GridContainer/Borde boton4/Boton prueba4" unique_id=2027857968]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton4" type="Label" parent="GridContainer/Borde boton4/Boton prueba4/Circulo boton4" unique_id=1240319366]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "4"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1366399544]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_top = -136.0
+offset_right = 522.0
+offset_bottom = 232.0
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Barra Superior" type="Panel" parent="." unique_id=1846947484]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("4_wpaqk")
+
+[node name="Label" type="Label" parent="Barra Superior" unique_id=240438837]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -11.5
+offset_right = 62.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Titulo Juego Whatsapp"
+
+[node name="Barra Inferior" type="Panel" parent="." unique_id=2120661600]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -113.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dqysy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Barra Inferior" unique_id=1260045061]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 27.0
+offset_right = 1120.0
+offset_bottom = 87.0
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Boton reinicio" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=1272096143]
+custom_minimum_size = Vector2(97, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Reiniciar"
+
+[node name="Boton creditos" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=532111056]
+custom_minimum_size = Vector2(97, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Creditos"
+
+[node name="Boton salida" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=654177269]
+custom_minimum_size = Vector2(97, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Salir"
+metadata/_edit_use_anchors_ = true
+
+[node name="Version" type="Label" parent="." unique_id=1435477677]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = 0.9620001
+anchor_right = 0.028
+anchor_bottom = 0.9620001
+offset_left = -24.256
+offset_top = -11.376038
+offset_right = 19.744
+offset_bottom = 11.623962
+theme_override_colors/font_color = Color(0.011087594, 0.011087573, 0.01108758, 0.2509804)
+theme_override_font_sizes/font_size = 20
+
+[node name="Menu salida" type="Panel" parent="." unique_id=748376239]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21614583
+anchor_top = 0.2037037
+anchor_right = 0.8133681
+anchor_bottom = 0.779321
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("4_wpaqk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Menu salida" unique_id=1591445429]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 70.0
+offset_right = 292.0
+offset_bottom = 149.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "¿Quieres salir del juego?"
+horizontal_alignment = 1
+
+[node name="Salir si" type="Button" parent="Menu salida" unique_id=363426467]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 221.0
+offset_right = 287.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Si"
+
+[node name="Salir no" type="Button" parent="Menu salida" unique_id=1444800172]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 221.0
+offset_right = 556.0
+offset_bottom = 285.5
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "No"
+
+[node name="Menu Creditos" type="Panel" parent="." unique_id=1389098078]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -117.0
+offset_right = 236.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("4_wpaqk")
+
+[node name="Creditos" type="Label" parent="Menu Creditos" unique_id=2093105440]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Diseñador - Edwin Bustamante
+Programador - Juan Rodó"
+horizontal_alignment = 1
+
+[node name="regresar creditos" type="Button" parent="Menu Creditos" unique_id=302773470]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85
+anchor_right = 0.5
+anchor_bottom = 0.85
+offset_left = -41.5
+offset_top = -28.90001
+offset_right = 53.5
+offset_bottom = 25.09999
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Regresar"
+
+[connection signal="pressed" from="GridContainer/Borde boton/Boton prueba" to="." method="_on_boton_prueba_pressed"]
+[connection signal="pressed" from="GridContainer/Borde boton2/Boton prueba2" to="." method="_on_boton_prueba_2_pressed"]
+[connection signal="pressed" from="GridContainer/Borde boton3/Boton prueba3" to="." method="_on_boton_prueba_3_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton reinicio" to="." method="_on_boton_reinicio_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton creditos" to="." method="_on_boton_creditos_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton salida" to="." method="_on_boton_salida_pressed"]
+[connection signal="pressed" from="Menu salida/Salir si" to="." method="_on_salir_si_pressed"]
+[connection signal="pressed" from="Menu salida/Salir no" to="." method="_on_salir_no_pressed"]
+[connection signal="pressed" from="Menu Creditos/regresar creditos" to="." method="_on_regresar_creditos_pressed"]

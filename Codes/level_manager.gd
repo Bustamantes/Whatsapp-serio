@@ -6,7 +6,7 @@ const Save_File = "user://savefile.dat"		#es el lugar en donde se almacena los d
 var Entered_level = 0
 
 # Este archivo maneja la progresión de los niveles, puesto como una variable global, desbloqueando los niveles conforme se juega
-var Level_finished = 0
+var  Level_finished = 0
 
 var data = {}		#aqui almacena los datos persistenetes en el que se guardarán los datos
 
@@ -25,7 +25,7 @@ func save_data():
 func load_data():
 	#verifica si el archivo de datos existe
 	if not FileAccess.file_exists(Save_File):
-		#en caso de no existir, estos serán los datos poe defecto
+		#en caso de no existir, estos serán los datos por defecto
 		data = {
 			"Level_finished" = 0,
 		}

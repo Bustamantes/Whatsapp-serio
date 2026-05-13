@@ -69,15 +69,26 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_sjmnu")
 
-[node name="Borde boton" type="Panel" parent="." unique_id=1893460519]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 131.0
-offset_right = 375.0
-offset_bottom = 236.0
+[node name="VFlowContainer" type="VFlowContainer" parent="." unique_id=380221843]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -212.0
+offset_right = 641.0
+offset_bottom = 211.0
+grow_vertical = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 4
+alignment = 1
+
+[node name="Borde boton" type="Panel" parent="VFlowContainer" unique_id=1893460519]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
 
-[node name="Boton prueba" type="Button" parent="Borde boton" unique_id=2057417497]
+[node name="Boton prueba" type="Button" parent="VFlowContainer/Borde boton" unique_id=2057417497]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.582
@@ -97,7 +108,7 @@ theme_override_styles/hover = ExtResource("2_cgmvo")
 text = "Abriendo Whatsapp
 "
 
-[node name="Circulo boton" type="PanelContainer" parent="Borde boton/Boton prueba" unique_id=142819837]
+[node name="Circulo boton" type="PanelContainer" parent="VFlowContainer/Borde boton/Boton prueba" unique_id=142819837]
 layout_mode = 0
 offset_left = -38.0
 offset_top = 11.0
@@ -105,26 +116,18 @@ offset_right = 19.0
 offset_bottom = 69.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
 
-[node name="Num boton" type="Label" parent="Borde boton/Boton prueba/Circulo boton" unique_id=986461118]
+[node name="Num boton" type="Label" parent="VFlowContainer/Borde boton/Boton prueba/Circulo boton" unique_id=986461118]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 20
 text = "1"
 
-[node name="Borde boton2" type="Panel" parent="." unique_id=329750561]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.19000001
-anchor_top = 0.47000003
-anchor_right = 0.19000001
-anchor_bottom = 0.47000003
-offset_left = -155.88002
-offset_top = -52.560028
-offset_right = 156.11998
-offset_bottom = 52.439972
+[node name="Borde boton2" type="Panel" parent="VFlowContainer" unique_id=329750561]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
 
-[node name="Boton prueba2" type="Button" parent="Borde boton2" unique_id=70153032]
+[node name="Boton prueba2" type="Button" parent="VFlowContainer/Borde boton2" unique_id=70153032]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 11.0
@@ -135,13 +138,15 @@ theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.0980392
 theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = ExtResource("2_cgmvo")
-theme_override_styles/hover = ExtResource("3_vh8u0")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
 disabled = true
-text = "Leyendo Mensajes
-"
+text = "Mensajes y
+Multimedia"
+autowrap_mode = 2
 
-[node name="Circulo boton2" type="PanelContainer" parent="Borde boton2/Boton prueba2" unique_id=723410214]
+[node name="Circulo boton2" type="PanelContainer" parent="VFlowContainer/Borde boton2/Boton prueba2" unique_id=723410214]
 layout_mode = 0
 offset_left = -38.0
 offset_top = 11.0
@@ -149,11 +154,160 @@ offset_right = 19.0
 offset_bottom = 69.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
 
-[node name="Num boton2" type="Label" parent="Borde boton2/Boton prueba2/Circulo boton2" unique_id=1666783439]
+[node name="Num boton2" type="Label" parent="VFlowContainer/Borde boton2/Boton prueba2/Circulo boton2" unique_id=1666783439]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 20
 text = "2"
+
+[node name="Borde boton3" type="Panel" parent="VFlowContainer" unique_id=827392488]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba3" type="Button" parent="VFlowContainer/Borde boton3" unique_id=2036994388]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
+disabled = true
+text = "Llamadas y Estados
+"
+
+[node name="Circulo boton3" type="PanelContainer" parent="VFlowContainer/Borde boton3/Boton prueba3" unique_id=2145166100]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton3" type="Label" parent="VFlowContainer/Borde boton3/Boton prueba3/Circulo boton3" unique_id=1370014309]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "3"
+
+[node name="Borde boton4" type="Panel" parent="VFlowContainer" unique_id=1871108987]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba4" type="Button" parent="VFlowContainer/Borde boton4" unique_id=1004073295]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
+disabled = true
+text = "Grupos"
+
+[node name="Circulo boton4" type="PanelContainer" parent="VFlowContainer/Borde boton4/Boton prueba4" unique_id=2027857968]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton4" type="Label" parent="VFlowContainer/Borde boton4/Boton prueba4/Circulo boton4" unique_id=1240319366]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "4"
+
+[node name="Borde boton5" type="Panel" parent="VFlowContainer" unique_id=1075345192]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba5" type="Button" parent="VFlowContainer/Borde boton5" unique_id=668888205]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
+disabled = true
+text = "Seguridad y 
+Privacidad"
+autowrap_mode = 2
+
+[node name="Circulo boton5" type="PanelContainer" parent="VFlowContainer/Borde boton5/Boton prueba5" unique_id=1226701523]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton5" type="Label" parent="VFlowContainer/Borde boton5/Boton prueba5/Circulo boton5" unique_id=54434746]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "5"
+
+[node name="Borde boton6" type="Panel" parent="VFlowContainer" unique_id=95458893]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba6" type="Button" parent="VFlowContainer/Borde boton6" unique_id=853076775]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wpaqk")
+disabled = true
+text = "Organización y 
+Almacenamiento"
+text_overrun_behavior = 2
+
+[node name="Circulo boton6" type="PanelContainer" parent="VFlowContainer/Borde boton6/Boton prueba6" unique_id=1363396568]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton6" type="Label" parent="VFlowContainer/Borde boton6/Boton prueba6/Circulo boton6" unique_id=510978617]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+text = "6"
 
 [node name="Barra Superior" type="Panel" parent="." unique_id=1846947484]
 layout_mode = 1
@@ -191,17 +345,38 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_dqysy")
 
-[node name="Boton salida" type="Button" parent="Barra Inferior" unique_id=654177269]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.93500006
-anchor_top = 0.49600002
-anchor_right = 0.93500006
-anchor_bottom = 0.49600002
-offset_left = -48.120117
-offset_top = -24.048004
-offset_right = 48.879883
-offset_bottom = 23.951996
+[node name="HBoxContainer" type="HBoxContainer" parent="Barra Inferior" unique_id=1260045061]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 27.0
+offset_right = 1120.0
+offset_bottom = 87.0
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Boton reinicio" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=1272096143]
+custom_minimum_size = Vector2(97, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Reiniciar"
+
+[node name="Boton creditos" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=532111056]
+custom_minimum_size = Vector2(97, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Creditos"
+
+[node name="Boton salida" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=654177269]
+custom_minimum_size = Vector2(97, 48)
+layout_mode = 2
 theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = ExtResource("2_cgmvo")
@@ -276,24 +451,6 @@ theme_override_styles/pressed = ExtResource("3_vh8u0")
 theme_override_styles/hover = ExtResource("2_cgmvo")
 text = "No"
 
-[node name="Boton creditos" type="Button" parent="." unique_id=532111056]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.67600006
-anchor_top = 0.91
-anchor_right = 0.67600006
-anchor_bottom = 0.91200006
-offset_left = -48.752075
-offset_top = -23.679993
-offset_right = 48.247925
-offset_bottom = 23.023987
-theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = ExtResource("2_cgmvo")
-theme_override_styles/pressed = ExtResource("3_vh8u0")
-theme_override_styles/hover = ExtResource("2_cgmvo")
-text = "Creditos"
-
 [node name="Menu Creditos" type="Panel" parent="." unique_id=1389098078]
 visible = false
 layout_mode = 1
@@ -324,8 +481,8 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Diseñador - Edwin Bustamante
-Programador - Juan Rodó"
+text = "Programador - Juan Rodó
+Diseñador - Edwin Bustamante"
 horizontal_alignment = 1
 
 [node name="regresar creditos" type="Button" parent="Menu Creditos" unique_id=302773470]
@@ -347,10 +504,15 @@ theme_override_styles/pressed = ExtResource("3_vh8u0")
 theme_override_styles/hover = ExtResource("2_cgmvo")
 text = "Regresar"
 
-[connection signal="pressed" from="Borde boton/Boton prueba" to="." method="_on_boton_prueba_pressed"]
-[connection signal="pressed" from="Borde boton2/Boton prueba2" to="." method="_on_boton_prueba_2_pressed"]
-[connection signal="pressed" from="Barra Inferior/Boton salida" to="." method="_on_boton_salida_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton/Boton prueba" to="." method="_on_boton_prueba_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton2/Boton prueba2" to="." method="_on_boton_prueba_2_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton3/Boton prueba3" to="." method="_on_boton_prueba_3_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton4/Boton prueba4" to="." method="_on_boton_prueba_4_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton5/Boton prueba5" to="." method="_on_boton_prueba_5_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton6/Boton prueba6" to="." method="_on_boton_prueba_6_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton reinicio" to="." method="_on_boton_reinicio_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton creditos" to="." method="_on_boton_creditos_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton salida" to="." method="_on_boton_salida_pressed"]
 [connection signal="pressed" from="Menu salida/Salir si" to="." method="_on_salir_si_pressed"]
 [connection signal="pressed" from="Menu salida/Salir no" to="." method="_on_salir_no_pressed"]
-[connection signal="pressed" from="Boton creditos" to="." method="_on_boton_creditos_pressed"]
 [connection signal="pressed" from="Menu Creditos/regresar creditos" to="." method="_on_regresar_creditos_pressed"]
