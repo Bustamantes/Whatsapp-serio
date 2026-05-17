@@ -23,6 +23,8 @@ func _ready() -> void:
 		5: datos = read_json_file("res://Levels/Questions_5.json")
 		6: datos = read_json_file("res://Levels/Questions_6.json")
 		_: get_tree().change_scene_to_file("res://Scenes/control.tscn")	#en caso de error, va directo al menu principal
+	if LevelManager.Level_finished >= LevelManager.Entered_level:		#las preguntas solo estaran en orden antes de pasar el nivel por primeras vez
+		datos.shuffle()		#cambia el orden de las preguntas, pero una vez por partida, sin preguntas repetidas
 	refresh_scene()
 
 
@@ -39,11 +41,12 @@ func read_json_file(filename: String):
 func refresh_scene():
 	if tables >= datos.size() and intentos > 0:		#en caso de completar el nivel de forma exitosa
 		get_tree().change_scene_to_file("res://Scenes/control.tscn")
-		if LevelManager.Level_finished < LevelManager.Entered_level:		#en caso de completar el nivel por primera vez, desbloqueando el siguiente nivel
+		if LevelManager.Level_finished < LevelManager.Entered_level:		#en caso de completar el nivel por primera vez, se irá desbloqueando el siguiente nivel en el menu principal
 			LevelManager.Level_finished += 1
 		LevelManager.Entered_level = 0		
-	elif tables >= datos.size() and intentos <= 0:	#muestra las preguntas si hay rondas de preguntas disponibles ,en este caso, items.size() significa todos los elementos del objeto en caso de querer usar todo el contenido del array
-		get_tree().change_scene_to_file("res://Scenes/control.tscn")
+	elif intentos == 0:	#en caso de que se agoten los intentos
+		$"Espacio juego/Espacio preguntas".hide()
+		$Reniten.show()
 	else:
 		trivia_juego()
 		
@@ -77,7 +80,7 @@ func _on_confirmacion_pressed() -> void:
 	confii.disabled = true
 	if Ultimo == glossa.Answer:
 		Intenn.text = "Correcto"
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.5).timeout 		# este comando crea una pausa temporal medida en segundos
 	else :
 		Intenn.text = "La respuesta es [" + glossa.Choices[glossa.Answer] + "]"
 		intentos -= 1
@@ -90,3 +93,11 @@ func _on_confirmacion_pressed() -> void:
 	Q4.button_pressed = false
 	tables += 1
 	refresh_scene()
+
+
+func _on_reini_pressed() -> void:
+	get_tree().reload_current_scene()
+
+
+func _on_salir_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/control.tscn")

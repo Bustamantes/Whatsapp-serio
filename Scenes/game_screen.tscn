@@ -5,40 +5,12 @@
 [ext_resource type="StyleBox" uid="uid://cdsqqe5c4b17e" path="res://Scenes/Question_option.tres" id="3_kuxdk"]
 [ext_resource type="StyleBox" uid="uid://yp3ljc4ooytm" path="res://Scenes/Question_touched.tres" id="4_76bm4"]
 [ext_resource type="ButtonGroup" uid="uid://b4plucumysih7" path="res://Scenes/group_Questions_Button.tres" id="5_qg26s"]
+[ext_resource type="StyleBox" uid="uid://b6epdhj5scm2t" path="res://Scenes/Retry_color.tres" id="6_c6clx"]
+[ext_resource type="StyleBox" uid="uid://cf4vr3ew8cjhm" path="res://Scenes/Retry_Pressed_color.tres" id="7_ck8pe"]
+[ext_resource type="StyleBox" uid="uid://bnqmp6uek6guc" path="res://Scenes/Retry_Disable_color.tres" id="8_5l801"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5224c"]
 bg_color = Color(0.47291023, 0.6369689, 0.786659, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kuxdk"]
-bg_color = Color(0.4862745, 0.23137255, 0.92941177, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76bm4"]
-bg_color = Color(0.5944133, 0.4469366, 0.9818948, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qg26s"]
-bg_color = Color(0.4862745, 0.23137255, 0.92941177, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7atg"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 12
 
 [node name="Control" type="Control" unique_id=1490381308]
 layout_mode = 3
@@ -65,9 +37,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -389.25
+offset_left = -439.625
 offset_top = -265.0
-offset_right = 389.25
+offset_right = 439.625
 offset_bottom = 265.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -80,20 +52,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -342.0
-offset_top = -222.0
-offset_right = 342.0
-offset_bottom = 228.0
+offset_left = -418.0
+offset_top = -225.0
+offset_right = 418.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
 
 [node name="Pregunta" type="Label" parent="Espacio juego/Espacio preguntas" unique_id=1175386806]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 24
 text = "Question"
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="separador preguntas" type="HBoxContainer" parent="Espacio juego/Espacio preguntas" unique_id=651921083]
 layout_mode = 2
@@ -105,11 +79,11 @@ layout_mode = 2
 theme_override_constants/separation = 16
 
 [node name="Seleccion 1" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/pri caja" unique_id=1732418043]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = ExtResource("3_kuxdk")
 theme_override_styles/pressed = ExtResource("4_76bm4")
 theme_override_styles/hover = ExtResource("3_kuxdk")
@@ -119,11 +93,11 @@ text = "Resp 1"
 autowrap_mode = 2
 
 [node name="Seleccion 3" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/pri caja" unique_id=731839212]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = ExtResource("3_kuxdk")
 theme_override_styles/pressed = ExtResource("4_76bm4")
 theme_override_styles/hover = ExtResource("3_kuxdk")
@@ -137,11 +111,11 @@ layout_mode = 2
 theme_override_constants/separation = 16
 
 [node name="Seleccion 2" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/seg caja" unique_id=857843029]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = ExtResource("3_kuxdk")
 theme_override_styles/pressed = ExtResource("4_76bm4")
 theme_override_styles/hover = ExtResource("3_kuxdk")
@@ -151,11 +125,11 @@ text = "Resp 2"
 autowrap_mode = 2
 
 [node name="Seleccion 4" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/seg caja" unique_id=676646002]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = ExtResource("3_kuxdk")
 theme_override_styles/pressed = ExtResource("4_76bm4")
 theme_override_styles/hover = ExtResource("3_kuxdk")
@@ -165,22 +139,73 @@ text = "Resp 4"
 autowrap_mode = 2
 
 [node name="Intentos" type="Label" parent="Espacio juego/Espacio preguntas" unique_id=756614612]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
 
 [node name="Confirmacion" type="Button" parent="Espacio juego/Espacio preguntas" unique_id=1494638752]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_kuxdk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_76bm4")
-theme_override_styles/hover = SubResource("StyleBoxFlat_qg26s")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_m7atg")
+theme_override_styles/normal = ExtResource("6_c6clx")
+theme_override_styles/pressed = ExtResource("7_ck8pe")
+theme_override_styles/hover = ExtResource("6_c6clx")
+theme_override_styles/disabled = ExtResource("8_5l801")
 disabled = true
 text = "Examinar"
+
+[node name="Reniten" type="Label" parent="." unique_id=781507576]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.0
+offset_top = -79.0
+offset_right = 216.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_font_sizes/font_size = 30
+text = "¿Quieres intentar de nuevo?"
+vertical_alignment = 1
+
+[node name="Reini" type="Button" parent="Reniten" unique_id=1336708935]
+custom_minimum_size = Vector2(150, 55)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 104.5
+offset_right = 165.0
+offset_bottom = 159.5
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("6_c6clx")
+theme_override_styles/pressed = ExtResource("7_ck8pe")
+theme_override_styles/hover = ExtResource("6_c6clx")
+text = "Reintentar
+"
+
+[node name="Salir" type="Button" parent="Reniten" unique_id=603105597]
+custom_minimum_size = Vector2(150, 55)
+layout_mode = 0
+offset_left = 247.0
+offset_top = 104.5
+offset_right = 397.0
+offset_bottom = 159.5
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("6_c6clx")
+theme_override_styles/pressed = ExtResource("7_ck8pe")
+theme_override_styles/hover = ExtResource("6_c6clx")
+text = "Salir"
 
 [connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 1" to="." method="_on_seleccion_1_pressed"]
 [connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 3" to="." method="_on_seleccion_3_pressed"]
 [connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 2" to="." method="_on_seleccion_2_pressed"]
 [connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 4" to="." method="_on_seleccion_4_pressed"]
 [connection signal="pressed" from="Espacio juego/Espacio preguntas/Confirmacion" to="." method="_on_confirmacion_pressed"]
+[connection signal="pressed" from="Reniten/Reini" to="." method="_on_reini_pressed"]
+[connection signal="pressed" from="Reniten/Salir" to="." method="_on_salir_pressed"]

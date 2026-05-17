@@ -10,7 +10,6 @@ extends Control
 @onready var N_seis = $"VFlowContainer/Borde boton6/Boton prueba6"
 
 func _ready() -> void:
-	print(LevelManager.Level_finished)
 	LevelManager.save_data()
 	Version.text = "v"+ProjectSettings.get_setting("application/config/version") 		# muestra la version del juego
 	
@@ -73,13 +72,27 @@ func _on_boton_prueba_6_pressed() -> void:
 	LevelManager.Entered_level = 6
 	get_tree().change_scene_to_file("res://Scenes/game_screen.tscn")
 	
+func _on_boton_reinicio_pressed() -> void:
+	OS.move_to_trash(ProjectSettings.globalize_path("user://savefile.dat"))		#este comando mueve el archivo de guardado a la papelera
+	LevelManager.Level_finished = 0
+	get_tree().reload_current_scene()
+	
 func _on_boton_creditos_pressed() -> void:			#lo que pasa si el boton de creditos es presionado
+	$"Barra Inferior/HBoxContainer/Boton reinicio".disabled = true
+	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = true
+	$"Barra Inferior/HBoxContainer/Boton salida".disabled = true
 	M_creditos.show()			#muestra el menu de los creditos
 	
 func _on_regresar_creditos_pressed() -> void:
+	$"Barra Inferior/HBoxContainer/Boton reinicio".disabled = false
+	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = false
+	$"Barra Inferior/HBoxContainer/Boton salida".disabled = false
 	M_creditos.hide()			#oculta el menu de creditos
 	
 func _on_boton_salida_pressed() -> void:			#lo que pasa si el boton de salida es presionado
+	$"Barra Inferior/HBoxContainer/Boton reinicio".disabled = true
+	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = true
+	$"Barra Inferior/HBoxContainer/Boton salida".disabled = true
 	M_salida.show()			#muestra el menu de salida
 
 func _on_salir_si_pressed() -> void:			#lo que pasa si opción "si" es presionada
@@ -87,9 +100,7 @@ func _on_salir_si_pressed() -> void:			#lo que pasa si opción "si" es presionad
 	get_tree().quit()		#se sale del programa
 
 func _on_salir_no_pressed() -> void:			#lo que pasa si opción "no" es presionada
+	$"Barra Inferior/HBoxContainer/Boton reinicio".disabled = false
+	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = false
+	$"Barra Inferior/HBoxContainer/Boton salida".disabled = false
 	M_salida.hide()				#oculta el menu de salida
-
-func _on_boton_reinicio_pressed() -> void:
-	OS.move_to_trash(ProjectSettings.globalize_path("user://savefile.dat"))
-	LevelManager.Level_finished = 0
-	get_tree().change_scene_to_file("res://Scenes/control.tscn")

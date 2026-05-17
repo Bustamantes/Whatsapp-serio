@@ -4,6 +4,7 @@
 [ext_resource type="StyleBox" uid="uid://dkkjmkvqtd2o6" path="res://Scenes/button_color.tres" id="2_cgmvo"]
 [ext_resource type="StyleBox" uid="uid://bwvbgnrfvlkr8" path="res://Scenes/button_clicked_color.tres" id="3_vh8u0"]
 [ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="4_wpaqk"]
+[ext_resource type="StyleBox" uid="uid://dd7w6fxnufg1k" path="res://Scenes/button_disabled_color.tres" id="5_btyrf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjmnu"]
 bg_color = Color(0.73333335, 0.9137255, 0.91764706, 1)
@@ -331,7 +332,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 23
 text = "Titulo Juego Whatsapp"
 
 [node name="Barra Inferior" type="Panel" parent="." unique_id=2120661600]
@@ -362,7 +363,8 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = ExtResource("2_cgmvo")
 theme_override_styles/pressed = ExtResource("3_vh8u0")
 theme_override_styles/hover = ExtResource("2_cgmvo")
-text = "Reiniciar"
+theme_override_styles/disabled = ExtResource("5_btyrf")
+text = "Borrar datos"
 
 [node name="Boton creditos" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=532111056]
 custom_minimum_size = Vector2(97, 48)
@@ -372,6 +374,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = ExtResource("2_cgmvo")
 theme_override_styles/pressed = ExtResource("3_vh8u0")
 theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = ExtResource("5_btyrf")
 text = "Creditos"
 
 [node name="Boton salida" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=654177269]
@@ -382,6 +385,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = ExtResource("2_cgmvo")
 theme_override_styles/pressed = ExtResource("3_vh8u0")
 theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = ExtResource("5_btyrf")
 text = "Salir"
 metadata/_edit_use_anchors_ = true
 
@@ -474,16 +478,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -211.0
+offset_top = -83.0
+offset_right = 140.0
+offset_bottom = 1.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Programador - Juan Rodó
-Diseñador - Edwin Bustamante"
-horizontal_alignment = 1
+theme_override_font_sizes/font_size = 22
+text = "Programadores - 
+Juan Rodó y Edwin Bustamante"
+autowrap_mode = 2
 
 [node name="regresar creditos" type="Button" parent="Menu Creditos" unique_id=302773470]
 layout_mode = 1
@@ -493,9 +498,9 @@ anchor_top = 0.85
 anchor_right = 0.5
 anchor_bottom = 0.85
 offset_left = -41.5
-offset_top = -28.90001
+offset_top = -55.90001
 offset_right = 53.5
-offset_bottom = 25.09999
+offset_bottom = -1.9000092
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
