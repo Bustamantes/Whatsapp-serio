@@ -6,6 +6,7 @@ extends Control
 @onready var Q4 = $"Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 4"
 @onready var Intenn = $"Espacio juego/Espacio preguntas/Intentos"
 @onready var confii = $"Espacio juego/Espacio preguntas/Confirmacion"
+@onready var mina = $AnimationPlayer
 
 var intentos = 3
 var Ultimo 	#variable usada para comparar con la opción correcta del archivo de las preguntas
@@ -15,6 +16,7 @@ var tables: int = 0			#selecciona un grupo de la tabla de las preguntas del arch
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	mina.play("Outfade")	#reproduce la animación de reaparecer
 	match  LevelManager.Entered_level:
 		1: datos = read_json_file("res://Levels/Questions_1.json")		#lee el archivo que contiene las preguntas de un nivel
 		2: datos = read_json_file("res://Levels/Questions_2.json")
@@ -96,8 +98,16 @@ func _on_confirmacion_pressed() -> void:
 
 
 func _on_reini_pressed() -> void:
-	get_tree().reload_current_scene()
-
+	mina.play("Infade")
+	
 
 func _on_salir_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/control.tscn")
+	mina.play("Infade")
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Infade" and $Reniten/Reini.button_pressed:
+		get_tree().reload_current_scene()
+	
+	if anim_name == "Infade" and $Reniten/Salir.button_pressed:
+		get_tree().change_scene_to_file("res://Scenes/control.tscn")

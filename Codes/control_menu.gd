@@ -1,5 +1,5 @@
 extends Control
-@onready var Version = $Version
+@onready var Version = $"Menu Creditos/Version"
 @onready var M_salida = $"Menu salida"
 @onready var M_creditos = $"Menu Creditos"
 @onready var N_uno = $"VFlowContainer/Borde boton/Boton prueba"
@@ -8,9 +8,11 @@ extends Control
 @onready var N_cuatro = $"VFlowContainer/Borde boton4/Boton prueba4"
 @onready var N_cinco = $"VFlowContainer/Borde boton5/Boton prueba5"
 @onready var N_seis = $"VFlowContainer/Borde boton6/Boton prueba6"
+@onready var Anim = $AnimationPlayer	#esta variable permite utulizar animaciones
 
 func _ready() -> void:
-	LevelManager.save_data()
+	LevelManager.save_data() #llama a la funcion de guardar datos
+	Anim.play("Outfade")
 	Version.text = "v"+ProjectSettings.get_setting("application/config/version") 		# muestra la version del juego
 	
 	# Verifica el progreso de los niveles
@@ -50,27 +52,27 @@ func _process(delta: float) -> void:
 
 func _on_boton_prueba_pressed() -> void:
 	LevelManager.Entered_level = 1
-	get_tree().change_scene_to_file("res://Scenes/game_screen.tscn")			#Cambia a la pantalla de juego
+	Anim.play("Infade")		#reproduce la animación de desvanecer
 
 func _on_boton_prueba_2_pressed() -> void:
 	LevelManager.Entered_level = 2
-	get_tree().change_scene_to_file("res://Scenes/game_screen.tscn")
+	Anim.play("Infade")
 
 func _on_boton_prueba_3_pressed() -> void:
 	LevelManager.Entered_level = 3
-	get_tree().change_scene_to_file("res://Scenes/game_screen.tscn")
+	Anim.play("Infade")
 	
 func _on_boton_prueba_4_pressed() -> void:
 	LevelManager.Entered_level = 4
-	get_tree().change_scene_to_file("res://Scenes/game_screen.tscn")
+	Anim.play("Infade")
 	
 func _on_boton_prueba_5_pressed() -> void:
 	LevelManager.Entered_level = 5
-	get_tree().change_scene_to_file("res://Scenes/game_screen.tscn")
+	Anim.play("Infade")
 
 func _on_boton_prueba_6_pressed() -> void:
 	LevelManager.Entered_level = 6
-	get_tree().change_scene_to_file("res://Scenes/game_screen.tscn")
+	Anim.play("Infade")
 	
 func _on_boton_reinicio_pressed() -> void:
 	OS.move_to_trash(ProjectSettings.globalize_path("user://savefile.dat"))		#este comando mueve el archivo de guardado a la papelera
@@ -96,7 +98,6 @@ func _on_boton_salida_pressed() -> void:			#lo que pasa si el boton de salida es
 	M_salida.show()			#muestra el menu de salida
 
 func _on_salir_si_pressed() -> void:			#lo que pasa si opción "si" es presionada
-	LevelManager.save_data()		#llama a la funcion de guardar datos
 	get_tree().quit()		#se sale del programa
 
 func _on_salir_no_pressed() -> void:			#lo que pasa si opción "no" es presionada
@@ -104,3 +105,9 @@ func _on_salir_no_pressed() -> void:			#lo que pasa si opción "no" es presionad
 	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = false
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = false
 	M_salida.hide()				#oculta el menu de salida
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Infade":		#verifica que solo cambie de escena si se usa una animación especifica
+		get_tree().change_scene_to_file("res://Scenes/game_screen.tscn")			#Cambia a la pantalla de juego
+	
