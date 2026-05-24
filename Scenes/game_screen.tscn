@@ -8,6 +8,10 @@
 [ext_resource type="StyleBox" uid="uid://b6epdhj5scm2t" path="res://Scenes/Retry_color.tres" id="6_c6clx"]
 [ext_resource type="StyleBox" uid="uid://cf4vr3ew8cjhm" path="res://Scenes/Retry_Pressed_color.tres" id="7_ck8pe"]
 [ext_resource type="StyleBox" uid="uid://bnqmp6uek6guc" path="res://Scenes/Retry_Disable_color.tres" id="8_5l801"]
+[ext_resource type="AudioStream" uid="uid://con651ukbffw6" path="res://Music/zapsplat_multimedia_button_click_fast_wooden_organic_004_78838.mp3" id="9_655u8"]
+[ext_resource type="AudioStream" uid="uid://bx5rsohkgr70b" path="res://Music/zapsplat_multimedia_gameshow_correct_answer_ping_ring_chime_004_92777.mp3" id="10_y1rp0"]
+[ext_resource type="AudioStream" uid="uid://cjv1vp7ncj2gj" path="res://Music/zapsplat_multimedia_gameshow_buzzer_incorrect_buzz_002_91595.mp3" id="11_a5xtm"]
+[ext_resource type="AudioStream" uid="uid://bu5bfx3u7x6cr" path="res://Music/music_zapsplat_game_music_quiz_puzzle_tension_electronic_arpeggio_003.mp3" id="12_y1rp0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5224c"]
 bg_color = Color(0.47291023, 0.6369689, 0.786659, 1)
@@ -90,6 +94,11 @@ _data = {
 &"Outfade": SubResource("Animation_1tcje"),
 &"RESET": SubResource("Animation_dqysy")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fd2kc"]
+random_pitch = 1.122462
+streams_count = 1
+stream_0/stream = ExtResource("9_655u8")
 
 [node name="Control" type="Control" unique_id=1490381308]
 layout_mode = 3
@@ -235,6 +244,21 @@ theme_override_styles/disabled = ExtResource("8_5l801")
 disabled = true
 text = "Examinar"
 
+[node name="NoTocar" type="ColorRect" parent="." unique_id=1590320320]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 136.0
+offset_top = -261.0
+offset_right = -138.0
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
 [node name="Reniten" type="Label" parent="." unique_id=781507576]
 visible = false
 layout_mode = 1
@@ -293,6 +317,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1317176546]
+stream = SubResource("AudioStreamRandomizer_fd2kc")
+
+[node name="Correcto_Sonido" type="AudioStreamPlayer" parent="." unique_id=821210544]
+stream = ExtResource("10_y1rp0")
+
+[node name="Incorrecto_Sonido" type="AudioStreamPlayer" parent="." unique_id=1789077222]
+stream = ExtResource("11_a5xtm")
+
+[node name="Musica_fondo" type="AudioStreamPlayer" parent="." unique_id=1305433844]
+stream = ExtResource("12_y1rp0")
+autoplay = true
 
 [connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 1" to="." method="_on_seleccion_1_pressed"]
 [connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 3" to="." method="_on_seleccion_3_pressed"]

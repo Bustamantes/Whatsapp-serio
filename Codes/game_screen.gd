@@ -7,6 +7,10 @@ extends Control
 @onready var Intenn = $"Espacio juego/Espacio preguntas/Intentos"
 @onready var confii = $"Espacio juego/Espacio preguntas/Confirmacion"
 @onready var mina = $AnimationPlayer
+@onready var clik = $Click
+@onready var Corec = $Correcto_Sonido
+@onready var Incor = $Incorrecto_Sonido
+@onready var M_fondo =$Musica_fondo
 
 var intentos = 3
 var Ultimo 	#variable usada para comparar con la opción correcta del archivo de las preguntas
@@ -47,6 +51,7 @@ func refresh_scene():
 			LevelManager.Level_finished += 1
 		LevelManager.Entered_level = 0		
 	elif intentos == 0:	#en caso de que se agoten los intentos
+		M_fondo.stop()
 		$"Espacio juego/Espacio preguntas".hide()
 		$Reniten.show()
 	else:
@@ -54,6 +59,7 @@ func refresh_scene():
 		
 func trivia_juego():
 	confii.disabled = true
+	$NoTocar.hide()
 	glossa= datos[tables]		#permite acceder al contenido del archivos de las preguntas
 	TextPregunta.text = glossa.Question
 	Q1.text = glossa.Choices[0]		#le cambia el texto anterior por una de las respuestas de la tablas de las repuestas en el archivo de las preguntas
@@ -63,32 +69,39 @@ func trivia_juego():
 	Intenn.text = "Intentos: {intentos}".format({"intentos": intentos})
 	
 func _on_seleccion_1_pressed() -> void:
-	Ultimo = 0		
+	Ultimo = 0
+	clik.play()
 	confii.disabled = false
 
 func _on_seleccion_2_pressed() -> void:
 	Ultimo = 1
+	clik.play()
 	confii.disabled = false
 
 func _on_seleccion_3_pressed() -> void:
 	Ultimo = 2
+	clik.play()
 	confii.disabled = false
 
 func _on_seleccion_4_pressed() -> void:
 	Ultimo = 3
+	clik.play()
 	confii.disabled = false
 	
 func _on_confirmacion_pressed() -> void:
 	confii.disabled = true
+	$NoTocar.show()
 	if Ultimo == glossa.Answer:
+		Corec.play()
 		Intenn.text = "Correcto"
 		await get_tree().create_timer(0.5).timeout 		# este comando crea una pausa temporal medida en segundos
-	else :
+	else:
+		Incor.play()
 		Intenn.text = "La respuesta es [" + glossa.Choices[glossa.Answer] + "]"
 		intentos -= 1
 		if intentos <= 0:
 			intentos = 0
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(1.5).timeout
 	Q1.button_pressed = false
 	Q2.button_pressed = false
 	Q3.button_pressed = false
@@ -98,10 +111,12 @@ func _on_confirmacion_pressed() -> void:
 
 
 func _on_reini_pressed() -> void:
+	clik.play()
 	mina.play("Infade")
-	
+
 
 func _on_salir_pressed() -> void:
+	clik.play()
 	mina.play("Infade")
 
 

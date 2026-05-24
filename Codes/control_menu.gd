@@ -8,9 +8,11 @@ extends Control
 @onready var N_cuatro = $"VFlowContainer/Borde boton4/Boton prueba4"
 @onready var N_cinco = $"VFlowContainer/Borde boton5/Boton prueba5"
 @onready var N_seis = $"VFlowContainer/Borde boton6/Boton prueba6"
-@onready var Anim = $AnimationPlayer	#esta variable permite utulizar animaciones
+@onready var Anim = $AnimationPlayer	#esta variable permite utilizar animaciones
+@onready var Adio = $Click_sonido		#esta variable es para utilizar sonidos
 
 func _ready() -> void:
+	
 	LevelManager.save_data() #llama a la funcion de guardar datos
 	Anim.play("Outfade")
 	Version.text = "v"+ProjectSettings.get_setting("application/config/version") 		# muestra la version del juego
@@ -52,49 +54,62 @@ func _process(delta: float) -> void:
 
 func _on_boton_prueba_pressed() -> void:
 	LevelManager.Entered_level = 1
+	Adio.play()		#reproduce un sonido
 	Anim.play("Infade")		#reproduce la animación de desvanecer
 
 func _on_boton_prueba_2_pressed() -> void:
 	LevelManager.Entered_level = 2
+	Adio.play()
 	Anim.play("Infade")
 
 func _on_boton_prueba_3_pressed() -> void:
 	LevelManager.Entered_level = 3
+	Adio.play()
 	Anim.play("Infade")
 	
 func _on_boton_prueba_4_pressed() -> void:
 	LevelManager.Entered_level = 4
+	Adio.play()
 	Anim.play("Infade")
 	
 func _on_boton_prueba_5_pressed() -> void:
 	LevelManager.Entered_level = 5
+	Adio.play()
 	Anim.play("Infade")
 
 func _on_boton_prueba_6_pressed() -> void:
 	LevelManager.Entered_level = 6
+	Adio.play()
 	Anim.play("Infade")
 	
 func _on_boton_reinicio_pressed() -> void:
 	OS.move_to_trash(ProjectSettings.globalize_path("user://savefile.dat"))		#este comando mueve el archivo de guardado a la papelera
 	LevelManager.Level_finished = 0
+	Adio.play()
 	get_tree().reload_current_scene()
 	
 func _on_boton_creditos_pressed() -> void:			#lo que pasa si el boton de creditos es presionado
 	$"Barra Inferior/HBoxContainer/Boton reinicio".disabled = true
 	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = true
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = true
+	Adio.play()
+	$Nontouch.show()
 	M_creditos.show()			#muestra el menu de los creditos
 	
 func _on_regresar_creditos_pressed() -> void:
 	$"Barra Inferior/HBoxContainer/Boton reinicio".disabled = false
 	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = false
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = false
+	Adio.play()
+	$Nontouch.hide()
 	M_creditos.hide()			#oculta el menu de creditos
 	
 func _on_boton_salida_pressed() -> void:			#lo que pasa si el boton de salida es presionado
 	$"Barra Inferior/HBoxContainer/Boton reinicio".disabled = true
 	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = true
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = true
+	Adio.play()
+	$Nontouch.show()
 	M_salida.show()			#muestra el menu de salida
 
 func _on_salir_si_pressed() -> void:			#lo que pasa si opción "si" es presionada
@@ -104,6 +119,8 @@ func _on_salir_no_pressed() -> void:			#lo que pasa si opción "no" es presionad
 	$"Barra Inferior/HBoxContainer/Boton reinicio".disabled = false
 	$"Barra Inferior/HBoxContainer/Boton creditos".disabled = false
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = false
+	Adio.play()
+	$Nontouch.hide()
 	M_salida.hide()				#oculta el menu de salida
 
 

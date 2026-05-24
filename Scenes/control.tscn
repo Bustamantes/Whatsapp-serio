@@ -5,6 +5,8 @@
 [ext_resource type="StyleBox" uid="uid://bwvbgnrfvlkr8" path="res://Scenes/button_clicked_color.tres" id="3_vh8u0"]
 [ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="4_wpaqk"]
 [ext_resource type="StyleBox" uid="uid://dd7w6fxnufg1k" path="res://Scenes/button_disabled_color.tres" id="5_btyrf"]
+[ext_resource type="AudioStream" uid="uid://con651ukbffw6" path="res://Music/zapsplat_multimedia_button_click_fast_wooden_organic_004_78838.mp3" id="6_dqysy"]
+[ext_resource type="AudioStream" uid="uid://bru84wugnk8g5" path="res://Music/zapsplat_multimedia_game_sound_pause_music_loop_soft_chime_calm_70247.mp3" id="7_1tcje"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjmnu"]
 bg_color = Color(0.73333335, 0.9137255, 0.91764706, 1)
@@ -130,6 +132,12 @@ _data = {
 &"Outfade": SubResource("Animation_1tcje"),
 &"RESET": SubResource("Animation_dqysy")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dqysy"]
+playback_mode = 1
+random_pitch = 1.122462
+streams_count = 1
+stream_0/stream = ExtResource("6_dqysy")
 
 [node name="Control" type="Control" unique_id=1248340580]
 layout_mode = 3
@@ -468,6 +476,19 @@ theme_override_styles/disabled = ExtResource("5_btyrf")
 text = "Salir"
 metadata/_edit_use_anchors_ = true
 
+[node name="Nontouch" type="ColorRect" parent="." unique_id=679136300]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -210.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
 [node name="Menu salida" type="Panel" parent="." unique_id=748376239]
 visible = false
 layout_mode = 1
@@ -543,16 +564,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -211.0
-offset_top = -83.0
-offset_right = 140.0
-offset_bottom = 1.5
+offset_left = -226.0
+offset_top = -91.0
+offset_right = 217.0
+offset_bottom = 4.25
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 22
-text = "Programadores - 
-Juan Rodó y Edwin Bustamante"
+theme_override_font_sizes/font_size = 20
+text = "Programadores - Juan Rodó y Edwin Bustamante
+Música y Sonidos - Zapsplat"
 autowrap_mode = 2
 
 [node name="regresar creditos" type="Button" parent="Menu Creditos" unique_id=302773470]
@@ -599,6 +620,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Click_sonido" type="AudioStreamPlayer" parent="." unique_id=2038286035]
+stream = SubResource("AudioStreamRandomizer_dqysy")
+
+[node name="M_menu" type="AudioStreamPlayer" parent="." unique_id=1100697916]
+stream = ExtResource("7_1tcje")
+autoplay = true
 
 [connection signal="pressed" from="VFlowContainer/Borde boton/Boton prueba" to="." method="_on_boton_prueba_pressed"]
 [connection signal="pressed" from="VFlowContainer/Borde boton2/Boton prueba2" to="." method="_on_boton_prueba_2_pressed"]
