@@ -11,14 +11,16 @@ config_version=5
 [application]
 
 config/name="Whatsapp Serio"
-config/version="0.6"
+config/version="0.7"
 run/main_scene="uid://cv0kiovxy5cnr"
+config/quit_on_go_back=false
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.30323294, 0.3032328, 0.30323276, 1)
+config/icon="uid://bb6ryghsphnbn"
 
 [audio]
 
-buses/default_bus_layout=""
+buses/default_bus_layout="uid://bkhli2lm8lirh"
 
 [autoload]
 

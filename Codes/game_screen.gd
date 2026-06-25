@@ -4,15 +4,18 @@ extends Control
 @onready var Q2 = $"Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 2"
 @onready var Q3 = $"Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 3"
 @onready var Q4 = $"Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 4"
-@onready var Intenn = $"Espacio juego/Espacio preguntas/Intentos"
+@onready var Intenn = $"Espacio juego/Espacio preguntas/HBoxContainer/Intentos"
+@onready var Puntto = $"Espacio juego/Espacio preguntas/HBoxContainer/Puntos"
 @onready var confii = $"Espacio juego/Espacio preguntas/Confirmacion"
 @onready var mina = $AnimationPlayer
 @onready var clik = $Click
 @onready var Corec = $Correcto_Sonido
 @onready var Incor = $Incorrecto_Sonido
-@onready var M_fondo =$Musica_fondo
+@onready var M_fondo = $Musica_fondo
 
-var intentos = 3
+var intento = 3		#variable que muestra los intentos iniciales
+var punto = 0		#variable utilizada para calcular el puntaje obtenido
+var M_punto = 0		#variable usada de multiplicador del puntaje 
 var Ultimo 	#variable usada para comparar con la opción correcta del archivo de las preguntas
 var datos: Array 	
 var glossa: Dictionary			
@@ -28,7 +31,7 @@ func _ready() -> void:
 		4: datos = read_json_file("res://Levels/Questions_4.json")
 		5: datos = read_json_file("res://Levels/Questions_5.json")
 		6: datos = read_json_file("res://Levels/Questions_6.json")
-		_: get_tree().change_scene_to_file("res://Scenes/control.tscn")	#en caso de error, va directo al menu principal
+		_: $Felicita.show()		#en caso de error, va directo al menu principal
 	if LevelManager.Level_finished >= LevelManager.Entered_level:		#las preguntas solo estaran en orden antes de pasar el nivel por primeras vez
 		datos.shuffle()		#cambia el orden de las preguntas, pero una vez por partida, sin preguntas repetidas
 	refresh_scene()
@@ -45,12 +48,16 @@ func read_json_file(filename: String):
 	return json_data
 
 func refresh_scene():
-	if tables >= datos.size() and intentos > 0:		#en caso de completar el nivel de forma exitosa
-		get_tree().change_scene_to_file("res://Scenes/control.tscn")
+	#esta funcion verifica los estados(victoria, derrota o en juego) y transiciones del juego
+	if tables >= datos.size() and intento > 0:		#en caso de completar el nivel de forma exitosa
+		M_fondo.stop()
+		$"Espacio juego/Espacio preguntas".hide()
+		$Felicita.show()
+		$"Felicita/Total puntos".text = "Puntos Totales: {puntos}".format({"puntos": punto})
 		if LevelManager.Level_finished < LevelManager.Entered_level:		#en caso de completar el nivel por primera vez, se irá desbloqueando el siguiente nivel en el menu principal
 			LevelManager.Level_finished += 1
 		LevelManager.Entered_level = 0		
-	elif intentos == 0:	#en caso de que se agoten los intentos
+	elif intento == 0:	#en caso de que se agoten los intentos
 		M_fondo.stop()
 		$"Espacio juego/Espacio preguntas".hide()
 		$Reniten.show()
@@ -58,15 +65,18 @@ func refresh_scene():
 		trivia_juego()
 		
 func trivia_juego():
+	# esta es la funcion que contiene las bases del juego
 	confii.disabled = true
-	$NoTocar.hide()
+	$NoTocar.hide()		#una imagen que evita al jugador de presionar los botones durante un proceso, se oculta para que el jugador pueda interactuar con el juego
 	glossa= datos[tables]		#permite acceder al contenido del archivos de las preguntas
 	TextPregunta.text = glossa.Question
-	Q1.text = glossa.Choices[0]		#le cambia el texto anterior por una de las respuestas de la tablas de las repuestas en el archivo de las preguntas
+	Q1.text = glossa.Choices[0]		#le cambia el texto anterior por una de las opciones de la tablas de las repuestas en el archivo de las preguntas
 	Q2.text = glossa.Choices[1]
 	Q3.text = glossa.Choices[2]
 	Q4.text = glossa.Choices[3]
-	Intenn.text = "Intentos: {intentos}".format({"intentos": intentos})
+	Intenn.text = "Intentos: {intentos}".format({"intentos": intento})		#aqui se muestran los intentos restantes
+	Puntto.text = "Puntos: {puntos}".format({"puntos": punto})		#aqui se muestran los puntos obtenidos
+	
 	
 func _on_seleccion_1_pressed() -> void:
 	Ultimo = 0
@@ -94,13 +104,17 @@ func _on_confirmacion_pressed() -> void:
 	if Ultimo == glossa.Answer:
 		Corec.play()
 		Intenn.text = "Correcto"
+		M_punto += 1		#el multiplicador aumenta por cada respuesta correcta
+		punto += 100 * M_punto		#este es el calculo del puntaje
 		await get_tree().create_timer(0.5).timeout 		# este comando crea una pausa temporal medida en segundos
 	else:
 		Incor.play()
 		Intenn.text = "La respuesta es [" + glossa.Choices[glossa.Answer] + "]"
-		intentos -= 1
-		if intentos <= 0:
-			intentos = 0
+		intento -= 1
+		M_punto = 0		#en caso de fallar una pregunta, el multiplicador se reinicia
+		punto += 25		#se obtendrá menos puntos en caso de fallar
+		if intento <= 0:
+			intento = 0
 		await get_tree().create_timer(1.5).timeout
 	Q1.button_pressed = false
 	Q2.button_pressed = false
@@ -118,11 +132,15 @@ func _on_reini_pressed() -> void:
 func _on_salir_pressed() -> void:
 	clik.play()
 	mina.play("Infade")
-
+	
+	
+func _on_volver_pressed() -> void:
+	clik.play()
+	mina.play("Infade")
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Infade" and $Reniten/Reini.button_pressed:
 		get_tree().reload_current_scene()
 	
-	if anim_name == "Infade" and $Reniten/Salir.button_pressed:
+	if anim_name == "Infade" and ($Reniten/Salir.button_pressed or $Felicita/Volver.button_pressed):
 		get_tree().change_scene_to_file("res://Scenes/control.tscn")
