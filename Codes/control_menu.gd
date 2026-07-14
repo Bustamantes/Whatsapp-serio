@@ -10,12 +10,13 @@ extends Control
 @onready var N_seis = $"VFlowContainer/Borde boton6/Boton prueba6"
 @onready var Anim = $AnimationPlayer	#esta variable permite utilizar animaciones
 @onready var Adio = $Click_sonido		#esta variable es para utilizar sonidos
-@onready var Music_vol = $"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer/HMusica/Mvolume"		#estas variables son las barras de volume
-@onready var SFX_vol = $"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer/HSonido/Svolume"
+@onready var Music_vol = $"Menu opciones/VBoxContainer/HMusica/Mvolume"		#estas variables son las barras de volume
+@onready var SFX_vol = $"Menu opciones/VBoxContainer/HSonido/Svolume"
 
 func _ready() -> void:
 	$M_menu.bus = "Music"		#asigna un sonido a un bus de audio
 	$Click_sonido.bus = "SFX"
+	$"Menu opciones/HPuntos/Puntaje record".text = "{point}".format({"point":LevelManager.Hi_score })
 	LevelManager.save_data() #llama a la funcion de guardar datos
 	Anim.play("Outfade")		#reproduce la animación de reaparecer
 	Version.text = "v"+ProjectSettings.get_setting("application/config/version") 		# muestra la version del juego
@@ -86,14 +87,14 @@ func _on_boton_prueba_6_pressed() -> void:
 	Anim.play("Infade")
 	
 func _on_boton_opciones_pressed() -> void:
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones".show()
+	$"Menu opciones".show()
 	$"Barra Inferior/HBoxContainer/Boton opciones".disabled = true		#desabilita el uso del boton
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = true
 	$Nontouch.show()
 	Adio.play()
 	
 func _on_regresar_opciones_pressed() -> void:
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones".hide()
+	$"Menu opciones".hide()
 	$"Barra Inferior/HBoxContainer/Boton opciones".disabled = false		#reactiva el uso del boton
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = false
 	$Nontouch.hide()
@@ -106,22 +107,22 @@ func _on_boton_reinicio_pressed() -> void:
 	get_tree().reload_current_scene()
 	
 func _on_boton_creditos_pressed() -> void:			#lo que pasa si el boton de creditos es presionado
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton creditos".disabled = true
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton reinicio".disabled = true
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Regresar opciones".disabled = true
+	$"Menu opciones/HBotones/Boton creditos".disabled = true
+	$"Menu opciones/HBotones/Boton reinicio".disabled = true
+	$"Menu opciones/HBotones/Regresar opciones".disabled = true
 	Adio.play()
 	M_creditos.show()			#muestra el menu de los creditos
 	
 func _on_regresar_creditos_pressed() -> void:
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton creditos".disabled = false
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton reinicio".disabled = false
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Regresar opciones".disabled = false
+	$"Menu opciones/HBotones/Boton creditos".disabled = false
+	$"Menu opciones/HBotones/Boton reinicio".disabled = false
+	$"Menu opciones/HBotones/Regresar opciones".disabled = false
 	Adio.play()
 	M_creditos.hide()			#oculta el menu de creditos
 	
 func _on_boton_salida_pressed() -> void:			#lo que pasa si el boton de salida es presionado
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton creditos".disabled = true
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton reinicio".disabled = true
+	$"Menu opciones/HBotones/Boton creditos".disabled = true
+	$"Menu opciones/HBotones/Boton reinicio".disabled = true
 	$"Barra Inferior/HBoxContainer/Boton opciones".disabled = true
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = true
 	Adio.play()
@@ -132,8 +133,8 @@ func _on_salir_si_pressed() -> void:			#lo que pasa si opción "si" es presionad
 	get_tree().quit()		#se sale del programa
 
 func _on_salir_no_pressed() -> void:			#lo que pasa si opción "no" es presionada
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton creditos".disabled = false
-	$"Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton reinicio".disabled = false
+	$"Menu opciones/HBotones/Boton creditos".disabled = false
+	$"Menu opciones/HBotones/Boton reinicio".disabled = false
 	$"Barra Inferior/HBoxContainer/Boton opciones".disabled = false
 	$"Barra Inferior/HBoxContainer/Boton salida".disabled = false
 	Adio.play()

@@ -1,0 +1,28 @@
+keys;es;en
+MAIN_MENU_TITLE_GAME;Whatsapp Juego de Trivia;Trivia Game Whatsapp
+MAIN_MENU_BTN_1;Abriendo Whatsapp;Opening Whatsapp
+MAIN_MENU_BTN_2;Mensajes y Multimedia;Messages and Multimedia
+MAIN_MENU_BTN_3;Llamadas y Estados;Calls and Whatsapp Status
+MAIN_MENU_BTN_4;Grupos;Groups
+MAIN_MENU_BTN_5;Seguridad y Privacidad;Privacy and Security
+MAIN_MENU_BTN_6;Organización y Almacenamiento;Organization and Storage
+MAIN_MENU_OPTION_BTN;Opciones;Options
+MAIN_MENU_QUIT_BTN;Salir;Quit
+OPTION_MUSIC_BAR;Música;Music
+OPTION_SFX_BAR;Sonido;Sound
+OPTION_HISCORE;Mejor Puntuación;Best Score
+OPTION_CREDITS_BTN;Créditos;Credits
+OPTION_ERASE_BTN;Borrar Datos;Erase Data
+OPTION_BACK_BTN;Regresar;Back
+CREDITS_DEV_LBL;"Programadores
+Juan Rodó
+Edwin Bustamante";"Developer
+Juan Rodó
+Edwin Bustamante"
+CREDITS_SOUND_LBL;"Música y Sonidos
+Zapsplat";"Music and Sounds
+Zapsplat"
+CREDTIS_BACK_BTN;Regresar;Back
+QUIT_LBL;¿Quieres salir del juego?;Do you want to quit?
+QUIT_YES;Si;Yes
+QUIT_NO;No;No

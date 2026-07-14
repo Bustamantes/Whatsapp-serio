@@ -56,7 +56,11 @@ func refresh_scene():
 		$"Felicita/Total puntos".text = "Puntos Totales: {puntos}".format({"puntos": punto})
 		if LevelManager.Level_finished < LevelManager.Entered_level:		#en caso de completar el nivel por primera vez, se irá desbloqueando el siguiente nivel en el menu principal
 			LevelManager.Level_finished += 1
-		LevelManager.Entered_level = 0		
+			
+		LevelManager.Entered_level = 0
+		
+		if punto > LevelManager.Hi_score:	#verifica si la puntuación actual con la mejor puntuación
+			LevelManager.Hi_score = punto
 	elif intento == 0:	#en caso de que se agoten los intentos
 		M_fondo.stop()
 		$"Espacio juego/Espacio preguntas".hide()

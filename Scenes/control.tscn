@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dddjhx3k42sxe" path="res://Codes/control_menu.gd" id="1_wpaqk"]
 [ext_resource type="StyleBox" uid="uid://dkkjmkvqtd2o6" path="res://Scenes/button_color.tres" id="2_cgmvo"]
+[ext_resource type="Script" uid="uid://dj4hucmufkxml" path="res://Codes/translator.gd" id="2_mwcvj"]
 [ext_resource type="FontFile" uid="uid://birtbea2dxvcu" path="res://Fonts & Images/Cabin-Italic-VariableFont_wdth,wght.ttf" id="2_vxodi"]
 [ext_resource type="StyleBox" uid="uid://bwvbgnrfvlkr8" path="res://Scenes/button_clicked_color.tres" id="3_vh8u0"]
 [ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="4_wpaqk"]
@@ -144,6 +145,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wpaqk")
 
+[node name="Translator" type="Node" parent="." unique_id=1792966968]
+script = ExtResource("2_mwcvj")
+
 [node name="Fondo" type="Panel" parent="." unique_id=2088665866]
 layout_mode = 1
 anchors_preset = 15
@@ -172,7 +176,7 @@ custom_minimum_size = Vector2(310, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
 
-[node name="Boton prueba" type="Button" parent="VFlowContainer/Borde boton" unique_id=2057417497]
+[node name="Boton prueba" type="Button" parent="VFlowContainer/Borde boton" unique_id=2057417497 groups=["Multidioma"]]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.582
@@ -190,8 +194,8 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = ExtResource("2_cgmvo")
 theme_override_styles/pressed = ExtResource("3_vh8u0")
 theme_override_styles/hover = ExtResource("2_cgmvo")
-text = "Abriendo Whatsapp
-"
+text = "Abriendo Whatsapp"
+metadata/keys = "MAIN_MENU_BTN_1"
 
 [node name="Circulo boton" type="PanelContainer" parent="VFlowContainer/Borde boton/Boton prueba" unique_id=142819837]
 layout_mode = 0
@@ -213,7 +217,7 @@ custom_minimum_size = Vector2(310, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
 
-[node name="Boton prueba2" type="Button" parent="VFlowContainer/Borde boton2" unique_id=70153032]
+[node name="Boton prueba2" type="Button" parent="VFlowContainer/Borde boton2" unique_id=70153032 groups=["Multidioma"]]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 11.0
@@ -232,6 +236,7 @@ disabled = true
 text = "Mensajes y
 Multimedia"
 autowrap_mode = 2
+metadata/keys = "MAIN_MENU_BTN_2"
 
 [node name="Circulo boton2" type="PanelContainer" parent="VFlowContainer/Borde boton2/Boton prueba2" unique_id=723410214]
 layout_mode = 0
@@ -253,7 +258,7 @@ custom_minimum_size = Vector2(310, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
 
-[node name="Boton prueba3" type="Button" parent="VFlowContainer/Borde boton3" unique_id=2036994388]
+[node name="Boton prueba3" type="Button" parent="VFlowContainer/Borde boton3" unique_id=2036994388 groups=["Multidioma"]]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 11.0
@@ -269,8 +274,8 @@ theme_override_styles/pressed = ExtResource("3_vh8u0")
 theme_override_styles/hover = ExtResource("2_cgmvo")
 theme_override_styles/disabled = ExtResource("5_0yuog")
 disabled = true
-text = "Llamadas y Estados
-"
+text = "Llamadas y Estados"
+metadata/keys = "MAIN_MENU_BTN_3"
 
 [node name="Circulo boton3" type="PanelContainer" parent="VFlowContainer/Borde boton3/Boton prueba3" unique_id=2145166100]
 layout_mode = 0
@@ -292,7 +297,7 @@ custom_minimum_size = Vector2(310, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
 
-[node name="Boton prueba4" type="Button" parent="VFlowContainer/Borde boton4" unique_id=1004073295]
+[node name="Boton prueba4" type="Button" parent="VFlowContainer/Borde boton4" unique_id=1004073295 groups=["Multidioma"]]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 11.0
@@ -309,6 +314,7 @@ theme_override_styles/hover = ExtResource("2_cgmvo")
 theme_override_styles/disabled = ExtResource("5_0yuog")
 disabled = true
 text = "Grupos"
+metadata/keys = "MAIN_MENU_BTN_4"
 
 [node name="Circulo boton4" type="PanelContainer" parent="VFlowContainer/Borde boton4/Boton prueba4" unique_id=2027857968]
 layout_mode = 0
@@ -330,7 +336,7 @@ custom_minimum_size = Vector2(310, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
 
-[node name="Boton prueba5" type="Button" parent="VFlowContainer/Borde boton5" unique_id=668888205]
+[node name="Boton prueba5" type="Button" parent="VFlowContainer/Borde boton5" unique_id=668888205 groups=["Multidioma"]]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 11.0
@@ -349,6 +355,7 @@ disabled = true
 text = "Seguridad y 
 Privacidad"
 autowrap_mode = 2
+metadata/keys = "MAIN_MENU_BTN_5"
 
 [node name="Circulo boton5" type="PanelContainer" parent="VFlowContainer/Borde boton5/Boton prueba5" unique_id=1226701523]
 layout_mode = 0
@@ -370,7 +377,7 @@ custom_minimum_size = Vector2(310, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
 
-[node name="Boton prueba6" type="Button" parent="VFlowContainer/Borde boton6" unique_id=853076775]
+[node name="Boton prueba6" type="Button" parent="VFlowContainer/Borde boton6" unique_id=853076775 groups=["Multidioma"]]
 layout_mode = 0
 offset_left = 62.0
 offset_top = 11.0
@@ -389,6 +396,7 @@ disabled = true
 text = "Organización y 
 Almacenamiento"
 text_overrun_behavior = 2
+metadata/keys = "MAIN_MENU_BTN_6"
 
 [node name="Circulo boton6" type="PanelContainer" parent="VFlowContainer/Borde boton6/Boton prueba6" unique_id=1363396568]
 layout_mode = 0
@@ -413,7 +421,7 @@ offset_bottom = 113.0
 grow_horizontal = 2
 theme_override_styles/panel = ExtResource("4_wpaqk")
 
-[node name="Label" type="Label" parent="Barra Superior" unique_id=240438837]
+[node name="Titulo_juego" type="Label" parent="Barra Superior" unique_id=240438837 groups=["Multidioma"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -429,7 +437,8 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vxodi")
 theme_override_font_sizes/font_size = 35
-text = "Titulo Juego Whatsapp"
+text = "Whatsapp"
+metadata/keys = "MAIN_MENU_TITLE_GAME"
 
 [node name="Nontouch" type="ColorRect" parent="." unique_id=679136300]
 visible = false
@@ -464,7 +473,7 @@ offset_bottom = 87.0
 theme_override_constants/separation = 60
 alignment = 1
 
-[node name="Boton opciones" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=1639250639]
+[node name="Boton opciones" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=1639250639 groups=["Multidioma"]]
 custom_minimum_size = Vector2(140, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
@@ -475,138 +484,9 @@ theme_override_styles/pressed = ExtResource("7_qtfct")
 theme_override_styles/hover = ExtResource("5_mft5f")
 theme_override_styles/disabled = ExtResource("8_0yuog")
 text = "Opciones"
+metadata/keys = "MAIN_MENU_OPTION_BTN"
 
-[node name="Menu opciones" type="Panel" parent="Barra Inferior/HBoxContainer/Boton opciones" unique_id=1146547758]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -7.478
-anchor_top = -7.7830005
-anchor_right = 1.411
-anchor_bottom = -0.083000004
-offset_left = 481.14
-offset_top = -0.019958496
-offset_right = 65.45999
-offset_bottom = -0.019999504
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = ExtResource("4_wpaqk")
-
-[node name="HBotones" type="HBoxContainer" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones" unique_id=1122579489]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -247.0
-offset_top = -104.0
-offset_right = 275.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 70
-
-[node name="Boton creditos" type="Button" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones" unique_id=532111056]
-custom_minimum_size = Vector2(140, 48)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
-theme_override_fonts/font = ExtResource("2_vxodi")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("5_mft5f")
-theme_override_styles/pressed = ExtResource("7_qtfct")
-theme_override_styles/hover = ExtResource("5_mft5f")
-theme_override_styles/disabled = ExtResource("8_0yuog")
-text = "Creditos"
-
-[node name="Boton reinicio" type="Button" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones" unique_id=1272096143]
-custom_minimum_size = Vector2(140, 48)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
-theme_override_fonts/font = ExtResource("2_vxodi")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("5_mft5f")
-theme_override_styles/pressed = ExtResource("7_qtfct")
-theme_override_styles/hover = ExtResource("5_mft5f")
-theme_override_styles/disabled = ExtResource("8_0yuog")
-text = "Borrar datos"
-
-[node name="Regresar opciones" type="Button" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones" unique_id=1793379700]
-custom_minimum_size = Vector2(140, 48)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
-theme_override_fonts/font = ExtResource("7_fx7jt")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("5_mft5f")
-theme_override_styles/pressed = ExtResource("7_qtfct")
-theme_override_styles/hover = ExtResource("5_mft5f")
-theme_override_styles/disabled = ExtResource("8_0yuog")
-text = "Regresar"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones" unique_id=1566118318]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -105.94501
-offset_top = -50.5
-offset_right = 105.94501
-offset_bottom = 50.5
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="HMusica" type="HBoxContainer" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer" unique_id=1253068278]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer/HMusica" unique_id=1793382464]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
-theme_override_constants/line_spacing = 0
-theme_override_font_sizes/font_size = 22
-text = "Música"
-
-[node name="Mvolume" type="HSlider" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer/HMusica" unique_id=1880242709]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-size_flags_vertical = 4
-max_value = 1.0
-step = 0.1
-value = 1.0
-tick_count = 11
-ticks_on_borders = true
-ticks_position = 3
-
-[node name="HSonido" type="HBoxContainer" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer" unique_id=2094975102]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 20
-
-[node name="Label" type="Label" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer/HSonido" unique_id=1412265054]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
-theme_override_constants/line_spacing = 0
-theme_override_font_sizes/font_size = 22
-text = "Sonido"
-
-[node name="Svolume" type="HSlider" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer/HSonido" unique_id=826403741]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-size_flags_vertical = 4
-max_value = 1.0
-step = 0.1
-value = 1.0
-tick_count = 11
-ticks_on_borders = true
-ticks_position = 3
-
-[node name="Boton salida" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=654177269]
+[node name="Boton salida" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=654177269 groups=["Multidioma"]]
 custom_minimum_size = Vector2(140, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
@@ -619,6 +499,172 @@ theme_override_styles/hover = ExtResource("5_mft5f")
 theme_override_styles/disabled = ExtResource("8_0yuog")
 text = "Salir"
 metadata/_edit_use_anchors_ = true
+metadata/keys = "MAIN_MENU_QUIT_BTN"
+
+[node name="Menu opciones" type="Panel" parent="." unique_id=1146547758]
+visible = false
+custom_minimum_size = Vector2(625, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("4_wpaqk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu opciones" unique_id=1566118318]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.5
+offset_top = -130.5
+offset_right = 147.5
+offset_bottom = -29.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HMusica" type="HBoxContainer" parent="Menu opciones/VBoxContainer" unique_id=1253068278]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Menu opciones/VBoxContainer/HMusica" unique_id=1793382464 groups=["Multidioma"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 22
+text = "Música"
+metadata/keys = "OPTION_MUSIC_BAR"
+
+[node name="Mvolume" type="HSlider" parent="Menu opciones/VBoxContainer/HMusica" unique_id=1880242709]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 1.0
+tick_count = 11
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="HSonido" type="HBoxContainer" parent="Menu opciones/VBoxContainer" unique_id=2094975102]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Menu opciones/VBoxContainer/HSonido" unique_id=1412265054 groups=["Multidioma"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 22
+text = "Sonido"
+metadata/keys = "OPTION_SFX_BAR"
+
+[node name="Svolume" type="HSlider" parent="Menu opciones/VBoxContainer/HSonido" unique_id=826403741]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 1.0
+tick_count = 11
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="HBotones" type="HBoxContainer" parent="Menu opciones" unique_id=1122579489]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -275.0
+offset_top = -96.0
+offset_right = 285.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 70
+
+[node name="Boton creditos" type="Button" parent="Menu opciones/HBotones" unique_id=532111056 groups=["Multidioma"]]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+theme_override_styles/disabled = ExtResource("8_0yuog")
+text = "Creditos"
+metadata/keys = "OPTION_CREDITS_BTN"
+
+[node name="Boton reinicio" type="Button" parent="Menu opciones/HBotones" unique_id=1272096143 groups=["Multidioma"]]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+theme_override_styles/disabled = ExtResource("8_0yuog")
+text = "Borrar datos"
+metadata/keys = "OPTION_ERASE_BTN"
+
+[node name="Regresar opciones" type="Button" parent="Menu opciones/HBotones" unique_id=1793379700 groups=["Multidioma"]]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("7_fx7jt")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+theme_override_styles/disabled = ExtResource("8_0yuog")
+text = "Regresar"
+metadata/keys = "OPTION_BACK_BTN"
+
+[node name="HPuntos" type="HBoxContainer" parent="Menu opciones" unique_id=708233454]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -20.0
+offset_right = 62.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top puntos" type="Label" parent="Menu opciones/HPuntos" unique_id=700850273 groups=["Multidioma"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 22
+text = "Mejor puntaje:"
+metadata/keys = "OPTION_HISCORE"
+
+[node name="Puntaje record" type="Label" parent="Menu opciones/HPuntos" unique_id=330991222]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 22
 
 [node name="Menu salida" type="Panel" parent="." unique_id=748376239]
 visible = false
@@ -632,7 +678,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("4_wpaqk")
 
-[node name="Label" type="Label" parent="Menu salida" unique_id=1591445429]
+[node name="Salir pregunta" type="Label" parent="Menu salida" unique_id=1591445429 groups=["Multidioma"]]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -647,8 +693,9 @@ theme_override_fonts/font = ExtResource("2_vxodi")
 theme_override_font_sizes/font_size = 50
 text = "¿Quieres salir del juego?"
 horizontal_alignment = 1
+metadata/keys = "QUIT_LBL"
 
-[node name="Salir si" type="Button" parent="Menu salida" unique_id=363426467]
+[node name="Salir si" type="Button" parent="Menu salida" unique_id=363426467 groups=["Multidioma"]]
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 0
 offset_left = 149.0
@@ -662,8 +709,9 @@ theme_override_styles/normal = ExtResource("5_mft5f")
 theme_override_styles/pressed = ExtResource("7_qtfct")
 theme_override_styles/hover = ExtResource("5_mft5f")
 text = "Si"
+metadata/keys = "QUIT_YES"
 
-[node name="Salir no" type="Button" parent="Menu salida" unique_id=1444800172]
+[node name="Salir no" type="Button" parent="Menu salida" unique_id=1444800172 groups=["Multidioma"]]
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 0
 offset_left = 410.0
@@ -677,6 +725,7 @@ theme_override_styles/normal = ExtResource("5_mft5f")
 theme_override_styles/pressed = ExtResource("7_qtfct")
 theme_override_styles/hover = ExtResource("5_mft5f")
 text = "No"
+metadata/keys = "QUIT_NO"
 
 [node name="Menu Creditos" type="Panel" parent="." unique_id=1389098078]
 visible = false
@@ -686,36 +735,62 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -236.0
-offset_top = -117.0
-offset_right = 236.0
-offset_bottom = 117.0
+offset_left = -312.5
+offset_top = -172.5
+offset_right = 312.5
+offset_bottom = 172.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("4_wpaqk")
 
-[node name="Creditos" type="Label" parent="Menu Creditos" unique_id=2093105440]
+[node name="Creditos desarrollador" type="Label" parent="Menu Creditos" unique_id=2093105440 groups=["Multidioma"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -226.0
-offset_top = -91.0
-offset_right = 217.0
-offset_bottom = -3.0
+offset_left = -267.5
+offset_top = -72.5
+offset_right = -5.0
+offset_bottom = 8.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vxodi")
 theme_override_font_sizes/font_size = 20
-text = "Programadores - Juan Rodó y Edwin Bustamante
-Música y Sonidos - Zapsplat"
+text = "-Programadores-
+Juan Rodó
+Edwin Bustamante"
+horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+metadata/keys = "CREDITS_DEV_LBL"
 
-[node name="regresar creditos" type="Button" parent="Menu Creditos" unique_id=302773470]
+[node name="Creditos sonidos" type="Label" parent="Menu Creditos" unique_id=721926754 groups=["Multidioma"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 12.5
+offset_top = -72.5
+offset_right = 237.5
+offset_bottom = -19.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+text = "-Música y Sonidos-
+Zapsplat"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/keys = "CREDITS_SOUND_LBL"
+
+[node name="regresar creditos" type="Button" parent="Menu Creditos" unique_id=302773470 groups=["Multidioma"]]
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 1
 anchors_preset = -1
@@ -736,6 +811,7 @@ theme_override_styles/normal = ExtResource("5_mft5f")
 theme_override_styles/pressed = ExtResource("7_qtfct")
 theme_override_styles/hover = ExtResource("5_mft5f")
 text = "Regresar"
+metadata/keys = "CREDTIS_BACK_BTN"
 
 [node name="Version" type="Label" parent="Menu Creditos" unique_id=1435477677]
 layout_mode = 1
@@ -780,12 +856,12 @@ bus = &"Music"
 [connection signal="pressed" from="VFlowContainer/Borde boton5/Boton prueba5" to="." method="_on_boton_prueba_5_pressed"]
 [connection signal="pressed" from="VFlowContainer/Borde boton6/Boton prueba6" to="." method="_on_boton_prueba_6_pressed"]
 [connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton opciones" to="." method="_on_boton_opciones_pressed"]
-[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton creditos" to="." method="_on_boton_creditos_pressed"]
-[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton reinicio" to="." method="_on_boton_reinicio_pressed"]
-[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Regresar opciones" to="." method="_on_regresar_opciones_pressed"]
-[connection signal="value_changed" from="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer/HMusica/Mvolume" to="." method="_on_mvolume_value_changed"]
-[connection signal="value_changed" from="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/VBoxContainer/HSonido/Svolume" to="." method="_on_svolume_value_changed"]
 [connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton salida" to="." method="_on_boton_salida_pressed"]
+[connection signal="value_changed" from="Menu opciones/VBoxContainer/HMusica/Mvolume" to="." method="_on_mvolume_value_changed"]
+[connection signal="value_changed" from="Menu opciones/VBoxContainer/HSonido/Svolume" to="." method="_on_svolume_value_changed"]
+[connection signal="pressed" from="Menu opciones/HBotones/Boton creditos" to="." method="_on_boton_creditos_pressed"]
+[connection signal="pressed" from="Menu opciones/HBotones/Boton reinicio" to="." method="_on_boton_reinicio_pressed"]
+[connection signal="pressed" from="Menu opciones/HBotones/Regresar opciones" to="." method="_on_regresar_opciones_pressed"]
 [connection signal="pressed" from="Menu salida/Salir si" to="." method="_on_salir_si_pressed"]
 [connection signal="pressed" from="Menu salida/Salir no" to="." method="_on_salir_no_pressed"]
 [connection signal="pressed" from="Menu Creditos/regresar creditos" to="." method="_on_regresar_creditos_pressed"]
