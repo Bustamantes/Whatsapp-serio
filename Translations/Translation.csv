@@ -26,3 +26,12 @@ CREDTIS_BACK_BTN;Regresar;Back
 QUIT_LBL;¿Quieres salir del juego?;Do you want to quit?
 QUIT_YES;Si;Yes
 QUIT_NO;No;No
+GAME_TRIES;"Intentos:";"Tries:"
+GAME_SCORE;"Puntaje:";"Score:"
+GAME_SELECT_BTN;Seleccionar;Select
+GAME_LOSE_SCREEN;¿Quieres intentar de nuevo?;Do you wanna try again?
+GAME_LOSE_RETRY;Reintentar;Retry
+GAME_LOSE_BACK;Salir;Exit
+GAME_WIN;¡Has completado el nivel!;You completed the level!
+GAME_WIN_SCORE;"Puntaje Total:";"Total Score:"
+GAME_WIN_BACK;Volver;Go back

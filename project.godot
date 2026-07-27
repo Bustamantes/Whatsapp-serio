@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Whatsapp Serio"
-config/version="0.8"
+config/version="0.9"
 run/main_scene="uid://cv0kiovxy5cnr"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.6", "Forward Plus")

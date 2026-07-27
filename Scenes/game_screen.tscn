@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dua6o5ou78n6v"]
 
 [ext_resource type="Script" uid="uid://bplj825x31v2u" path="res://Codes/game_screen.gd" id="1_a68iv"]
+[ext_resource type="Script" uid="uid://dj4hucmufkxml" path="res://Codes/translator.gd" id="2_aps3t"]
 [ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="2_kuxdk"]
 [ext_resource type="FontFile" uid="uid://f1flwx8kbh76" path="res://Fonts & Images/static/Cabin-Medium.ttf" id="3_a5xtm"]
 [ext_resource type="StyleBox" uid="uid://cdsqqe5c4b17e" path="res://Scenes/Question_option.tres" id="3_kuxdk"]
@@ -111,6 +112,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a68iv")
 
+[node name="Translation juego" type="Node" parent="." unique_id=1523033361]
+script = ExtResource("2_aps3t")
+
 [node name="Fondo juego" type="Panel" parent="." unique_id=1031714799]
 layout_mode = 1
 anchors_preset = 15
@@ -159,6 +163,7 @@ theme_override_font_sizes/font_size = 24
 text = "Question"
 horizontal_alignment = 1
 autowrap_mode = 3
+metadata/keys = ""
 
 [node name="separador preguntas" type="HBoxContainer" parent="Espacio juego/Espacio preguntas" unique_id=651921083]
 layout_mode = 2
@@ -183,6 +188,7 @@ toggle_mode = true
 button_group = ExtResource("5_qg26s")
 text = "Resp 1"
 autowrap_mode = 2
+metadata/keys = ""
 
 [node name="Seleccion 3" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/pri caja" unique_id=731839212]
 custom_minimum_size = Vector2(300, 50)
@@ -198,6 +204,7 @@ toggle_mode = true
 button_group = ExtResource("5_qg26s")
 text = "Resp 3"
 autowrap_mode = 2
+metadata/keys = ""
 
 [node name="seg caja" type="VBoxContainer" parent="Espacio juego/Espacio preguntas/separador preguntas" unique_id=1780414215]
 layout_mode = 2
@@ -217,6 +224,7 @@ toggle_mode = true
 button_group = ExtResource("5_qg26s")
 text = "Resp 2"
 autowrap_mode = 2
+metadata/keys = ""
 
 [node name="Seleccion 4" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/seg caja" unique_id=676646002]
 custom_minimum_size = Vector2(300, 50)
@@ -232,28 +240,57 @@ toggle_mode = true
 button_group = ExtResource("5_qg26s")
 text = "Resp 4"
 autowrap_mode = 2
+metadata/keys = ""
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Espacio juego/Espacio preguntas" unique_id=1308299585]
 layout_mode = 2
+alignment = 1
 
-[node name="Intentos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer" unique_id=756614612]
+[node name="Caja intento" type="HBoxContainer" parent="Espacio juego/Espacio preguntas/HBoxContainer" unique_id=1972756436]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Intentos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer/Caja intento" unique_id=756614612 groups=["Multidioma"]]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_a5xtm")
 theme_override_font_sizes/font_size = 22
-horizontal_alignment = 1
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/keys = "GAME_TRIES"
 
-[node name="Puntos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer" unique_id=2112658849]
+[node name="Num Intentos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer/Caja intento" unique_id=1326653006]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="Caja puntos" type="HBoxContainer" parent="Espacio juego/Espacio preguntas/HBoxContainer" unique_id=1417190680]
+layout_mode = 2
+alignment = 1
+
+[node name="Puntos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer/Caja puntos" unique_id=2112658849 groups=["Multidioma"]]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 22
-horizontal_alignment = 1
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/keys = "GAME_SCORE"
 
-[node name="Confirmacion" type="Button" parent="Espacio juego/Espacio preguntas" unique_id=1494638752]
+[node name="num puntos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer/Caja puntos" unique_id=1677791121]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="Confirmacion" type="Button" parent="Espacio juego/Espacio preguntas" unique_id=1494638752 groups=["Multidioma"]]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_a5xtm")
@@ -264,6 +301,7 @@ theme_override_styles/hover = ExtResource("6_c6clx")
 theme_override_styles/disabled = ExtResource("8_5l801")
 disabled = true
 text = "Examinar"
+metadata/keys = "GAME_SELECT_BTN"
 
 [node name="NoTocar" type="ColorRect" parent="." unique_id=1590320320]
 visible = false
@@ -280,7 +318,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0)
 
-[node name="Reniten" type="Label" parent="." unique_id=781507576]
+[node name="Reniten" type="Label" parent="." unique_id=781507576 groups=["Multidioma"]]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -300,8 +338,9 @@ theme_override_font_sizes/font_size = 30
 text = "¿Quieres intentar de nuevo?"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/keys = "GAME_LOSE_SCREEN"
 
-[node name="Reini" type="Button" parent="Reniten" unique_id=1336708935]
+[node name="Reini" type="Button" parent="Reniten" unique_id=1336708935 groups=["Multidioma"]]
 custom_minimum_size = Vector2(150, 55)
 layout_mode = 0
 offset_left = 15.0
@@ -316,8 +355,9 @@ theme_override_styles/hover = ExtResource("6_c6clx")
 toggle_mode = true
 text = "Reintentar
 "
+metadata/keys = "GAME_LOSE_RETRY"
 
-[node name="Salir" type="Button" parent="Reniten" unique_id=603105597]
+[node name="Salir" type="Button" parent="Reniten" unique_id=603105597 groups=["Multidioma"]]
 custom_minimum_size = Vector2(150, 55)
 layout_mode = 0
 offset_left = 247.0
@@ -331,8 +371,9 @@ theme_override_styles/pressed = ExtResource("7_ck8pe")
 theme_override_styles/hover = ExtResource("6_c6clx")
 toggle_mode = true
 text = "Salir"
+metadata/keys = "GAME_LOSE_BACK"
 
-[node name="Felicita" type="Label" parent="." unique_id=267810927]
+[node name="Felicita" type="Label" parent="." unique_id=267810927 groups=["Multidioma"]]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -341,9 +382,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -180.5
-offset_top = -98.0
+offset_top = -99.0
 offset_right = 180.5
-offset_bottom = -56.0
+offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -351,28 +392,40 @@ theme_override_fonts/font = ExtResource("10_fd2kc")
 theme_override_font_sizes/font_size = 30
 text = "¡Has completado el nivel!"
 horizontal_alignment = 1
+metadata/keys = "GAME_WIN"
 
-[node name="Total puntos" type="Label" parent="Felicita" unique_id=369972386]
+[node name="Caja total" type="HBoxContainer" parent="Felicita" unique_id=1682324729]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = 18.0
-offset_right = 20.0
-offset_bottom = 60.0
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = 36.0
+offset_right = 90.0
+offset_bottom = 76.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+
+[node name="Total puntos" type="Label" parent="Felicita/Caja total" unique_id=369972386 groups=["Multidioma"]]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_a5xtm")
 theme_override_font_sizes/font_size = 30
 text = "Puntaje Total: "
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/keys = "GAME_WIN_SCORE"
 
-[node name="Volver" type="Button" parent="Felicita" unique_id=1458998916]
+[node name="num total puntos" type="Label" parent="Felicita/Caja total" unique_id=1691027846]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Volver" type="Button" parent="Felicita" unique_id=1458998916 groups=["Multidioma"]]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 1
 anchors_preset = 7
@@ -393,6 +446,7 @@ theme_override_styles/pressed = ExtResource("7_ck8pe")
 theme_override_styles/hover = ExtResource("6_c6clx")
 toggle_mode = true
 text = "Volver"
+metadata/keys = "GAME_WIN_BACK"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=571841265]
 libraries/ = SubResource("AnimationLibrary_c6clx")

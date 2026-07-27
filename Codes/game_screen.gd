@@ -4,8 +4,8 @@ extends Control
 @onready var Q2 = $"Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 2"
 @onready var Q3 = $"Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 3"
 @onready var Q4 = $"Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 4"
-@onready var Intenn = $"Espacio juego/Espacio preguntas/HBoxContainer/Intentos"
-@onready var Puntto = $"Espacio juego/Espacio preguntas/HBoxContainer/Puntos"
+@onready var Intenn = $"Espacio juego/Espacio preguntas/HBoxContainer/Caja intento/Intentos"
+@onready var Puntto = $"Espacio juego/Espacio preguntas/HBoxContainer/Caja puntos/Puntos"
 @onready var confii = $"Espacio juego/Espacio preguntas/Confirmacion"
 @onready var mina = $AnimationPlayer
 @onready var clik = $Click
@@ -53,7 +53,7 @@ func refresh_scene():
 		M_fondo.stop()
 		$"Espacio juego/Espacio preguntas".hide()
 		$Felicita.show()
-		$"Felicita/Total puntos".text = "Puntos Totales: {puntos}".format({"puntos": punto})
+		$"Felicita/Caja total/num total puntos".text = "{point}".format({"point":punto })
 		if LevelManager.Level_finished < LevelManager.Entered_level:		#en caso de completar el nivel por primera vez, se irá desbloqueando el siguiente nivel en el menu principal
 			LevelManager.Level_finished += 1
 			
@@ -78,8 +78,11 @@ func trivia_juego():
 	Q2.text = glossa.Choices[1]
 	Q3.text = glossa.Choices[2]
 	Q4.text = glossa.Choices[3]
-	Intenn.text = "Intentos: {intentos}".format({"intentos": intento})		#aqui se muestran los intentos restantes
-	Puntto.text = "Puntos: {puntos}".format({"puntos": punto})		#aqui se muestran los puntos obtenidos
+	match TranslationServer.get_locale():
+		"es":Intenn.text = "Intentos: "
+		"en":Intenn.text = "Tries: "	
+	$"Espacio juego/Espacio preguntas/HBoxContainer/Caja intento/Num Intentos".text = "{try}".format({"try":intento })#aqui se muestran los intentos restantes
+	$"Espacio juego/Espacio preguntas/HBoxContainer/Caja puntos/num puntos".text = "{point}".format({"point":punto })		#aqui se muestran los puntos obtenidos
 	
 	
 func _on_seleccion_1_pressed() -> void:
@@ -107,13 +110,17 @@ func _on_confirmacion_pressed() -> void:
 	$NoTocar.show()
 	if Ultimo == glossa.Answer:
 		Corec.play()
-		Intenn.text = "Correcto"
+		match TranslationServer.get_locale():	#cambia el texto segun el idioma, pero sin guardar o sovreescribir esos datos
+			"es":Intenn.text = "Correcto"
+			"en":Intenn.text = "Correct"
 		M_punto += 1		#el multiplicador aumenta por cada respuesta correcta
 		punto += 100 * M_punto		#este es el calculo del puntaje
 		await get_tree().create_timer(0.5).timeout 		# este comando crea una pausa temporal medida en segundos
 	else:
 		Incor.play()
-		Intenn.text = "La respuesta es [" + glossa.Choices[glossa.Answer] + "]"
+		match TranslationServer.get_locale():
+			"es":Intenn.text = "La respuesta es [" + glossa.Choices[glossa.Answer] + "]"
+			"en":Intenn.text = "The answer is [" + glossa.Choices[glossa.Answer] + "]"
 		intento -= 1
 		M_punto = 0		#en caso de fallar una pregunta, el multiplicador se reinicia
 		punto += 25		#se obtendrá menos puntos en caso de fallar
