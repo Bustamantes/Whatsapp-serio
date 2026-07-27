@@ -301,6 +301,7 @@ theme_override_styles/hover = ExtResource("6_c6clx")
 theme_override_styles/disabled = ExtResource("8_5l801")
 disabled = true
 text = "Examinar"
+autowrap_mode = 1
 metadata/keys = "GAME_SELECT_BTN"
 
 [node name="NoTocar" type="ColorRect" parent="." unique_id=1590320320]

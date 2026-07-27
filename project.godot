@@ -38,6 +38,7 @@ Multidioma=""
 [internationalization]
 
 locale/translations=PackedStringArray("res://Translations/Translation.es.translation", "res://Translations/Translation.en.translation")
+locale/fallback="es"
 
 [rendering]
 

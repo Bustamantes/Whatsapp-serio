@@ -78,9 +78,10 @@ func trivia_juego():
 	Q2.text = glossa.Choices[1]
 	Q3.text = glossa.Choices[2]
 	Q4.text = glossa.Choices[3]
-	match TranslationServer.get_locale():
+	match OS.get_locale_language():	#cambia el texto segun el idioma del dispositivo, pero sin guardar o sovreescribir esos datos
 		"es":Intenn.text = "Intentos: "
 		"en":Intenn.text = "Tries: "	
+	$"Espacio juego/Espacio preguntas/HBoxContainer/Caja intento/Num Intentos".show()
 	$"Espacio juego/Espacio preguntas/HBoxContainer/Caja intento/Num Intentos".text = "{try}".format({"try":intento })#aqui se muestran los intentos restantes
 	$"Espacio juego/Espacio preguntas/HBoxContainer/Caja puntos/num puntos".text = "{point}".format({"point":punto })		#aqui se muestran los puntos obtenidos
 	
@@ -108,9 +109,10 @@ func _on_seleccion_4_pressed() -> void:
 func _on_confirmacion_pressed() -> void:
 	confii.disabled = true
 	$NoTocar.show()
+	$"Espacio juego/Espacio preguntas/HBoxContainer/Caja intento/Num Intentos".hide()
 	if Ultimo == glossa.Answer:
 		Corec.play()
-		match TranslationServer.get_locale():	#cambia el texto segun el idioma, pero sin guardar o sovreescribir esos datos
+		match OS.get_locale_language():
 			"es":Intenn.text = "Correcto"
 			"en":Intenn.text = "Correct"
 		M_punto += 1		#el multiplicador aumenta por cada respuesta correcta
@@ -118,7 +120,7 @@ func _on_confirmacion_pressed() -> void:
 		await get_tree().create_timer(0.5).timeout 		# este comando crea una pausa temporal medida en segundos
 	else:
 		Incor.play()
-		match TranslationServer.get_locale():
+		match OS.get_locale_language():
 			"es":Intenn.text = "La respuesta es [" + glossa.Choices[glossa.Answer] + "]"
 			"en":Intenn.text = "The answer is [" + glossa.Choices[glossa.Answer] + "]"
 		intento -= 1
