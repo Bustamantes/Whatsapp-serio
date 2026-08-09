@@ -1,0 +1,27 @@
+[
+	{"Question": "¿Como hago una copia de seguridad de Whatsapp?",
+	 "Choices": ["Con un segundo teléfono","Más opciones > ajustes > privacidad","Más opciones > Ajustes > Chats > Toca Copia de seguridad > Guardar","Solo en internet"],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿Como puedo configurar mi opciones e privacidad?",
+	 "Choices": ["Ajustes > Privacidad","Ajustes > Listas","Ajustes > Cuenta","Ajustes > Notificaciones"],
+	 "Answer": 0
+	},
+	
+	{"Question": "¿Como sé si un contacto es sospechoso?",
+	 "Choices": ["El contacto se identifica calmadamente","El contacto hace peticiones extrañas y/o envia enlaces poco confiables","El contacto cambió de numero telefonico","El contacto es nuevo"],
+	 "Answer": 1
+	},
+	
+	{"Question": "¿Como bloquear a un contacto sospechoso?",
+	 "Choices": ["Entra al chat del contacto > tocar el nombre del contacto > guardar","Entra al chat del contacto > tocar el nombre del contacto > llamar","Entra al chat del contacto > tocar el nombre del contacto > notificaciones","Entra al chat del contacto > tocar el nombre del contacto> bajar y presionar Bloquear"],
+	 "Answer": 3
+	},
+	
+	{"Question": "¿Que tipo de personas puede ver tu información personal?",
+	 "Choices": ["Todas las anteriores, pero a elección del usuario","Mis contactos","Nadie","Todos"],
+	 "Answer": 0
+	},
+	
+]

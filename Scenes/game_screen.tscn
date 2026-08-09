@@ -1,0 +1,488 @@
+[gd_scene format=3 uid="uid://dua6o5ou78n6v"]
+
+[ext_resource type="Script" uid="uid://bplj825x31v2u" path="res://Codes/game_screen.gd" id="1_a68iv"]
+[ext_resource type="Script" uid="uid://dj4hucmufkxml" path="res://Codes/translator.gd" id="2_aps3t"]
+[ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="2_kuxdk"]
+[ext_resource type="FontFile" uid="uid://f1flwx8kbh76" path="res://Fonts & Images/static/Cabin-Medium.ttf" id="3_a5xtm"]
+[ext_resource type="StyleBox" uid="uid://cdsqqe5c4b17e" path="res://Scenes/Question_option.tres" id="3_kuxdk"]
+[ext_resource type="StyleBox" uid="uid://yp3ljc4ooytm" path="res://Scenes/Question_touched.tres" id="4_76bm4"]
+[ext_resource type="ButtonGroup" uid="uid://b4plucumysih7" path="res://Scenes/group_Questions_Button.tres" id="5_qg26s"]
+[ext_resource type="StyleBox" uid="uid://b6epdhj5scm2t" path="res://Scenes/Retry_color.tres" id="6_c6clx"]
+[ext_resource type="StyleBox" uid="uid://cf4vr3ew8cjhm" path="res://Scenes/Retry_Pressed_color.tres" id="7_ck8pe"]
+[ext_resource type="StyleBox" uid="uid://bnqmp6uek6guc" path="res://Scenes/Retry_Disable_color.tres" id="8_5l801"]
+[ext_resource type="AudioStream" uid="uid://con651ukbffw6" path="res://Music/zapsplat_multimedia_button_click_fast_wooden_organic_004_78838.mp3" id="9_655u8"]
+[ext_resource type="FontFile" uid="uid://y5ylhmayldyh" path="res://Fonts & Images/static/Cabin-Bold.ttf" id="10_fd2kc"]
+[ext_resource type="AudioStream" uid="uid://bx5rsohkgr70b" path="res://Music/zapsplat_multimedia_gameshow_correct_answer_ping_ring_chime_004_92777.mp3" id="10_y1rp0"]
+[ext_resource type="AudioStream" uid="uid://cjv1vp7ncj2gj" path="res://Music/zapsplat_multimedia_gameshow_buzzer_incorrect_buzz_002_91595.mp3" id="11_a5xtm"]
+[ext_resource type="AudioStream" uid="uid://bu5bfx3u7x6cr" path="res://Music/music_zapsplat_game_music_quiz_puzzle_tension_electronic_arpeggio_003.mp3" id="12_y1rp0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5224c"]
+bg_color = Color(0.47291023, 0.6369689, 0.786659, 1)
+
+[sub_resource type="Animation" id="Animation_btyrf"]
+resource_name = "Infade"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Transi:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4745098, 0.63529414, 0.7882353, 0), Color(0.4745098, 0.63529414, 0.7882353, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Transi:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_1tcje"]
+resource_name = "Outfade"
+length = 0.75
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Transi:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4745098, 0.63529414, 0.7882353, 1), Color(0.4745098, 0.63529414, 0.7882353, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Transi:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.75),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_dqysy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Transi:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c6clx"]
+_data = {
+&"Infade": SubResource("Animation_btyrf"),
+&"Outfade": SubResource("Animation_1tcje"),
+&"RESET": SubResource("Animation_dqysy")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fd2kc"]
+random_pitch = 1.122462
+streams_count = 1
+stream_0/stream = ExtResource("9_655u8")
+
+[node name="Control" type="Control" unique_id=1490381308]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a68iv")
+
+[node name="Translation juego" type="Node" parent="." unique_id=1523033361]
+script = ExtResource("2_aps3t")
+
+[node name="Fondo juego" type="Panel" parent="." unique_id=1031714799]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5224c")
+
+[node name="Espacio juego" type="Panel" parent="." unique_id=26089291]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -439.625
+offset_top = -265.0
+offset_right = 439.625
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_kuxdk")
+
+[node name="Espacio preguntas" type="VBoxContainer" parent="Espacio juego" unique_id=1865769083]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.0
+offset_top = -225.0
+offset_right = 418.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Pregunta" type="Label" parent="Espacio juego/Espacio preguntas" unique_id=1175386806]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 24
+text = "Question"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/keys = ""
+
+[node name="separador preguntas" type="HBoxContainer" parent="Espacio juego/Espacio preguntas" unique_id=651921083]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="pri caja" type="VBoxContainer" parent="Espacio juego/Espacio preguntas/separador preguntas" unique_id=24282637]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Seleccion 1" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/pri caja" unique_id=1732418043]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+toggle_mode = true
+button_group = ExtResource("5_qg26s")
+text = "Resp 1"
+autowrap_mode = 2
+metadata/keys = ""
+
+[node name="Seleccion 3" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/pri caja" unique_id=731839212]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+toggle_mode = true
+button_group = ExtResource("5_qg26s")
+text = "Resp 3"
+autowrap_mode = 2
+metadata/keys = ""
+
+[node name="seg caja" type="VBoxContainer" parent="Espacio juego/Espacio preguntas/separador preguntas" unique_id=1780414215]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Seleccion 2" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/seg caja" unique_id=857843029]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+toggle_mode = true
+button_group = ExtResource("5_qg26s")
+text = "Resp 2"
+autowrap_mode = 2
+metadata/keys = ""
+
+[node name="Seleccion 4" type="Button" parent="Espacio juego/Espacio preguntas/separador preguntas/seg caja" unique_id=676646002]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.3137255, 0.2901961, 1, 1)
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = ExtResource("3_kuxdk")
+theme_override_styles/pressed = ExtResource("4_76bm4")
+theme_override_styles/hover = ExtResource("3_kuxdk")
+toggle_mode = true
+button_group = ExtResource("5_qg26s")
+text = "Resp 4"
+autowrap_mode = 2
+metadata/keys = ""
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Espacio juego/Espacio preguntas" unique_id=1308299585]
+layout_mode = 2
+alignment = 1
+
+[node name="Caja intento" type="HBoxContainer" parent="Espacio juego/Espacio preguntas/HBoxContainer" unique_id=1972756436]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Intentos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer/Caja intento" unique_id=756614612 groups=["Multidioma"]]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/keys = "GAME_TRIES"
+
+[node name="Num Intentos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer/Caja intento" unique_id=1326653006]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="Caja puntos" type="HBoxContainer" parent="Espacio juego/Espacio preguntas/HBoxContainer" unique_id=1417190680]
+layout_mode = 2
+alignment = 1
+
+[node name="Puntos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer/Caja puntos" unique_id=2112658849 groups=["Multidioma"]]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/keys = "GAME_SCORE"
+
+[node name="num puntos" type="Label" parent="Espacio juego/Espacio preguntas/HBoxContainer/Caja puntos" unique_id=1677791121]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="Confirmacion" type="Button" parent="Espacio juego/Espacio preguntas" unique_id=1494638752 groups=["Multidioma"]]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("6_c6clx")
+theme_override_styles/pressed = ExtResource("7_ck8pe")
+theme_override_styles/hover = ExtResource("6_c6clx")
+theme_override_styles/disabled = ExtResource("8_5l801")
+disabled = true
+text = "Examinar"
+autowrap_mode = 1
+metadata/keys = "GAME_SELECT_BTN"
+
+[node name="NoTocar" type="ColorRect" parent="." unique_id=1590320320]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 136.0
+offset_top = -261.0
+offset_right = -138.0
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Reniten" type="Label" parent="." unique_id=781507576 groups=["Multidioma"]]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.0
+offset_top = -79.0
+offset_right = 216.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 30
+text = "¿Quieres intentar de nuevo?"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/keys = "GAME_LOSE_SCREEN"
+
+[node name="Reini" type="Button" parent="Reniten" unique_id=1336708935 groups=["Multidioma"]]
+custom_minimum_size = Vector2(150, 55)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 104.5
+offset_right = 165.0
+offset_bottom = 159.5
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("6_c6clx")
+theme_override_styles/pressed = ExtResource("7_ck8pe")
+theme_override_styles/hover = ExtResource("6_c6clx")
+toggle_mode = true
+text = "Reintentar
+"
+metadata/keys = "GAME_LOSE_RETRY"
+
+[node name="Salir" type="Button" parent="Reniten" unique_id=603105597 groups=["Multidioma"]]
+custom_minimum_size = Vector2(150, 55)
+layout_mode = 0
+offset_left = 247.0
+offset_top = 104.5
+offset_right = 397.0
+offset_bottom = 159.5
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("6_c6clx")
+theme_override_styles/pressed = ExtResource("7_ck8pe")
+theme_override_styles/hover = ExtResource("6_c6clx")
+toggle_mode = true
+text = "Salir"
+metadata/keys = "GAME_LOSE_BACK"
+
+[node name="Felicita" type="Label" parent="." unique_id=267810927 groups=["Multidioma"]]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.5
+offset_top = -99.0
+offset_right = 180.5
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_fd2kc")
+theme_override_font_sizes/font_size = 30
+text = "¡Has completado el nivel!"
+horizontal_alignment = 1
+metadata/keys = "GAME_WIN"
+
+[node name="Caja total" type="HBoxContainer" parent="Felicita" unique_id=1682324729]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = 36.0
+offset_right = 90.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Total puntos" type="Label" parent="Felicita/Caja total" unique_id=369972386 groups=["Multidioma"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 30
+text = "Puntaje Total: "
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/keys = "GAME_WIN_SCORE"
+
+[node name="num total puntos" type="Label" parent="Felicita/Caja total" unique_id=1691027846]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Volver" type="Button" parent="Felicita" unique_id=1458998916 groups=["Multidioma"]]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = 85.0
+offset_right = 75.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_a5xtm")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("6_c6clx")
+theme_override_styles/pressed = ExtResource("7_ck8pe")
+theme_override_styles/hover = ExtResource("6_c6clx")
+toggle_mode = true
+text = "Volver"
+metadata/keys = "GAME_WIN_BACK"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=571841265]
+libraries/ = SubResource("AnimationLibrary_c6clx")
+
+[node name="Transi" type="ColorRect" parent="AnimationPlayer" unique_id=677643223]
+self_modulate = Color(0.4745098, 0.63529414, 0.7882353, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1317176546]
+stream = SubResource("AudioStreamRandomizer_fd2kc")
+bus = &"SFX"
+
+[node name="Correcto_Sonido" type="AudioStreamPlayer" parent="." unique_id=821210544]
+stream = ExtResource("10_y1rp0")
+bus = &"SFX"
+
+[node name="Incorrecto_Sonido" type="AudioStreamPlayer" parent="." unique_id=1789077222]
+stream = ExtResource("11_a5xtm")
+bus = &"SFX"
+
+[node name="Musica_fondo" type="AudioStreamPlayer" parent="." unique_id=1305433844]
+stream = ExtResource("12_y1rp0")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 1" to="." method="_on_seleccion_1_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/pri caja/Seleccion 3" to="." method="_on_seleccion_3_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 2" to="." method="_on_seleccion_2_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/separador preguntas/seg caja/Seleccion 4" to="." method="_on_seleccion_4_pressed"]
+[connection signal="pressed" from="Espacio juego/Espacio preguntas/Confirmacion" to="." method="_on_confirmacion_pressed"]
+[connection signal="pressed" from="Reniten/Reini" to="." method="_on_reini_pressed"]
+[connection signal="pressed" from="Reniten/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Felicita/Volver" to="." method="_on_volver_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

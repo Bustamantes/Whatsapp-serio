@@ -11,13 +11,37 @@ config_version=5
 [application]
 
 config/name="Whatsapp Serio"
+config/version="0.9"
+run/main_scene="uid://cv0kiovxy5cnr"
+config/quit_on_go_back=false
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.30323294, 0.3032328, 0.30323276, 1)
+config/icon="uid://bb6ryghsphnbn"
 
-[physics]
+[audio]
 
-3d/physics_engine="Jolt Physics"
+buses/default_bus_layout="uid://bkhli2lm8lirh"
+
+[autoload]
+
+LevelManager="*uid://cb4ja8886r8xf"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/handheld/orientation=4
+
+[global_group]
+
+Multidioma=""
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Translations/Translation.es.translation", "res://Translations/Translation.en.translation")
+locale/fallback="es"
 
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.38170326, 0.38170323, 0.38170317, 1)

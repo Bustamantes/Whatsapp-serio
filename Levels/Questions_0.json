@@ -1,0 +1,27 @@
+[
+	{"Question": "¿?",
+	 "Choices": ["","","",""],
+	 "Answer": 1
+	},
+	
+	{"Question": "¿?",
+	 "Choices": ["","","",""],
+	 "Answer": 0
+	},
+
+	{"Question": "¿?",
+	 "Choices": ["","","",""],
+	 "Answer": 1
+	},
+	
+	{"Question": "¿?",
+	 "Choices": ["","","",""],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿?",
+	 "Choices": ["","","",""],
+	 "Answer": 3
+	},
+	
+]

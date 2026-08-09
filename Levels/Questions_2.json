@@ -1,0 +1,41 @@
+[
+	{"Question": "¿Cómo puedo escribir mensajes en WhatsApp?",
+	 "Choices": ["Tocar el espacio de mensaje > escribir y tocar el icono de la flecha","Tocar el icono de la cámara > escribir y tocar el icono de la flecha","Tocar el icono del clip > escribir y tocar el icono de la flecha","Tocar el icono del micrófono > escribir y tocar el icono del Micrófono"],
+	 "Answer": 0
+	},
+	
+	{"Question": "¿Cómo puedo tomar una foto en el chat de WhatsApp?",
+	 "Choices": ["Tocando el icono de la estrella","Tocando el icono del micrófono","Tocando el icono del sticker","Tocando el icono de la cámara"],
+	 "Answer": 3
+	},
+
+	{"Question": "¿Cómo comparto una foto que ya tengo guardada en mi celular?",
+	 "Choices": ["Icono del clip > Ubicación > elegir la foto > icono de la flecha","Icono del clip > Galería > elegir la foto > icono de la flecha","Icono del clip > Encuestas > elegir la foto > icono de la flecha","Icono del clip > Cámara > elegir la foto > icono de la flecha"],
+	 "Answer": 1
+	},
+	
+	{"Question": "¿Como envío un audio en WhatsApp?",
+	 "Choices": ["Mantener el icono del contacto","Mantener el icono de la cámara","Mantener presionado el icono del micrófono","Mantener el icono del volumen"],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿Cómo envío un audio sin tener que mantener el dedo apretado todo el tiempo?",
+	 "Choices": ["Presionar y deslízar el icono del micrófono hacia la derecha","Presionar y deslízar el mensaje hacia arriba","Presionar y deslízar el icono del clip hacia la izquierda","Presionar y deslízar el icono del micrófono hacia arriba"],
+	 "Answer": 3
+	},
+	
+	{ "Question": "¿Que significa cuando en un mensaje hay dos ganchos azules?",
+	  "Choices": ["Que el mensaje ha sido leido", "Que el mensaje ha sido enviado", "Que el mensaje ha sido escrito", "Que el mensaje ha sido eliminado"],
+	  "Answer": 0
+	},
+	
+	{ "Question": "¿Que significa cuando en un mensaje hay dos ganchos grises?",
+	  "Choices": ["Que el mensaje ha sido leido", "Que el mensaje ha sido enviado", "Que el mensaje llegó al destinatario", "Que el mensaje ha sido eliminado"],
+	  "Answer": 2
+	},
+	
+	{ "Question": "¿Que significa cuando en un mensaje solo hay un gancho gris?",
+	  "Choices": ["Que el mensaje ha sido leido", "Que el mensaje ha sido enviado", "Que el mensaje ha sido escrito", "Que el mensaje ha sido eliminado"],
+	  "Answer": 1
+	},
+]

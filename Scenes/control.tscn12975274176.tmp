@@ -1,0 +1,753 @@
+[gd_scene format=3 uid="uid://cv0kiovxy5cnr"]
+
+[ext_resource type="Script" uid="uid://dddjhx3k42sxe" path="res://Codes/control_menu.gd" id="1_wpaqk"]
+[ext_resource type="StyleBox" uid="uid://dkkjmkvqtd2o6" path="res://Scenes/button_color.tres" id="2_cgmvo"]
+[ext_resource type="FontFile" uid="uid://birtbea2dxvcu" path="res://Fonts & Images/Cabin-Italic-VariableFont_wdth,wght.ttf" id="2_vxodi"]
+[ext_resource type="StyleBox" uid="uid://bwvbgnrfvlkr8" path="res://Scenes/button_clicked_color.tres" id="3_vh8u0"]
+[ext_resource type="StyleBox" uid="uid://12d1a3145nog" path="res://Scenes/Menu_message.tres" id="4_wpaqk"]
+[ext_resource type="StyleBox" uid="uid://devo8b0t6nxe3" path="res://Scenes/Locked_color.tres" id="5_0yuog"]
+[ext_resource type="StyleBox" uid="uid://cf0rknbvpxsm6" path="res://Scenes/Menu_button.tres" id="5_mft5f"]
+[ext_resource type="AudioStream" uid="uid://con651ukbffw6" path="res://Music/zapsplat_multimedia_button_click_fast_wooden_organic_004_78838.mp3" id="6_dqysy"]
+[ext_resource type="AudioStream" uid="uid://bru84wugnk8g5" path="res://Music/zapsplat_multimedia_game_sound_pause_music_loop_soft_chime_calm_70247.mp3" id="7_1tcje"]
+[ext_resource type="FontFile" uid="uid://br7hfpu756l7i" path="res://Fonts & Images/Cabin-VariableFont_wdth,wght.ttf" id="7_fx7jt"]
+[ext_resource type="StyleBox" uid="uid://dul2a80vr4e0y" path="res://Scenes/Menu_clicked.tres" id="7_qtfct"]
+[ext_resource type="StyleBox" uid="uid://fhxmf882n0mf" path="res://Scenes/Menu_disabled.tres" id="8_0yuog"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjmnu"]
+bg_color = Color(0.73333335, 0.9137255, 0.91764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh8u0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.3137255, 0.2901961, 1, 1)
+border_blend = true
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 15
+corner_detail = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgmvo"]
+bg_color = Color(0.14509805, 0.3882353, 0.92156863, 0.49019608)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.09803922, 0.09803922, 0.09803922, 0.3764706)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqysy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_top = 8
+border_width_bottom = 8
+border_color = Color(0.3137255, 0.2901961, 1, 1)
+border_blend = true
+
+[sub_resource type="Animation" id="Animation_btyrf"]
+resource_name = "Infade"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Transi:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4745098, 0.63529414, 0.7882353, 0), Color(0.47450984, 0.63529414, 0.7882353, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Transi:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_1tcje"]
+resource_name = "Outfade"
+length = 0.75
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Transi:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.4745098, 0.63529414, 0.7882353, 1), Color(0.4745098, 0.63529414, 0.7882353, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Transi:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1.0000002, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_dqysy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Transi:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1tcje"]
+_data = {
+&"Infade": SubResource("Animation_btyrf"),
+&"Outfade": SubResource("Animation_1tcje"),
+&"RESET": SubResource("Animation_dqysy")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dqysy"]
+playback_mode = 1
+random_pitch = 1.122462
+streams_count = 1
+stream_0/stream = ExtResource("6_dqysy")
+
+[node name="Control" type="Control" unique_id=1248340580]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wpaqk")
+
+[node name="Fondo" type="Panel" parent="." unique_id=2088665866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sjmnu")
+
+[node name="VFlowContainer" type="VFlowContainer" parent="." unique_id=380221843]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -212.0
+offset_right = 641.0
+offset_bottom = 211.0
+grow_vertical = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+alignment = 1
+
+[node name="Borde boton" type="Panel" parent="VFlowContainer" unique_id=1893460519]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba" type="Button" parent="VFlowContainer/Borde boton" unique_id=2057417497]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.49500003
+anchor_right = 0.582
+anchor_bottom = 0.49500003
+offset_left = -119.584
+offset_top = -40.975002
+offset_right = 119.416
+offset_bottom = 41.024998
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+text = "Abriendo Whatsapp
+"
+
+[node name="Circulo boton" type="PanelContainer" parent="VFlowContainer/Borde boton/Boton prueba" unique_id=142819837]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton" type="Label" parent="VFlowContainer/Borde boton/Boton prueba/Circulo boton" unique_id=986461118]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="Borde boton2" type="Panel" parent="VFlowContainer" unique_id=329750561]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba2" type="Button" parent="VFlowContainer/Borde boton2" unique_id=70153032]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = ExtResource("5_0yuog")
+disabled = true
+text = "Mensajes y
+Multimedia"
+autowrap_mode = 2
+
+[node name="Circulo boton2" type="PanelContainer" parent="VFlowContainer/Borde boton2/Boton prueba2" unique_id=723410214]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton2" type="Label" parent="VFlowContainer/Borde boton2/Boton prueba2/Circulo boton2" unique_id=1666783439]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+text = "2"
+
+[node name="Borde boton3" type="Panel" parent="VFlowContainer" unique_id=827392488]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba3" type="Button" parent="VFlowContainer/Borde boton3" unique_id=2036994388]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = ExtResource("5_0yuog")
+disabled = true
+text = "Llamadas y Estados
+"
+
+[node name="Circulo boton3" type="PanelContainer" parent="VFlowContainer/Borde boton3/Boton prueba3" unique_id=2145166100]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton3" type="Label" parent="VFlowContainer/Borde boton3/Boton prueba3/Circulo boton3" unique_id=1370014309]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+text = "3"
+
+[node name="Borde boton4" type="Panel" parent="VFlowContainer" unique_id=1871108987]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba4" type="Button" parent="VFlowContainer/Borde boton4" unique_id=1004073295]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = ExtResource("5_0yuog")
+disabled = true
+text = "Grupos"
+
+[node name="Circulo boton4" type="PanelContainer" parent="VFlowContainer/Borde boton4/Boton prueba4" unique_id=2027857968]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton4" type="Label" parent="VFlowContainer/Borde boton4/Boton prueba4/Circulo boton4" unique_id=1240319366]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+text = "4"
+
+[node name="Borde boton5" type="Panel" parent="VFlowContainer" unique_id=1075345192]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba5" type="Button" parent="VFlowContainer/Borde boton5" unique_id=668888205]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = ExtResource("5_0yuog")
+disabled = true
+text = "Seguridad y 
+Privacidad"
+autowrap_mode = 2
+
+[node name="Circulo boton5" type="PanelContainer" parent="VFlowContainer/Borde boton5/Boton prueba5" unique_id=1226701523]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton5" type="Label" parent="VFlowContainer/Borde boton5/Boton prueba5/Circulo boton5" unique_id=54434746]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+text = "5"
+
+[node name="Borde boton6" type="Panel" parent="VFlowContainer" unique_id=95458893]
+custom_minimum_size = Vector2(310, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vh8u0")
+
+[node name="Boton prueba6" type="Button" parent="VFlowContainer/Borde boton6" unique_id=853076775]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 11.0
+offset_right = 301.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.09803922, 0.09803922, 0.09803922, 0.23529412)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("2_cgmvo")
+theme_override_styles/pressed = ExtResource("3_vh8u0")
+theme_override_styles/hover = ExtResource("2_cgmvo")
+theme_override_styles/disabled = ExtResource("5_0yuog")
+disabled = true
+text = "Organización y 
+Almacenamiento"
+text_overrun_behavior = 2
+
+[node name="Circulo boton6" type="PanelContainer" parent="VFlowContainer/Borde boton6/Boton prueba6" unique_id=1363396568]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 11.0
+offset_right = 19.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cgmvo")
+
+[node name="Num boton6" type="Label" parent="VFlowContainer/Borde boton6/Boton prueba6/Circulo boton6" unique_id=510978617]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+text = "6"
+
+[node name="Barra Superior" type="Panel" parent="." unique_id=1846947484]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("4_wpaqk")
+
+[node name="Label" type="Label" parent="Barra Superior" unique_id=240438837]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -11.5
+offset_right = 62.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 35
+text = "Titulo Juego Whatsapp"
+
+[node name="Nontouch" type="ColorRect" parent="." unique_id=679136300]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -210.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Barra Inferior" type="Panel" parent="." unique_id=2120661600]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -113.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dqysy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Barra Inferior" unique_id=1260045061]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 27.0
+offset_right = 1075.0
+offset_bottom = 87.0
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Boton opciones" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=1639250639]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+theme_override_styles/disabled = ExtResource("8_0yuog")
+text = "Opciones"
+
+[node name="Menu opciones" type="Panel" parent="Barra Inferior/HBoxContainer/Boton opciones" unique_id=1146547758]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -7.478
+anchor_top = -7.7830005
+anchor_right = 1.411
+anchor_bottom = -0.083000004
+offset_left = 481.14
+offset_top = -0.019958496
+offset_right = 65.45999
+offset_bottom = -0.019999504
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("4_wpaqk")
+
+[node name="HMusica" type="HBoxContainer" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones" unique_id=1253068278]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.089
+anchor_right = 0.57500005
+anchor_bottom = 0.286
+offset_left = 0.00021362305
+offset_top = -0.11800003
+offset_right = 101.231476
+offset_bottom = -0.13200378
+grow_horizontal = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HMusica" unique_id=1793382464]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+text = "Música"
+
+[node name="HSlider" type="HSlider" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HMusica" unique_id=1880242709]
+layout_mode = 2
+max_value = 1.0
+
+[node name="HSonido" type="HBoxContainer" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones" unique_id=2094975102]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBotones" type="HBoxContainer" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones" unique_id=1122579489]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -247.0
+offset_top = -104.0
+offset_right = 275.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 70
+
+[node name="Boton creditos" type="Button" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones" unique_id=532111056]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+theme_override_styles/disabled = ExtResource("8_0yuog")
+text = "Creditos"
+
+[node name="Boton reinicio" type="Button" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones" unique_id=1272096143]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+theme_override_styles/disabled = ExtResource("8_0yuog")
+text = "Borrar datos"
+
+[node name="Regresar opciones" type="Button" parent="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones" unique_id=1793379700]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("7_fx7jt")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+theme_override_styles/disabled = ExtResource("8_0yuog")
+text = "Regresar"
+
+[node name="Boton salida" type="Button" parent="Barra Inferior/HBoxContainer" unique_id=654177269]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09239689, 0.09239713, 0.09239692, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+theme_override_styles/disabled = ExtResource("8_0yuog")
+text = "Salir"
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu salida" type="Panel" parent="." unique_id=748376239]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19965278
+anchor_top = 0.2037037
+anchor_right = 0.796875
+anchor_bottom = 0.779321
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("4_wpaqk")
+
+[node name="Label" type="Label" parent="Menu salida" unique_id=1591445429]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 70.0
+offset_right = 292.0
+offset_bottom = 149.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 50
+text = "¿Quieres salir del juego?"
+horizontal_alignment = 1
+
+[node name="Salir si" type="Button" parent="Menu salida" unique_id=363426467]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 0
+offset_left = 149.0
+offset_top = 214.0
+offset_right = 279.0
+offset_bottom = 277.0
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+text = "Si"
+
+[node name="Salir no" type="Button" parent="Menu salida" unique_id=1444800172]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 0
+offset_left = 410.0
+offset_top = 214.0
+offset_right = 540.0
+offset_bottom = 278.5
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+text = "No"
+
+[node name="Menu Creditos" type="Panel" parent="." unique_id=1389098078]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -117.0
+offset_right = 236.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("4_wpaqk")
+
+[node name="Creditos" type="Label" parent="Menu Creditos" unique_id=2093105440]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -91.0
+offset_right = 217.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+text = "Programadores - Juan Rodó y Edwin Bustamante
+Música y Sonidos - Zapsplat"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="regresar creditos" type="Button" parent="Menu Creditos" unique_id=302773470]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85
+anchor_right = 0.5
+anchor_bottom = 0.85
+offset_left = -79.0
+offset_top = -55.90001
+offset_right = 61.0
+offset_bottom = -1.9000092
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("5_mft5f")
+theme_override_styles/pressed = ExtResource("7_qtfct")
+theme_override_styles/hover = ExtResource("5_mft5f")
+text = "Regresar"
+
+[node name="Version" type="Label" parent="Menu Creditos" unique_id=1435477677]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = 0.9620001
+anchor_right = 0.028
+anchor_bottom = 0.9620001
+offset_left = -1.2160006
+offset_top = -34.108017
+offset_right = 42.784
+offset_bottom = -6.108017
+theme_override_colors/font_color = Color(0.011087594, 0.011087573, 0.01108758, 0.2509804)
+theme_override_fonts/font = ExtResource("2_vxodi")
+theme_override_font_sizes/font_size = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2122894504]
+libraries/ = SubResource("AnimationLibrary_1tcje")
+
+[node name="Transi" type="ColorRect" parent="AnimationPlayer" unique_id=1805180162]
+visible = false
+self_modulate = Color(0.4745098, 0.63529414, 0.7882353, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Click_sonido" type="AudioStreamPlayer" parent="." unique_id=2038286035]
+stream = SubResource("AudioStreamRandomizer_dqysy")
+bus = &"SFX"
+
+[node name="M_menu" type="AudioStreamPlayer" parent="." unique_id=1100697916]
+stream = ExtResource("7_1tcje")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="VFlowContainer/Borde boton/Boton prueba" to="." method="_on_boton_prueba_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton2/Boton prueba2" to="." method="_on_boton_prueba_2_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton3/Boton prueba3" to="." method="_on_boton_prueba_3_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton4/Boton prueba4" to="." method="_on_boton_prueba_4_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton5/Boton prueba5" to="." method="_on_boton_prueba_5_pressed"]
+[connection signal="pressed" from="VFlowContainer/Borde boton6/Boton prueba6" to="." method="_on_boton_prueba_6_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton opciones" to="." method="_on_boton_opciones_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton creditos" to="." method="_on_boton_creditos_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Boton reinicio" to="." method="_on_boton_reinicio_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton opciones/Menu opciones/HBotones/Regresar opciones" to="." method="_on_regresar_opciones_pressed"]
+[connection signal="pressed" from="Barra Inferior/HBoxContainer/Boton salida" to="." method="_on_boton_salida_pressed"]
+[connection signal="pressed" from="Menu salida/Salir si" to="." method="_on_salir_si_pressed"]
+[connection signal="pressed" from="Menu salida/Salir no" to="." method="_on_salir_no_pressed"]
+[connection signal="pressed" from="Menu Creditos/regresar creditos" to="." method="_on_regresar_creditos_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

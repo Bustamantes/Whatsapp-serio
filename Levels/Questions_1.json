@@ -1,0 +1,36 @@
+[
+	{ "Question": "¿Cómo puedo ver los chats en WhatsApp?",
+	  "Choices": ["Llamando al contacto", "Seleccionando al contacto", "Guardando al contacto", "Hablando al contacto"],
+	  "Answer": 1
+	},
+	
+	{ "Question": "¿En que orden se muestran los chats en WhatsApp?",
+	  "Choices": ["En orden del mensaje más reciente", "En orden del mensaje más antiguo", "En orden alfabético", "En orden númerico"],
+	  "Answer": 0
+	},
+	
+	{"Question": "¿Cómo sé si tengo mensajes nuevos sin abrir?",
+	 "Choices": ["En la pantalla principal, habrá un video al lado del contacto","En la pantalla principal, habrá un número debajo del contacto","En la pantalla principal, habrá una letra al lado del contacto","En la pantalla principal, habrá un número al lado del contacto"],
+	 "Answer": 3
+	},
+
+	{"Question": "¿Cómo puedo cambiar el tamaño de la letra?",
+	 "Choices": ["Ajustes > Sonido > Tamaño de fuente","Ajustes > Chats > Copia de seguridad","Ajustes > Chats > Tamaño de fuente","Dispositivos Vinculados > Chats > Tamaño de fuente"],
+	 "Answer": 2
+	},
+	
+	{"Question": "¿Donde se ubica el icono de Más Opciones (tres puntos)?",
+	 "Choices": ["Esquina Superior Izquierda","Esquina Inferior Derecha","Esquina Inferior Izquierda","Esquina Superior Derecha"],
+	 "Answer": 3
+	},
+	
+	{"Question": "¿Que pestañas hay en la parte de abajo?",
+	 "Choices": ["Chats, Novedades, Videos, Llamadas","Chats, Novedades, Comunidades, Llamadas","Conversaciones, Novedades, Comunidades, Llamadas","Fotos, Videos, Audios, Llamadas"],
+	 "Answer": 1
+	},
+	
+	{"Question": "¿Como se añade un contacto?",
+	  "Choices": ["Pestaña Chats > el icono verde > Nuevo Contacto", "Pestaña Chats > el icono verde > el nombre del contacto  > nombre del contacto  > editar > eliminar", "Solo con otro contacto", "Más opciones > Dispositivos vinculados > Vincular un dispositivo"],
+	  "Answer": 0
+	},
+]
